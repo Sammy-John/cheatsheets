@@ -10,7 +10,6 @@ if (!fs.existsSync(buildPath)) {
   fs.mkdirSync(buildPath);
 }
 
-// Group cards by topic > category
 const grouped = {};
 for (const card of cards) {
   const { topic, category } = card;
@@ -19,7 +18,6 @@ for (const card of cards) {
   grouped[topic][category].push(card);
 }
 
-// Sidebar generator
 const generateSidebarHTML = () => `
   <aside class="sidebar">
     <h2>Topics</h2>
@@ -60,16 +58,14 @@ const generateSidebarHTML = () => `
   </aside>
 `;
 
-// Generate card markup
 const generateCardHTML = (card) => `
-  <div class="card" id="${card.id}" data-category="${card.category}" data-topic="${card.topic}">
+  <div class="card" id="${card.id}" data-category="${card.category}" data-topic="${card.topic}" style="transform: translate(0px, 0px);">
     <h3>${card.title}</h3>
     <p>${card.description}</p>
     <pre><code>${card.code}</code></pre>
   </div>
 `;
 
-// Final HTML output
 const html = `
 <!DOCTYPE html>
 <html lang="en">
@@ -81,17 +77,20 @@ const html = `
 </head>
 <body>
   <button class="toggle-sidebar" onclick="document.querySelector('.sidebar').classList.toggle('open')">☰ Filters</button>
-
   ${generateSidebarHTML()}
-
   <main class="card-container">
     ${cards.map(generateCardHTML).join("\n")}
   </main>
 
   <script>
+    const cardPositions = {};
+    
     function toggleCard(id, visible) {
       const el = document.getElementById(id);
-      if (el) el.style.display = visible ? "block" : "none";
+      if (el) {
+        el.style.display = visible ? "block" : "none";
+        if (visible) applyCardPosition(el);
+      }
     }
 
     function toggleCategory(category, visible) {
@@ -104,10 +103,62 @@ const html = `
         }
       });
     }
+
+    function applyCardPosition(card) {
+      const pos = cardPositions[card.id];
+      if (pos) {
+        card.style.transform = \`translate(\${pos.x}px, \${pos.y}px)\`;
+      } else {
+        card.style.transform = "translate(0px, 0px)";
+      }
+    }
+document.addEventListener('DOMContentLoaded', () => {
+  const gridSize = 30; // Adjust grid snapping size here
+  const cards = document.querySelectorAll('.card');
+  const cardPositions = {};
+  let activeCard = null;
+  let offsetX = 0, offsetY = 0, isDragging = false;
+
+  function snapToGrid(value) {
+    return Math.round(value / gridSize) * gridSize;
+  }
+
+  cards.forEach(card => {
+    card.addEventListener('mousedown', (e) => {
+      if (window.innerWidth <= 768) return; // Fully disable drag on mobile
+      isDragging = true;
+      activeCard = card;
+      const pos = cardPositions[card.id] || { x: 0, y: 0 };
+      offsetX = e.clientX - pos.x;
+      offsetY = e.clientY - pos.y;
+      activeCard.style.zIndex = 1000;
+    });
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (!isDragging || !activeCard) return;
+    let x = e.clientX - offsetX;
+    let y = e.clientY - offsetY;
+    x = snapToGrid(x);
+    y = snapToGrid(y);
+    activeCard.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
+    cardPositions[activeCard.id] = { x, y };
+  });
+
+  document.addEventListener('mouseup', () => {
+    if (activeCard) {
+      activeCard.style.zIndex = "";
+    }
+    isDragging = false;
+    activeCard = null;
+  });
+});
+
+
   </script>
 </body>
 </html>
 `;
 
 fs.writeFileSync(outputHtml, html, "utf-8");
-console.log("✅ Responsive cheatsheet generated at /build/index.html with mobile sidebar toggle");
+console.log("✅ Cheatsheet generated with free drag-and-drop positioning (session memory only).");

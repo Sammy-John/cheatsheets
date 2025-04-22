@@ -1,4 +1,4 @@
-# C# Cheatsheet
+# Cheatsheet
 
 A lightweight, interactive  cheatsheet designed as a quick reference tool while coding.
 

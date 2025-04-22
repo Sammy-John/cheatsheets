@@ -18,7 +18,7 @@ The cheatsheet is intended to be used side-by-side with your development environ
 ## 🌐 Live Demo
 
 The cheatsheet is hosted on **GitHub Pages**:  
-[View the Live Cheatsheet Here]([https://github.com/Sammy-John/cheatsheets/])
+[View the Live Cheatsheet Here]("https://sammy-john.github.io/cheatsheets/")
 
 ## 📝 License
 

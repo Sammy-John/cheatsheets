@@ -80,6 +80,8 @@ const html = `
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <button class="toggle-sidebar" onclick="document.querySelector('.sidebar').classList.toggle('open')">☰ Filters</button>
+
   ${generateSidebarHTML()}
 
   <main class="card-container">
@@ -108,4 +110,4 @@ const html = `
 `;
 
 fs.writeFileSync(outputHtml, html, "utf-8");
-console.log("✅ Fixed sidebar and structure generated at /build/index.html");
+console.log("✅ Responsive cheatsheet generated at /build/index.html with mobile sidebar toggle");

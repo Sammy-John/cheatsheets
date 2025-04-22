@@ -52,6 +52,53 @@
       "description": "Used for file and stream I/O operations.",
       "code": "using System.IO;\n\nFile.WriteAllText(\"file.txt\", \"Hello\");",
       "tags": ["syntax", "using", "io"]
-    }
-  ]
+    },
+      {
+        "id": "syntax-namespace-declaration",
+        "topic": "Syntax",
+        "category": "Program Structure",
+        "title": "namespace Declaration",
+        "description": "Defines a scope to group related classes and avoid naming conflicts.",
+        "code": "namespace MyApplication\n{\n    public class Program\n    {\n        static void Main(string[] args)\n        {\n            Console.WriteLine(\"Hello from MyApplication!\");\n        }\n    }\n}",
+        "tags": ["syntax", "structure", "namespace"]
+      },
+      {
+        "id": "syntax-class-declaration",
+        "topic": "Syntax",
+        "category": "Program Structure",
+        "title": "class Declaration",
+        "description": "Defines a class as the core building block of a C# program. Can contain methods, properties, and fields.",
+        "code": "public class Calculator\n{\n    public int Add(int a, int b)\n    {\n        return a + b;\n    }\n}",
+        "tags": ["syntax", "structure", "class"]
+      },
+      {
+        "id": "syntax-entry-point-main-method",
+        "topic": "Syntax",
+        "category": "Program Structure",
+        "title": "Entry Point: static void Main(string[] args)",
+        "description": "The starting point of a C# console application. Executes when the program runs.",
+        "code": "static void Main(string[] args)\n{\n    Console.WriteLine(\"Welcome to the program!\");\n}",
+        "tags": ["syntax", "structure", "entry point", "main"]
+      },
+      {
+        "id": "syntax-method-declaration",
+        "topic": "Syntax",
+        "category": "Program Structure",
+        "title": "Method Declaration",
+        "description": "Defines a reusable block of code. Includes access modifiers, return type, method name, and parameters.",
+        "code": "public void GreetUser(string name)\n{\n    Console.WriteLine($\"Hello, {name}!\");\n}",
+        "tags": ["syntax", "structure", "method", "function"]
+      },
+      {
+        "id": "syntax-static-method-declaration",
+        "topic": "Syntax",
+        "category": "Program Structure",
+        "title": "Static Method Declaration",
+        "description": "A method that belongs to the class itself rather than to instances of the class.",
+        "code": "public static int Square(int number)\n{\n    return number * number;\n}",
+        "tags": ["syntax", "structure", "method", "static"]
+      }
+    ]
+    
+  
   

@@ -33,14 +33,14 @@ const generateSidebarHTML = () => `
                 <summary>${category}</summary>
                 <div class="card-filters">
                   <label>
-                    <input type="checkbox" class="category-toggle" data-category="${category}" checked onchange="toggleCategory('${category}', this.checked)">
+                    <input type="checkbox" class="category-toggle" data-category="${category}" onchange="toggleCategory('${category}', this.checked)">
                     Show All
                   </label>
                   ${cards
                     .map(
                       (card) => `
                       <label>
-                        <input type="checkbox" class="card-toggle" data-id="${card.id}" checked onchange="toggleCard('${card.id}', this.checked)">
+                        <input type="checkbox" class="card-toggle" data-id="${card.id}" onchange="toggleCard('${card.id}', this.checked)">
                         ${card.title}
                       </label>
                     `
@@ -92,6 +92,13 @@ const html = `
         if (visible) applyCardPosition(el);
       }
     }
+
+    document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.card').forEach(card => {
+    card.style.display = 'none';
+  });
+});
+
 
     function toggleCategory(category, visible) {
       const checkboxes = document.querySelectorAll('.card-toggle[data-id]');

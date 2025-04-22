@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <button class="toggle-sidebar" onclick="document.querySelector('.sidebar').classList.toggle('open')">☰ Filters</button>
   
   <aside class="sidebar">
     <h2>Topics</h2>
@@ -19,38 +20,74 @@
                 <summary>Imports</summary>
                 <div class="card-filters">
                   <label>
-                    <input type="checkbox" class="category-toggle" data-category="Imports" checked onchange="toggleCategory('Imports', this.checked)">
+                    <input type="checkbox" class="category-toggle" data-category="Imports" onchange="toggleCategory('Imports', this.checked)">
                     Show All
                   </label>
                   
                       <label>
-                        <input type="checkbox" class="card-toggle" data-id="syntax-using-system" checked onchange="toggleCard('syntax-using-system', this.checked)">
+                        <input type="checkbox" class="card-toggle" data-id="syntax-using-system" onchange="toggleCard('syntax-using-system', this.checked)">
                         using System;
                       </label>
                     
                       <label>
-                        <input type="checkbox" class="card-toggle" data-id="syntax-using-system-collections-generic" checked onchange="toggleCard('syntax-using-system-collections-generic', this.checked)">
+                        <input type="checkbox" class="card-toggle" data-id="syntax-using-system-collections-generic" onchange="toggleCard('syntax-using-system-collections-generic', this.checked)">
                         using System.Collections.Generic;
                       </label>
                     
                       <label>
-                        <input type="checkbox" class="card-toggle" data-id="syntax-using-system-linq" checked onchange="toggleCard('syntax-using-system-linq', this.checked)">
+                        <input type="checkbox" class="card-toggle" data-id="syntax-using-system-linq" onchange="toggleCard('syntax-using-system-linq', this.checked)">
                         using System.Linq;
                       </label>
                     
                       <label>
-                        <input type="checkbox" class="card-toggle" data-id="syntax-using-system-text" checked onchange="toggleCard('syntax-using-system-text', this.checked)">
+                        <input type="checkbox" class="card-toggle" data-id="syntax-using-system-text" onchange="toggleCard('syntax-using-system-text', this.checked)">
                         using System.Text;
                       </label>
                     
                       <label>
-                        <input type="checkbox" class="card-toggle" data-id="syntax-using-system-threading" checked onchange="toggleCard('syntax-using-system-threading', this.checked)">
+                        <input type="checkbox" class="card-toggle" data-id="syntax-using-system-threading" onchange="toggleCard('syntax-using-system-threading', this.checked)">
                         using System.Threading;
                       </label>
                     
                       <label>
-                        <input type="checkbox" class="card-toggle" data-id="syntax-using-system-io" checked onchange="toggleCard('syntax-using-system-io', this.checked)">
+                        <input type="checkbox" class="card-toggle" data-id="syntax-using-system-io" onchange="toggleCard('syntax-using-system-io', this.checked)">
                         using System.IO;
+                      </label>
+                    
+                </div>
+              </details>
+            
+              <details open class="category-block">
+                <summary>Program Structure</summary>
+                <div class="card-filters">
+                  <label>
+                    <input type="checkbox" class="category-toggle" data-category="Program Structure" onchange="toggleCategory('Program Structure', this.checked)">
+                    Show All
+                  </label>
+                  
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="syntax-namespace-declaration" onchange="toggleCard('syntax-namespace-declaration', this.checked)">
+                        namespace Declaration
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="syntax-class-declaration" onchange="toggleCard('syntax-class-declaration', this.checked)">
+                        class Declaration
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="syntax-entry-point-main-method" onchange="toggleCard('syntax-entry-point-main-method', this.checked)">
+                        Entry Point: static void Main(string[] args)
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="syntax-method-declaration" onchange="toggleCard('syntax-method-declaration', this.checked)">
+                        Method Declaration
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="syntax-static-method-declaration" onchange="toggleCard('syntax-static-method-declaration', this.checked)">
+                        Static Method Declaration
                       </label>
                     
                 </div>
@@ -60,10 +97,9 @@
       
   </aside>
 
-
   <main class="card-container">
     
-  <div class="card" id="syntax-using-system" data-category="Imports" data-topic="Syntax">
+  <div class="card" id="syntax-using-system" data-category="Imports" data-topic="Syntax" style="transform: translate(0px, 0px);">
     <h3>using System;</h3>
     <p>Includes core system functionality such as Console, Math, String, etc.</p>
     <pre><code>using System;
@@ -72,7 +108,7 @@ Console.WriteLine("Hello, World!");</code></pre>
   </div>
 
 
-  <div class="card" id="syntax-using-system-collections-generic" data-category="Imports" data-topic="Syntax">
+  <div class="card" id="syntax-using-system-collections-generic" data-category="Imports" data-topic="Syntax" style="transform: translate(0px, 0px);">
     <h3>using System.Collections.Generic;</h3>
     <p>Enables usage of generic collections like List<T>, Dictionary<TKey, TValue>.</p>
     <pre><code>using System.Collections.Generic;
@@ -81,7 +117,7 @@ List<string> names = new List<string>();</code></pre>
   </div>
 
 
-  <div class="card" id="syntax-using-system-linq" data-category="Imports" data-topic="Syntax">
+  <div class="card" id="syntax-using-system-linq" data-category="Imports" data-topic="Syntax" style="transform: translate(0px, 0px);">
     <h3>using System.Linq;</h3>
     <p>Provides LINQ functionality to query collections using a functional approach.</p>
     <pre><code>using System.Linq;
@@ -90,7 +126,7 @@ var evenNumbers = numbers.Where(n => n % 2 == 0);</code></pre>
   </div>
 
 
-  <div class="card" id="syntax-using-system-text" data-category="Imports" data-topic="Syntax">
+  <div class="card" id="syntax-using-system-text" data-category="Imports" data-topic="Syntax" style="transform: translate(0px, 0px);">
     <h3>using System.Text;</h3>
     <p>Gives access to classes for string encoding and StringBuilder.</p>
     <pre><code>using System.Text;
@@ -99,7 +135,7 @@ StringBuilder sb = new StringBuilder();</code></pre>
   </div>
 
 
-  <div class="card" id="syntax-using-system-threading" data-category="Imports" data-topic="Syntax">
+  <div class="card" id="syntax-using-system-threading" data-category="Imports" data-topic="Syntax" style="transform: translate(0px, 0px);">
     <h3>using System.Threading;</h3>
     <p>Provides classes and methods for multithreading.</p>
     <pre><code>using System.Threading;
@@ -108,7 +144,7 @@ Thread.Sleep(1000);</code></pre>
   </div>
 
 
-  <div class="card" id="syntax-using-system-io" data-category="Imports" data-topic="Syntax">
+  <div class="card" id="syntax-using-system-io" data-category="Imports" data-topic="Syntax" style="transform: translate(0px, 0px);">
     <h3>using System.IO;</h3>
     <p>Used for file and stream I/O operations.</p>
     <pre><code>using System.IO;
@@ -116,13 +152,84 @@ Thread.Sleep(1000);</code></pre>
 File.WriteAllText("file.txt", "Hello");</code></pre>
   </div>
 
+
+  <div class="card" id="syntax-namespace-declaration" data-category="Program Structure" data-topic="Syntax" style="transform: translate(0px, 0px);">
+    <h3>namespace Declaration</h3>
+    <p>Defines a scope to group related classes and avoid naming conflicts.</p>
+    <pre><code>namespace MyApplication
+{
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello from MyApplication!");
+        }
+    }
+}</code></pre>
+  </div>
+
+
+  <div class="card" id="syntax-class-declaration" data-category="Program Structure" data-topic="Syntax" style="transform: translate(0px, 0px);">
+    <h3>class Declaration</h3>
+    <p>Defines a class as the core building block of a C# program. Can contain methods, properties, and fields.</p>
+    <pre><code>public class Calculator
+{
+    public int Add(int a, int b)
+    {
+        return a + b;
+    }
+}</code></pre>
+  </div>
+
+
+  <div class="card" id="syntax-entry-point-main-method" data-category="Program Structure" data-topic="Syntax" style="transform: translate(0px, 0px);">
+    <h3>Entry Point: static void Main(string[] args)</h3>
+    <p>The starting point of a C# console application. Executes when the program runs.</p>
+    <pre><code>static void Main(string[] args)
+{
+    Console.WriteLine("Welcome to the program!");
+}</code></pre>
+  </div>
+
+
+  <div class="card" id="syntax-method-declaration" data-category="Program Structure" data-topic="Syntax" style="transform: translate(0px, 0px);">
+    <h3>Method Declaration</h3>
+    <p>Defines a reusable block of code. Includes access modifiers, return type, method name, and parameters.</p>
+    <pre><code>public void GreetUser(string name)
+{
+    Console.WriteLine($"Hello, {name}!");
+}</code></pre>
+  </div>
+
+
+  <div class="card" id="syntax-static-method-declaration" data-category="Program Structure" data-topic="Syntax" style="transform: translate(0px, 0px);">
+    <h3>Static Method Declaration</h3>
+    <p>A method that belongs to the class itself rather than to instances of the class.</p>
+    <pre><code>public static int Square(int number)
+{
+    return number * number;
+}</code></pre>
+  </div>
+
   </main>
 
   <script>
+    const cardPositions = {};
+    
     function toggleCard(id, visible) {
       const el = document.getElementById(id);
-      if (el) el.style.display = visible ? "block" : "none";
+      if (el) {
+        el.style.display = visible ? "block" : "none";
+        if (visible) applyCardPosition(el);
+      }
     }
+
+    document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.card').forEach(card => {
+    card.style.display = 'none';
+  });
+});
+
 
     function toggleCategory(category, visible) {
       const checkboxes = document.querySelectorAll('.card-toggle[data-id]');
@@ -134,6 +241,58 @@ File.WriteAllText("file.txt", "Hello");</code></pre>
         }
       });
     }
+
+    function applyCardPosition(card) {
+      const pos = cardPositions[card.id];
+      if (pos) {
+        card.style.transform = `translate(${pos.x}px, ${pos.y}px)`;
+      } else {
+        card.style.transform = "translate(0px, 0px)";
+      }
+    }
+document.addEventListener('DOMContentLoaded', () => {
+  const gridSize = 30; // Adjust grid snapping size here
+  const cards = document.querySelectorAll('.card');
+  const cardPositions = {};
+  let activeCard = null;
+  let offsetX = 0, offsetY = 0, isDragging = false;
+
+  function snapToGrid(value) {
+    return Math.round(value / gridSize) * gridSize;
+  }
+
+  cards.forEach(card => {
+    card.addEventListener('mousedown', (e) => {
+      if (window.innerWidth <= 768) return; // Fully disable drag on mobile
+      isDragging = true;
+      activeCard = card;
+      const pos = cardPositions[card.id] || { x: 0, y: 0 };
+      offsetX = e.clientX - pos.x;
+      offsetY = e.clientY - pos.y;
+      activeCard.style.zIndex = 1000;
+    });
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (!isDragging || !activeCard) return;
+    let x = e.clientX - offsetX;
+    let y = e.clientY - offsetY;
+    x = snapToGrid(x);
+    y = snapToGrid(y);
+    activeCard.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
+    cardPositions[activeCard.id] = { x, y };
+  });
+
+  document.addEventListener('mouseup', () => {
+    if (activeCard) {
+      activeCard.style.zIndex = "";
+    }
+    isDragging = false;
+    activeCard = null;
+  });
+});
+
+
   </script>
 </body>
 </html>

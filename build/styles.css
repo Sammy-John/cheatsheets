@@ -4,7 +4,78 @@
     padding: 0;
     box-sizing: border-box;
   }
+
+  :root {
+    /* 📌 Category Background Colors */
+    --bg-imports: #f9e79f;              /* Soft yellow */
+    --bg-program-structure: #aed6f1;    /* Soft sky blue */
+    --bg-control-flow: #f5b7b1;         /* Coral pink */
+    --bg-data-types: #abebc6;           /* Mint green */
+    --bg-methods: #fad7a0;              /* Peach/orange */
   
+    /* 💥 High-Punch Title Colors */
+    --title-imports: #ff2d95;             /* Electric pink */
+    --title-program-structure: #FF6f00;   /* Warm Orange */
+    --title-control-flow: #00f0ff;        /* Bright cyan */
+    --title-data-types: #bf40bf;          /* Hot purple */
+    --title-methods: #2979ff;             /* Vivid blue */
+  
+    /* 🖋 Paragraph Text Colors */
+    --text-dark: #222;                   /* Blackish for light backgrounds */
+    --text-light: #ddd;                  /* Light grey/white for dark backgrounds */
+  }
+  
+
+/* Imports Category */
+.card[data-category="Imports"] {
+  background-color: var(--bg-imports);
+  color: var(--text-dark); /* Light bg → dark text */
+}
+
+.card[data-category="Imports"] h3 {
+  color: var(--title-imports);
+}
+
+/* Program Structure Category */
+.card[data-category="Program Structure"] {
+  background-color: var(--bg-program-structure);
+  color: var(--text-dark); /* Light bg → dark text */
+}
+
+.card[data-category="Program Structure"] h3 {
+  color: var(--title-program-structure);
+}
+
+/* Control Flow Category */
+.card[data-category="Control Flow"] {
+  background-color: var(--bg-control-flow);
+  color: var(--text-dark);
+}
+
+.card[data-category="Control Flow"] h3 {
+  color: var(--title-control-flow);
+}
+
+/* Data Types Category */
+.card[data-category="Data Types"] {
+  background-color: var(--bg-data-types);
+  color: var(--text-dark);
+}
+
+.card[data-category="Data Types"] h3 {
+  color: var(--title-data-types);
+}
+
+/* Methods Category */
+.card[data-category="Methods"] {
+  background-color: var(--bg-methods);
+  color: var(--text-dark);
+}
+
+.card[data-category="Methods"] h3 {
+  color: var(--title-methods);
+}
+
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
@@ -75,16 +146,7 @@
     overflow-y: auto;
     background: #1e1e2f;
   }
-  
-  /* ✨ Topic-based Card Backgrounds */
-  .card[data-topic="Syntax"] {
-    background-color: #40364a; /* Plum-like post-it */
-  }
-  
-  /* 🟡 Category-based Title Colors */
-  .card[data-category="Imports"] h3 {
-    color: #ffcc66; /* Warm yellow */
-  }
+ 
   
   /* 📋 Shared Card Styling */
   .card {
@@ -107,7 +169,7 @@
   
   .card p {
     font-size: 0.9rem;
-    color: #ddd;
+    color: var(--text-dark);
     margin-bottom: 0.5rem;
   }
   

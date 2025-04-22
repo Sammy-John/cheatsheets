@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C# Cheatsheet</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  
+  <aside class="sidebar">
+    <h2>Topics</h2>
+    
+        <div class="topic-section">
+          <h3>Syntax</h3>
+          
+              <details open class="category-block">
+                <summary>Imports</summary>
+                <div class="card-filters">
+                  <label>
+                    <input type="checkbox" class="category-toggle" data-category="Imports" checked onchange="toggleCategory('Imports', this.checked)">
+                    Show All
+                  </label>
+                  
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="syntax-using-system" checked onchange="toggleCard('syntax-using-system', this.checked)">
+                        using System;
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="syntax-using-system-collections-generic" checked onchange="toggleCard('syntax-using-system-collections-generic', this.checked)">
+                        using System.Collections.Generic;
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="syntax-using-system-linq" checked onchange="toggleCard('syntax-using-system-linq', this.checked)">
+                        using System.Linq;
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="syntax-using-system-text" checked onchange="toggleCard('syntax-using-system-text', this.checked)">
+                        using System.Text;
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="syntax-using-system-threading" checked onchange="toggleCard('syntax-using-system-threading', this.checked)">
+                        using System.Threading;
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="syntax-using-system-io" checked onchange="toggleCard('syntax-using-system-io', this.checked)">
+                        using System.IO;
+                      </label>
+                    
+                </div>
+              </details>
+            
+        </div>
+      
+  </aside>
+
+
+  <main class="card-container">
+    
+  <div class="card" id="syntax-using-system" data-category="Imports" data-topic="Syntax">
+    <h3>using System;</h3>
+    <p>Includes core system functionality such as Console, Math, String, etc.</p>
+    <pre><code>using System;
+
+Console.WriteLine("Hello, World!");</code></pre>
+  </div>
+
+
+  <div class="card" id="syntax-using-system-collections-generic" data-category="Imports" data-topic="Syntax">
+    <h3>using System.Collections.Generic;</h3>
+    <p>Enables usage of generic collections like List<T>, Dictionary<TKey, TValue>.</p>
+    <pre><code>using System.Collections.Generic;
+
+List<string> names = new List<string>();</code></pre>
+  </div>
+
+
+  <div class="card" id="syntax-using-system-linq" data-category="Imports" data-topic="Syntax">
+    <h3>using System.Linq;</h3>
+    <p>Provides LINQ functionality to query collections using a functional approach.</p>
+    <pre><code>using System.Linq;
+
+var evenNumbers = numbers.Where(n => n % 2 == 0);</code></pre>
+  </div>
+
+
+  <div class="card" id="syntax-using-system-text" data-category="Imports" data-topic="Syntax">
+    <h3>using System.Text;</h3>
+    <p>Gives access to classes for string encoding and StringBuilder.</p>
+    <pre><code>using System.Text;
+
+StringBuilder sb = new StringBuilder();</code></pre>
+  </div>
+
+
+  <div class="card" id="syntax-using-system-threading" data-category="Imports" data-topic="Syntax">
+    <h3>using System.Threading;</h3>
+    <p>Provides classes and methods for multithreading.</p>
+    <pre><code>using System.Threading;
+
+Thread.Sleep(1000);</code></pre>
+  </div>
+
+
+  <div class="card" id="syntax-using-system-io" data-category="Imports" data-topic="Syntax">
+    <h3>using System.IO;</h3>
+    <p>Used for file and stream I/O operations.</p>
+    <pre><code>using System.IO;
+
+File.WriteAllText("file.txt", "Hello");</code></pre>
+  </div>
+
+  </main>
+
+  <script>
+    function toggleCard(id, visible) {
+      const el = document.getElementById(id);
+      if (el) el.style.display = visible ? "block" : "none";
+    }
+
+    function toggleCategory(category, visible) {
+      const checkboxes = document.querySelectorAll('.card-toggle[data-id]');
+      checkboxes.forEach(cb => {
+        const card = document.getElementById(cb.dataset.id);
+        if (card && card.dataset.category === category) {
+          cb.checked = visible;
+          toggleCard(cb.dataset.id, visible);
+        }
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+[
+    {
+      "id": "syntax-using-system",
+      "topic": "Syntax",
+      "category": "Imports",
+      "title": "using System;",
+      "description": "Includes core system functionality such as Console, Math, String, etc.",
+      "code": "using System;\n\nConsole.WriteLine(\"Hello, World!\");",
+      "tags": ["syntax", "using", "core"]
+    },
+    {
+      "id": "syntax-using-system-collections-generic",
+      "topic": "Syntax",
+      "category": "Imports",
+      "title": "using System.Collections.Generic;",
+      "description": "Enables usage of generic collections like List<T>, Dictionary<TKey, TValue>.",
+      "code": "using System.Collections.Generic;\n\nList<string> names = new List<string>();",
+      "tags": ["syntax", "using", "collections"]
+    },
+    {
+      "id": "syntax-using-system-linq",
+      "topic": "Syntax",
+      "category": "Imports",
+      "title": "using System.Linq;",
+      "description": "Provides LINQ functionality to query collections using a functional approach.",
+      "code": "using System.Linq;\n\nvar evenNumbers = numbers.Where(n => n % 2 == 0);",
+      "tags": ["syntax", "using", "linq"]
+    },
+    {
+      "id": "syntax-using-system-text",
+      "topic": "Syntax",
+      "category": "Imports",
+      "title": "using System.Text;",
+      "description": "Gives access to classes for string encoding and StringBuilder.",
+      "code": "using System.Text;\n\nStringBuilder sb = new StringBuilder();",
+      "tags": ["syntax", "using", "string"]
+    },
+    {
+      "id": "syntax-using-system-threading",
+      "topic": "Syntax",
+      "category": "Imports",
+      "title": "using System.Threading;",
+      "description": "Provides classes and methods for multithreading.",
+      "code": "using System.Threading;\n\nThread.Sleep(1000);",
+      "tags": ["syntax", "using", "threads"]
+    },
+    {
+      "id": "syntax-using-system-io",
+      "topic": "Syntax",
+      "category": "Imports",
+      "title": "using System.IO;",
+      "description": "Used for file and stream I/O operations.",
+      "code": "using System.IO;\n\nFile.WriteAllText(\"file.txt\", \"Hello\");",
+      "tags": ["syntax", "using", "io"]
+    }
+  ]
+  

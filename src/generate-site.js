@@ -3,7 +3,7 @@ const path = require("path");
 
 const cards = require("./cards.json");
 
-const buildPath = path.join(__dirname, "..", "build");
+const buildPath = path.join(__dirname, "..", "docs");
 const outputHtml = path.join(buildPath, "index.html");
 
 if (!fs.existsSync(buildPath)) {
@@ -29,7 +29,7 @@ const generateSidebarHTML = () => `
           ${Object.entries(categories)
             .map(
               ([category, cards]) => `
-              <details open class="category-block">
+              <details class="category-block">
                 <summary>${category}</summary>
                 <div class="card-filters">
                   <label>

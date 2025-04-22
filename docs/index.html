@@ -16,42 +16,78 @@
         <div class="topic-section">
           <h3>Syntax</h3>
           
-              <details open class="category-block">
+              <details class="category-block">
                 <summary>Imports</summary>
                 <div class="card-filters">
                   <label>
-                    <input type="checkbox" class="category-toggle" data-category="Imports" checked onchange="toggleCategory('Imports', this.checked)">
+                    <input type="checkbox" class="category-toggle" data-category="Imports" onchange="toggleCategory('Imports', this.checked)">
                     Show All
                   </label>
                   
                       <label>
-                        <input type="checkbox" class="card-toggle" data-id="syntax-using-system" checked onchange="toggleCard('syntax-using-system', this.checked)">
+                        <input type="checkbox" class="card-toggle" data-id="syntax-using-system" onchange="toggleCard('syntax-using-system', this.checked)">
                         using System;
                       </label>
                     
                       <label>
-                        <input type="checkbox" class="card-toggle" data-id="syntax-using-system-collections-generic" checked onchange="toggleCard('syntax-using-system-collections-generic', this.checked)">
+                        <input type="checkbox" class="card-toggle" data-id="syntax-using-system-collections-generic" onchange="toggleCard('syntax-using-system-collections-generic', this.checked)">
                         using System.Collections.Generic;
                       </label>
                     
                       <label>
-                        <input type="checkbox" class="card-toggle" data-id="syntax-using-system-linq" checked onchange="toggleCard('syntax-using-system-linq', this.checked)">
+                        <input type="checkbox" class="card-toggle" data-id="syntax-using-system-linq" onchange="toggleCard('syntax-using-system-linq', this.checked)">
                         using System.Linq;
                       </label>
                     
                       <label>
-                        <input type="checkbox" class="card-toggle" data-id="syntax-using-system-text" checked onchange="toggleCard('syntax-using-system-text', this.checked)">
+                        <input type="checkbox" class="card-toggle" data-id="syntax-using-system-text" onchange="toggleCard('syntax-using-system-text', this.checked)">
                         using System.Text;
                       </label>
                     
                       <label>
-                        <input type="checkbox" class="card-toggle" data-id="syntax-using-system-threading" checked onchange="toggleCard('syntax-using-system-threading', this.checked)">
+                        <input type="checkbox" class="card-toggle" data-id="syntax-using-system-threading" onchange="toggleCard('syntax-using-system-threading', this.checked)">
                         using System.Threading;
                       </label>
                     
                       <label>
-                        <input type="checkbox" class="card-toggle" data-id="syntax-using-system-io" checked onchange="toggleCard('syntax-using-system-io', this.checked)">
+                        <input type="checkbox" class="card-toggle" data-id="syntax-using-system-io" onchange="toggleCard('syntax-using-system-io', this.checked)">
                         using System.IO;
+                      </label>
+                    
+                </div>
+              </details>
+            
+              <details class="category-block">
+                <summary>Program Structure</summary>
+                <div class="card-filters">
+                  <label>
+                    <input type="checkbox" class="category-toggle" data-category="Program Structure" onchange="toggleCategory('Program Structure', this.checked)">
+                    Show All
+                  </label>
+                  
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="syntax-namespace-declaration" onchange="toggleCard('syntax-namespace-declaration', this.checked)">
+                        namespace Declaration
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="syntax-class-declaration" onchange="toggleCard('syntax-class-declaration', this.checked)">
+                        class Declaration
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="syntax-entry-point-main-method" onchange="toggleCard('syntax-entry-point-main-method', this.checked)">
+                        Entry Point: static void Main(string[] args)
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="syntax-method-declaration" onchange="toggleCard('syntax-method-declaration', this.checked)">
+                        Method Declaration
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="syntax-static-method-declaration" onchange="toggleCard('syntax-static-method-declaration', this.checked)">
+                        Static Method Declaration
                       </label>
                     
                 </div>
@@ -116,6 +152,65 @@ Thread.Sleep(1000);</code></pre>
 File.WriteAllText("file.txt", "Hello");</code></pre>
   </div>
 
+
+  <div class="card" id="syntax-namespace-declaration" data-category="Program Structure" data-topic="Syntax" style="transform: translate(0px, 0px);">
+    <h3>namespace Declaration</h3>
+    <p>Defines a scope to group related classes and avoid naming conflicts.</p>
+    <pre><code>namespace MyApplication
+{
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello from MyApplication!");
+        }
+    }
+}</code></pre>
+  </div>
+
+
+  <div class="card" id="syntax-class-declaration" data-category="Program Structure" data-topic="Syntax" style="transform: translate(0px, 0px);">
+    <h3>class Declaration</h3>
+    <p>Defines a class as the core building block of a C# program. Can contain methods, properties, and fields.</p>
+    <pre><code>public class Calculator
+{
+    public int Add(int a, int b)
+    {
+        return a + b;
+    }
+}</code></pre>
+  </div>
+
+
+  <div class="card" id="syntax-entry-point-main-method" data-category="Program Structure" data-topic="Syntax" style="transform: translate(0px, 0px);">
+    <h3>Entry Point: static void Main(string[] args)</h3>
+    <p>The starting point of a C# console application. Executes when the program runs.</p>
+    <pre><code>static void Main(string[] args)
+{
+    Console.WriteLine("Welcome to the program!");
+}</code></pre>
+  </div>
+
+
+  <div class="card" id="syntax-method-declaration" data-category="Program Structure" data-topic="Syntax" style="transform: translate(0px, 0px);">
+    <h3>Method Declaration</h3>
+    <p>Defines a reusable block of code. Includes access modifiers, return type, method name, and parameters.</p>
+    <pre><code>public void GreetUser(string name)
+{
+    Console.WriteLine($"Hello, {name}!");
+}</code></pre>
+  </div>
+
+
+  <div class="card" id="syntax-static-method-declaration" data-category="Program Structure" data-topic="Syntax" style="transform: translate(0px, 0px);">
+    <h3>Static Method Declaration</h3>
+    <p>A method that belongs to the class itself rather than to instances of the class.</p>
+    <pre><code>public static int Square(int number)
+{
+    return number * number;
+}</code></pre>
+  </div>
+
   </main>
 
   <script>
@@ -128,6 +223,13 @@ File.WriteAllText("file.txt", "Hello");</code></pre>
         if (visible) applyCardPosition(el);
       }
     }
+
+    document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.card').forEach(card => {
+    card.style.display = 'none';
+  });
+});
+
 
     function toggleCategory(category, visible) {
       const checkboxes = document.querySelectorAll('.card-toggle[data-id]');

@@ -5,7 +5,77 @@
     box-sizing: border-box;
   }
 
+  :root {
+    /* 📌 Category Background Colors */
+    --bg-imports: #f9e79f;              /* Soft yellow */
+    --bg-program-structure: #aed6f1;    /* Soft sky blue */
+    --bg-control-flow: #f5b7b1;         /* Coral pink */
+    --bg-data-types: #abebc6;           /* Mint green */
+    --bg-methods: #fad7a0;              /* Peach/orange */
   
+    /* 💥 High-Punch Title Colors */
+    --title-imports: #ff2d95;             /* Electric pink */
+    --title-program-structure: #FF6f00;   /* Warm Orange */
+    --title-control-flow: #00f0ff;        /* Bright cyan */
+    --title-data-types: #bf40bf;          /* Hot purple */
+    --title-methods: #2979ff;             /* Vivid blue */
+  
+    /* 🖋 Paragraph Text Colors */
+    --text-dark: #222;                   /* Blackish for light backgrounds */
+    --text-light: #ddd;                  /* Light grey/white for dark backgrounds */
+  }
+  
+
+/* Imports Category */
+.card[data-category="Imports"] {
+  background-color: var(--bg-imports);
+  color: var(--text-dark); /* Light bg → dark text */
+}
+
+.card[data-category="Imports"] h3 {
+  color: var(--title-imports);
+}
+
+/* Program Structure Category */
+.card[data-category="Program Structure"] {
+  background-color: var(--bg-program-structure);
+  color: var(--text-dark); /* Light bg → dark text */
+}
+
+.card[data-category="Program Structure"] h3 {
+  color: var(--title-program-structure);
+}
+
+/* Control Flow Category */
+.card[data-category="Control Flow"] {
+  background-color: var(--bg-control-flow);
+  color: var(--text-dark);
+}
+
+.card[data-category="Control Flow"] h3 {
+  color: var(--title-control-flow);
+}
+
+/* Data Types Category */
+.card[data-category="Data Types"] {
+  background-color: var(--bg-data-types);
+  color: var(--text-dark);
+}
+
+.card[data-category="Data Types"] h3 {
+  color: var(--title-data-types);
+}
+
+/* Methods Category */
+.card[data-category="Methods"] {
+  background-color: var(--bg-methods);
+  color: var(--text-dark);
+}
+
+.card[data-category="Methods"] h3 {
+  color: var(--title-methods);
+}
+
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
@@ -14,7 +84,6 @@
     background-color: #1e1e2f;
     color: #f0f0f0;
   }
-
   
   /* Sidebar */
   .sidebar {
@@ -66,127 +135,78 @@
     margin-right: 0.5rem;
     accent-color: #50fa7b;
   }
-  
-  /* Card Container: Grid Layout */
-  .card-container {
-    flex: 1;
-    width: 100%;
-    padding: 1rem;
-    padding-top: 3rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    overflow-y: auto;
-    min-height: 0;
-  }
-  
 
-/* This is the key fix for SortableJS with grid: */
-.card-container .card {
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
+  /* Hide toggle button on desktop */
+.toggle-sidebar {
+  display: none;
 }
 
-.card-container.draggable {
+/* Show toggle button on mobile only */
+@media (max-width: 768px) {
+  .toggle-sidebar {
+    display: block;
+  }
+}
+
+.card-container {
+  flex: 1;
+  padding: 1rem;
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
   gap: 1rem;
+  overflow-y: auto;
+  background: #1e1e2f;
 }
 
-.card-container.draggable .card {
-  width: 260px;
-}
-
-.dragging {
-  opacity: 0.5;
-  transform: scale(0.98);
-}
-
-/* Uniform Card Styling */
 .card {
-  background-color: #40364a; /* default for topic: Syntax */
+  width: 270px;              /* ✅ Fixed size */
+  height: 300px;             /* ✅ Fixed height */
+  box-sizing: border-box;
   border-radius: 8px;
-  width: 260px;
-  height: 200px;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   transition: transform 0.2s;
-  padding: 1rem;
   cursor: grab;
-  overflow: hidden;
+  overflow-y: auto;
 }
 
-/* Card Interactions */
 .card:hover {
   transform: scale(1.02);
 }
 
-/* Card Title */
-.card h3 {
-  font-size: 1rem;
-  line-height: 1.2;
-  height: 2.4rem; /* ~2 lines */
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  margin-bottom: 0.5rem;
-}
-
-/* Description Paragraph */
-.card p {
-  font-size: 0.85rem;
-  color: #ddd;
-  line-height: 1.2;
-  max-height: 3.4rem; /* ~3 lines max */
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  margin-bottom: 0.5rem;
-}
-
-/* Topic-based Card Backgrounds */
-.card[data-topic="Syntax"] {
-  background-color: #40364a; /* Plum tone for Syntax */
-}
-
-/* Category-based Title Highlighting */
-.card[data-category="Imports"] h3 {
-  color: #ffcc66; /* Warm yellow for Imports category */
-}
-
-/* Code Block */
-.card pre {
-  flex-grow: 1;
-  background-color: #13131a;
-  color: #b6fcd5;
-  font-family: 'Fira Code', 'Courier New', Courier, monospace;
-  font-size: 0.8rem;
-  padding: 0;
-  margin: 0; 
-  border-radius: 0;
-  overflow: auto;
-  white-space: pre-wrap;
-  line-height: 1.3;
-}
-
-/* Mobile Sidebar Behavior */
-@media (max-width: 768px) {
-
-  @media (max-width: 768px) {
-    html, body {
-      overflow: auto;               
-      height: auto;
-    }
+  
+  .card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
   }
   
-
+  .card p {
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+  }
+  
+  /* 🧱 Code Block Styling */
+  .card pre {
+    background-color: #13131a;
+    color: #b6fcd5;
+    font-family: 'Fira Code', 'Courier New', Courier, monospace;
+    font-size: 0.85rem;
+    padding: 0.75rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+  }
+  
+  /* Mobile Sidebar Behavior */
+@media (max-width: 768px) {
   .sidebar {
     position: fixed;
     top: 0;
-    left: -100%;
+    left: -100%; /* Hidden off-screen */
     height: 100vh;
     background-color: #282a36;
     z-index: 1000;
@@ -194,10 +214,11 @@
   }
 
   .sidebar.open {
-    left: 0;
+    left: 0; /* Slide in from the left when open */
   }
 
   .toggle-sidebar {
+    display: block;
     position: fixed;
     top: 1rem;
     left: 1rem;
@@ -211,54 +232,34 @@
     cursor: pointer;
   }
 
-  .card-container {
-    flex: 1;
-    width: 100%;
-    padding: 1rem;
-    padding-top: 3rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    gap: 1rem;
-    overflow-y: auto;
-    min-height: 0;
+  @media (max-width: 768px) {
+    .card-container {
+      flex: 1;
+      width: 100%;
+      padding: 1rem;
+      padding-top: 3rem;
+      display: flex;
+      flex-direction: column;        /* ✅ Stack vertically */
+      align-items: center;           /* ✅ Center the single column */
+      gap: 1rem;
+      overflow-y: auto;
+      min-height: 0;
+    }
+  
+    .card {
+      width: 90%;                   /* ✅ Fills most of mobile width */
+      max-width: 300px;             /* ✅ Keeps sizing consistent */
+      height: 300px;                /* ✅ Taller for mobile readability */
+      box-sizing: border-box;
+    }
+  
+    .card pre {
+      flex-grow: 1;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;             /* ✅ Avoid scrollbars inside the code block */
+    }
   }
-
-  .card {
-    width: 90%;
-    max-width: 300px;
-    height: 300px;         
-    box-sizing: border-box;
-    transition: transform 0.1s ease; /* Smoothens snap movement */
-  }
-
-  .card pre {
-    flex-grow: 1;           
-    padding: 0;             
-    margin: 0;
-    overflow: hidden;       
-  }
-}
-
-/* Desktop layout for dragging */
-@media (min-width: 769px) {
-  .card-container {
-    display: flex;              
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 1rem;
-    padding: 1rem;
-    overflow-y: auto;
-  }
-
-  .card {
-    width: 260px;               
-    height: 200px;
-  }
-}
-
-/* Dragging feedback */
-.dragging {
-  opacity: 0.5;
-  transform: scale(0.98);
+  
+  
 }

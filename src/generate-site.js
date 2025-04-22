@@ -3,7 +3,7 @@ const path = require("path");
 
 const cards = require("./cards.json");
 
-const buildPath = path.join(__dirname, "..", "build");
+const buildPath = path.join(__dirname, "..", "docs");
 const outputHtml = path.join(buildPath, "index.html");
 
 if (!fs.existsSync(buildPath)) {
@@ -29,18 +29,18 @@ const generateSidebarHTML = () => `
           ${Object.entries(categories)
             .map(
               ([category, cards]) => `
-              <details open class="category-block">
+              <details class="category-block">
                 <summary>${category}</summary>
                 <div class="card-filters">
                   <label>
-                    <input type="checkbox" class="category-toggle" data-category="${category}" checked onchange="toggleCategory('${category}', this.checked)">
+                    <input type="checkbox" class="category-toggle" data-category="${category}" onchange="toggleCategory('${category}', this.checked)">
                     Show All
                   </label>
                   ${cards
                     .map(
                       (card) => `
                       <label>
-                        <input type="checkbox" class="card-toggle" data-id="${card.id}" checked onchange="toggleCard('${card.id}', this.checked)">
+                        <input type="checkbox" class="card-toggle" data-id="${card.id}" onchange="toggleCard('${card.id}', this.checked)">
                         ${card.title}
                       </label>
                     `
@@ -92,6 +92,13 @@ const html = `
         if (visible) applyCardPosition(el);
       }
     }
+
+    document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.card').forEach(card => {
+    card.style.display = 'none';
+  });
+});
+
 
     function toggleCategory(category, visible) {
       const checkboxes = document.querySelectorAll('.card-toggle[data-id]');

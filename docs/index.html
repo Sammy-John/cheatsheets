@@ -93,6 +93,67 @@
                 </div>
               </details>
             
+              <details class="category-block">
+                <summary>Control Flow</summary>
+                <div class="card-filters">
+                  <label>
+                    <input type="checkbox" class="category-toggle" data-category="Control Flow" onchange="toggleCategory('Control Flow', this.checked)">
+                    Show All
+                  </label>
+                  
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="syntax-if-statement" onchange="toggleCard('syntax-if-statement', this.checked)">
+                        if Statement
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="syntax-if-else-statement" onchange="toggleCard('syntax-if-else-statement', this.checked)">
+                        if-else Statement
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="syntax-else-if-statement" onchange="toggleCard('syntax-else-if-statement', this.checked)">
+                        else-if Ladder
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="syntax-switch-statement" onchange="toggleCard('syntax-switch-statement', this.checked)">
+                        switch Statement
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="syntax-for-loop" onchange="toggleCard('syntax-for-loop', this.checked)">
+                        for Loop
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="syntax-while-loop" onchange="toggleCard('syntax-while-loop', this.checked)">
+                        while Loop
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="syntax-do-while-loop" onchange="toggleCard('syntax-do-while-loop', this.checked)">
+                        do-while Loop
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="syntax-foreach-loop" onchange="toggleCard('syntax-foreach-loop', this.checked)">
+                        foreach Loop
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="syntax-break-statement" onchange="toggleCard('syntax-break-statement', this.checked)">
+                        break Statement
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="syntax-continue-statement" onchange="toggleCard('syntax-continue-statement', this.checked)">
+                        continue Statement
+                      </label>
+                    
+                </div>
+              </details>
+            
         </div>
       
   </aside>
@@ -208,6 +269,139 @@ File.WriteAllText("file.txt", "Hello");</code></pre>
     <pre><code>public static int Square(int number)
 {
     return number * number;
+}</code></pre>
+  </div>
+
+
+  <div class="card" id="syntax-if-statement" data-category="Control Flow" data-topic="Syntax" style="transform: translate(0px, 0px);">
+    <h3>if Statement</h3>
+    <p>Executes a block of code if a specified condition is true.</p>
+    <pre><code>if (score >= 50)
+{
+    Console.WriteLine("You passed!");
+}</code></pre>
+  </div>
+
+
+  <div class="card" id="syntax-if-else-statement" data-category="Control Flow" data-topic="Syntax" style="transform: translate(0px, 0px);">
+    <h3>if-else Statement</h3>
+    <p>Executes one block of code if the condition is true, another block if the condition is false.</p>
+    <pre><code>if (score >= 50)
+{
+    Console.WriteLine("You passed!");
+}
+else
+{
+    Console.WriteLine("You failed.");
+}</code></pre>
+  </div>
+
+
+  <div class="card" id="syntax-else-if-statement" data-category="Control Flow" data-topic="Syntax" style="transform: translate(0px, 0px);">
+    <h3>else-if Ladder</h3>
+    <p>Checks multiple conditions in sequence and executes the first true block.</p>
+    <pre><code>if (score >= 90)
+{
+    Console.WriteLine("Grade: A");
+}
+else if (score >= 80)
+{
+    Console.WriteLine("Grade: B");
+}
+else
+{
+    Console.WriteLine("Grade: C or below");
+}</code></pre>
+  </div>
+
+
+  <div class="card" id="syntax-switch-statement" data-category="Control Flow" data-topic="Syntax" style="transform: translate(0px, 0px);">
+    <h3>switch Statement</h3>
+    <p>Selects one of many code blocks to be executed based on a matching value.</p>
+    <pre><code>switch (day)
+{
+    case "Monday":
+        Console.WriteLine("Start of the week!");
+        break;
+    case "Friday":
+        Console.WriteLine("Weekend is near!");
+        break;
+    default:
+        Console.WriteLine("Just another day.");
+        break;
+}</code></pre>
+  </div>
+
+
+  <div class="card" id="syntax-for-loop" data-category="Control Flow" data-topic="Syntax" style="transform: translate(0px, 0px);">
+    <h3>for Loop</h3>
+    <p>Executes a block of code a specific number of times.</p>
+    <pre><code>for (int i = 0; i < 5; i++)
+{
+    Console.WriteLine($"Iteration {i}");
+}</code></pre>
+  </div>
+
+
+  <div class="card" id="syntax-while-loop" data-category="Control Flow" data-topic="Syntax" style="transform: translate(0px, 0px);">
+    <h3>while Loop</h3>
+    <p>Repeats a block of code while a specified condition is true.</p>
+    <pre><code>int count = 0;
+while (count < 3)
+{
+    Console.WriteLine($"Count: {count}");
+    count++;
+}</code></pre>
+  </div>
+
+
+  <div class="card" id="syntax-do-while-loop" data-category="Control Flow" data-topic="Syntax" style="transform: translate(0px, 0px);">
+    <h3>do-while Loop</h3>
+    <p>Similar to a while loop, but guarantees the block runs at least once.</p>
+    <pre><code>int number;
+do
+{
+    Console.Write("Enter a number (0 to stop): ");
+    number = int.Parse(Console.ReadLine());
+} while (number != 0);</code></pre>
+  </div>
+
+
+  <div class="card" id="syntax-foreach-loop" data-category="Control Flow" data-topic="Syntax" style="transform: translate(0px, 0px);">
+    <h3>foreach Loop</h3>
+    <p>Iterates over each element in a collection or array.</p>
+    <pre><code>string[] fruits = {"Apple", "Banana", "Cherry"};
+foreach (string fruit in fruits)
+{
+    Console.WriteLine(fruit);
+}</code></pre>
+  </div>
+
+
+  <div class="card" id="syntax-break-statement" data-category="Control Flow" data-topic="Syntax" style="transform: translate(0px, 0px);">
+    <h3>break Statement</h3>
+    <p>Terminates the closest enclosing loop or switch statement immediately.</p>
+    <pre><code>for (int i = 0; i < 10; i++)
+{
+    if (i == 5)
+    {
+        break;
+    }
+    Console.WriteLine(i);
+}</code></pre>
+  </div>
+
+
+  <div class="card" id="syntax-continue-statement" data-category="Control Flow" data-topic="Syntax" style="transform: translate(0px, 0px);">
+    <h3>continue Statement</h3>
+    <p>Skips the current iteration of a loop and continues with the next iteration.</p>
+    <pre><code>for (int i = 0; i < 5; i++)
+{
+    if (i == 2)
+    {
+        continue;
+    }
+    Console.WriteLine(i);
 }</code></pre>
   </div>
 

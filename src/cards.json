@@ -97,7 +97,97 @@
         "description": "A method that belongs to the class itself rather than to instances of the class.",
         "code": "public static int Square(int number)\n{\n    return number * number;\n}",
         "tags": ["syntax", "structure", "method", "static"]
-      }
+      },
+        {
+          "id": "syntax-if-statement",
+          "topic": "Syntax",
+          "category": "Control Flow",
+          "title": "if Statement",
+          "description": "Executes a block of code if a specified condition is true.",
+          "code": "if (score >= 50)\n{\n    Console.WriteLine(\"You passed!\");\n}",
+          "tags": ["syntax", "control flow", "if", "conditional"]
+        },
+        {
+          "id": "syntax-if-else-statement",
+          "topic": "Syntax",
+          "category": "Control Flow",
+          "title": "if-else Statement",
+          "description": "Executes one block of code if the condition is true, another block if the condition is false.",
+          "code": "if (score >= 50)\n{\n    Console.WriteLine(\"You passed!\");\n}\nelse\n{\n    Console.WriteLine(\"You failed.\");\n}",
+          "tags": ["syntax", "control flow", "if", "else", "conditional"]
+        },
+        {
+          "id": "syntax-else-if-statement",
+          "topic": "Syntax",
+          "category": "Control Flow",
+          "title": "else-if Ladder",
+          "description": "Checks multiple conditions in sequence and executes the first true block.",
+          "code": "if (score >= 90)\n{\n    Console.WriteLine(\"Grade: A\");\n}\nelse if (score >= 80)\n{\n    Console.WriteLine(\"Grade: B\");\n}\nelse\n{\n    Console.WriteLine(\"Grade: C or below\");\n}",
+          "tags": ["syntax", "control flow", "if", "else if", "conditional"]
+        },
+        {
+          "id": "syntax-switch-statement",
+          "topic": "Syntax",
+          "category": "Control Flow",
+          "title": "switch Statement",
+          "description": "Selects one of many code blocks to be executed based on a matching value.",
+          "code": "switch (day)\n{\n    case \"Monday\":\n        Console.WriteLine(\"Start of the week!\");\n        break;\n    case \"Friday\":\n        Console.WriteLine(\"Weekend is near!\");\n        break;\n    default:\n        Console.WriteLine(\"Just another day.\");\n        break;\n}",
+          "tags": ["syntax", "control flow", "switch", "conditional"]
+        },
+        {
+          "id": "syntax-for-loop",
+          "topic": "Syntax",
+          "category": "Control Flow",
+          "title": "for Loop",
+          "description": "Executes a block of code a specific number of times.",
+          "code": "for (int i = 0; i < 5; i++)\n{\n    Console.WriteLine($\"Iteration {i}\");\n}",
+          "tags": ["syntax", "control flow", "loop", "for"]
+        },
+        {
+          "id": "syntax-while-loop",
+          "topic": "Syntax",
+          "category": "Control Flow",
+          "title": "while Loop",
+          "description": "Repeats a block of code while a specified condition is true.",
+          "code": "int count = 0;\nwhile (count < 3)\n{\n    Console.WriteLine($\"Count: {count}\");\n    count++;\n}",
+          "tags": ["syntax", "control flow", "loop", "while"]
+        },
+        {
+          "id": "syntax-do-while-loop",
+          "topic": "Syntax",
+          "category": "Control Flow",
+          "title": "do-while Loop",
+          "description": "Similar to a while loop, but guarantees the block runs at least once.",
+          "code": "int number;\ndo\n{\n    Console.Write(\"Enter a number (0 to stop): \");\n    number = int.Parse(Console.ReadLine());\n} while (number != 0);",
+          "tags": ["syntax", "control flow", "loop", "do while"]
+        },
+        {
+          "id": "syntax-foreach-loop",
+          "topic": "Syntax",
+          "category": "Control Flow",
+          "title": "foreach Loop",
+          "description": "Iterates over each element in a collection or array.",
+          "code": "string[] fruits = {\"Apple\", \"Banana\", \"Cherry\"};\nforeach (string fruit in fruits)\n{\n    Console.WriteLine(fruit);\n}",
+          "tags": ["syntax", "control flow", "loop", "foreach"]
+        },
+        {
+          "id": "syntax-break-statement",
+          "topic": "Syntax",
+          "category": "Control Flow",
+          "title": "break Statement",
+          "description": "Terminates the closest enclosing loop or switch statement immediately.",
+          "code": "for (int i = 0; i < 10; i++)\n{\n    if (i == 5)\n    {\n        break;\n    }\n    Console.WriteLine(i);\n}",
+          "tags": ["syntax", "control flow", "break", "loop"]
+        },
+        {
+          "id": "syntax-continue-statement",
+          "topic": "Syntax",
+          "category": "Control Flow",
+          "title": "continue Statement",
+          "description": "Skips the current iteration of a loop and continues with the next iteration.",
+          "code": "for (int i = 0; i < 5; i++)\n{\n    if (i == 2)\n    {\n        continue;\n    }\n    Console.WriteLine(i);\n}",
+          "tags": ["syntax", "control flow", "continue", "loop"]
+        }
     ]
     
   

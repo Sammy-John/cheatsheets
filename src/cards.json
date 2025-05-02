@@ -187,8 +187,581 @@
           "description": "Skips the current iteration of a loop and continues with the next iteration.",
           "code": "for (int i = 0; i < 5; i++)\n{\n    if (i == 2)\n    {\n        continue;\n    }\n    Console.WriteLine(i);\n}",
           "tags": ["syntax", "control flow", "continue", "loop"]
-        }
-    ]
-    
-  
-  
+        },
+        {
+          "id": "syntax-int-type",
+          "topic": "Syntax",
+          "category": "Data Types",
+          "title": "int",
+          "description": "Stores whole numbers between -2,147,483,648 and 2,147,483,647.",
+          "code": "int age = 30;\nConsole.WriteLine(age);",
+          "tags": ["syntax", "data types", "int", "integer"]
+        },
+        {
+          "id": "syntax-double-type",
+          "topic": "Syntax",
+          "category": "Data Types",
+          "title": "double",
+          "description": "Stores decimal numbers with double precision floating point.",
+          "code": "double price = 19.99;\nConsole.WriteLine(price);",
+          "tags": ["syntax", "data types", "double", "float"]
+        },
+        {
+          "id": "syntax-bool-type",
+          "topic": "Syntax",
+          "category": "Data Types",
+          "title": "bool",
+          "description": "Stores true or false values.",
+          "code": "bool isActive = true;\nConsole.WriteLine(isActive);",
+          "tags": ["syntax", "data types", "bool", "boolean"]
+        },
+        {
+          "id": "syntax-char-type",
+          "topic": "Syntax",
+          "category": "Data Types",
+          "title": "char",
+          "description": "Stores a single Unicode character.",
+          "code": "char grade = 'A';\nConsole.WriteLine(grade);",
+          "tags": ["syntax", "data types", "char", "character"]
+        },
+        {
+          "id": "syntax-string-type",
+          "topic": "Syntax",
+          "category": "Data Types",
+          "title": "string",
+          "description": "Stores a sequence of characters (text).",
+          "code": "string message = \"Hello, World!\";\nConsole.WriteLine(message);",
+          "tags": ["syntax", "data types", "string", "text"]
+        },
+        {
+          "id": "syntax-var-keyword",
+          "topic": "Syntax",
+          "category": "Data Types",
+          "title": "var (Implicit Typing)",
+          "description": "Infers the type from the assigned value (must be initialized).",
+          "code": "var count = 10; // inferred as int\nConsole.WriteLine(count);",
+          "tags": ["syntax", "data types", "var", "implicit"]
+        },
+        {
+          "id": "syntax-const-keyword",
+          "topic": "Syntax",
+          "category": "Data Types",
+          "title": "const",
+          "description": "Declares an unchangeable (compile-time) constant.",
+          "code": "const double Pi = 3.14159;\nConsole.WriteLine(Pi);",
+          "tags": ["syntax", "data types", "const", "constant"]
+        },
+        {
+          "id": "syntax-object-type",
+          "topic": "Syntax",
+          "category": "Data Types",
+          "title": "object",
+          "description": "Base type of all data types in C#. Can hold any type.",
+          "code": "object data = 42;\nConsole.WriteLine(data);",
+          "tags": ["syntax", "data types", "object", "base type"]
+        },
+        {
+          "id": "syntax-dynamic-type",
+          "topic": "Syntax",
+          "category": "Data Types",
+          "title": "dynamic",
+          "description": "Stores any type and resolves at runtime (no compile-time type checking).",
+          "code": "dynamic value = \"Hello\";\nvalue = 123;\nConsole.WriteLine(value);",
+          "tags": ["syntax", "data types", "dynamic", "runtime"]
+        },
+        {
+          "id": "syntax-decimal-type",
+          "topic": "Syntax",
+          "category": "Data Types",
+          "title": "decimal",
+          "description": "Precise decimal numbers for financial and monetary calculations.",
+          "code": "decimal balance = 1000.75m;\nConsole.WriteLine(balance);",
+          "tags": ["syntax", "data types", "decimal", "money"]
+        },
+        {
+          "id": "syntax-method-declaration",
+          "topic": "Syntax",
+          "category": "Methods",
+          "title": "Method Declaration",
+          "description": "Defines a reusable block of code with a return type, name, and optional parameters.",
+          "code": "public void SayHello()\n{\n    Console.WriteLine(\"Hello!\");\n}",
+          "tags": ["syntax", "methods", "declaration", "void"]
+        },
+        {
+          "id": "syntax-method-call",
+          "topic": "Syntax",
+          "category": "Methods",
+          "title": "Calling a Method",
+          "description": "Invoke a method by using its name followed by parentheses.",
+          "code": "SayHello();",
+          "tags": ["syntax", "methods", "call", "invoke"]
+        },
+        {
+          "id": "syntax-method-parameters",
+          "topic": "Syntax",
+          "category": "Methods",
+          "title": "Method with Parameters",
+          "description": "Pass values to a method using parameters.",
+          "code": "public void Greet(string name)\n{\n    Console.WriteLine($\"Hello, {name}!\");\n}",
+          "tags": ["syntax", "methods", "parameters", "arguments"]
+        },
+        {
+          "id": "syntax-method-return-value",
+          "topic": "Syntax",
+          "category": "Methods",
+          "title": "Returning a Value",
+          "description": "Methods can return values using a return type and the return keyword.",
+          "code": "public int Add(int a, int b)\n{\n    return a + b;\n}",
+          "tags": ["syntax", "methods", "return", "value"]
+        },
+        {
+          "id": "syntax-method-overloading",
+          "topic": "Syntax",
+          "category": "Methods",
+          "title": "Method Overloading",
+          "description": "Multiple methods can share the same name if they differ in parameters.",
+          "code": "public void Print(string message) { }\npublic void Print(int number) { }",
+          "tags": ["syntax", "methods", "overloading", "parameters"]
+        },
+        {
+          "id": "syntax-method-default-parameters",
+          "topic": "Syntax",
+          "category": "Methods",
+          "title": "Default Parameters",
+          "description": "Provide default values for parameters so they are optional when calling the method.",
+          "code": "public void ShowMessage(string msg = \"Default\")\n{\n    Console.WriteLine(msg);\n}",
+          "tags": ["syntax", "methods", "default", "optional parameters"]
+        },
+        {
+          "id": "syntax-method-static",
+          "topic": "Syntax",
+          "category": "Methods",
+          "title": "Static Methods",
+          "description": "Belong to the class itself and can be called without an instance.",
+          "code": "public static void Log(string message)\n{\n    Console.WriteLine(message);\n}",
+          "tags": ["syntax", "methods", "static", "class method"]
+        },
+        {
+          "id": "syntax-method-main",
+          "topic": "Syntax",
+          "category": "Methods",
+          "title": "Main Method",
+          "description": "The entry point of a C# application. Must be static.",
+          "code": "static void Main(string[] args)\n{\n    Console.WriteLine(\"Program started.\");\n}",
+          "tags": ["syntax", "methods", "main", "entry point"]
+        },
+        {
+          "id": "syntax-method-async",
+          "topic": "Syntax",
+          "category": "Methods",
+          "title": "Async Methods",
+          "description": "Methods marked with async can use the await keyword for asynchronous operations.",
+          "code": "public async Task LoadDataAsync()\n{\n    await Task.Delay(1000);\n    Console.WriteLine(\"Done.\");\n}",
+          "tags": ["syntax", "methods", "async", "await"]
+        },
+        {
+          "id": "syntax-ref-parameter",
+          "topic": "Syntax",
+          "category": "Advanced Method Syntax",
+          "title": "ref Parameter",
+          "description": "Allows a method to modify the caller’s variable directly.",
+          "code": "void Modify(ref int number)\n{\n    number += 10;\n}\n\nint val = 5;\nModify(ref val);",
+          "tags": ["syntax", "methods", "advanced", "ref", "parameter"]
+        },
+        {
+          "id": "syntax-out-parameter",
+          "topic": "Syntax",
+          "category": "Advanced Method Syntax",
+          "title": "out Parameter",
+          "description": "Used to return multiple values from a method.",
+          "code": "void GetValues(out int x, out int y)\n{\n    x = 10;\n    y = 20;\n}\n\nGetValues(out int a, out int b);",
+          "tags": ["syntax", "methods", "advanced", "out", "multiple return"]
+        },
+        {
+          "id": "syntax-in-parameter",
+          "topic": "Syntax",
+          "category": "Advanced Method Syntax",
+          "title": "in Parameter",
+          "description": "Passes a parameter by reference but does not allow modification.",
+          "code": "void Show(in int value)\n{\n    Console.WriteLine(value);\n}",
+          "tags": ["syntax", "methods", "advanced", "in", "readonly"]
+        },
+        {
+          "id": "syntax-params-array",
+          "topic": "Syntax",
+          "category": "Advanced Method Syntax",
+          "title": "params Array",
+          "description": "Allows passing a variable number of arguments to a method.",
+          "code": "void PrintNumbers(params int[] numbers)\n{\n    foreach (int n in numbers)\n        Console.WriteLine(n);\n}\n\nPrintNumbers(1, 2, 3);",
+          "tags": ["syntax", "methods", "advanced", "params", "variable arguments"]
+        },
+        {
+          "id": "syntax-expression-bodied-method",
+          "topic": "Syntax",
+          "category": "Advanced Method Syntax",
+          "title": "Expression-Bodied Method",
+          "description": "Concise method syntax for simple return expressions.",
+          "code": "int Square(int x) => x * x;",
+          "tags": ["syntax", "methods", "advanced", "expression bodied"]
+        },
+        {
+          "id": "syntax-extension-method",
+          "topic": "Syntax",
+          "category": "Advanced Method Syntax",
+          "title": "Extension Method",
+          "description": "Adds a method to an existing type without modifying it directly.",
+          "code": "public static class StringExtensions\n{\n    public static int WordCount(this string str)\n    {\n        return str.Split(' ').Length;\n    }\n}\n\nstring s = \"Hello world\";\nint count = s.WordCount();",
+          "tags": ["syntax", "methods", "advanced", "extension method", "this"]
+        },
+        {
+          "id": "syntax-local-function",
+          "topic": "Syntax",
+          "category": "Advanced Method Syntax",
+          "title": "Local Function",
+          "description": "A method defined inside another method.",
+          "code": "void Outer()\n{\n    void Inner()\n    {\n        Console.WriteLine(\"Inside Inner\");\n    }\n    Inner();\n}",
+          "tags": ["syntax", "methods", "advanced", "local function"]
+        },
+        {
+          "id": "syntax-class-definition",
+          "topic": "Syntax",
+          "category": "Classes & Objects",
+          "title": "Class Definition",
+          "description": "Defines a blueprint for creating objects with fields, properties, and methods.",
+          "code": "public class Person\n{\n    public string Name;\n    public void Greet() {\n        Console.WriteLine($\"Hello, {Name}!\");\n    }\n}",
+          "tags": ["syntax", "class", "objects", "definition"]
+        },
+        {
+          "id": "syntax-object-instantiation",
+          "topic": "Syntax",
+          "category": "Classes & Objects",
+          "title": "Object Instantiation",
+          "description": "Creates an instance of a class using the `new` keyword.",
+          "code": "Person p = new Person();\np.Name = \"Sam\";\np.Greet();",
+          "tags": ["syntax", "objects", "new", "instantiation"]
+        },
+        {
+          "id": "syntax-constructor",
+          "topic": "Syntax",
+          "category": "Classes & Objects",
+          "title": "Constructor",
+          "description": "Special method that runs when a new object is created.",
+          "code": "public class Person\n{\n    public string Name;\n    public Person(string name) {\n        Name = name;\n    }\n}",
+          "tags": ["syntax", "class", "constructor", "objects"]
+        },
+        {
+          "id": "syntax-access-modifiers",
+          "topic": "Syntax",
+          "category": "Classes & Objects",
+          "title": "Access Modifiers",
+          "description": "Control visibility of class members using `public`, `private`, etc.",
+          "code": "public class Car {\n    private int speed;\n    public void Accelerate() {\n        speed += 10;\n    }\n}",
+          "tags": ["syntax", "access", "modifiers", "public", "private"]
+        },
+        {
+          "id": "syntax-this-keyword",
+          "topic": "Syntax",
+          "category": "Classes & Objects",
+          "title": "this Keyword",
+          "description": "Refers to the current instance of the class.",
+          "code": "public class Box {\n    private int width;\n    public Box(int width) {\n        this.width = width;\n    }\n}",
+          "tags": ["syntax", "this", "keyword", "objects"]
+        },
+        {
+          "id": "syntax-properties",
+          "topic": "Syntax",
+          "category": "Classes & Objects",
+          "title": "Auto-Implemented Properties",
+          "description": "Simplified syntax for defining public properties with getters/setters.",
+          "code": "public class User {\n    public string Name { get; set; }\n}",
+          "tags": ["syntax", "properties", "get", "set"]
+        },
+        {
+          "id": "syntax-static-class",
+          "topic": "Syntax",
+          "category": "Classes & Objects",
+          "title": "Static Class",
+          "description": "A class that cannot be instantiated and only contains static members.",
+          "code": "public static class MathHelper\n{\n    public static int Double(int x)\n    {\n        return x * 2;\n    }\n}\n\nint result = MathHelper.Double(4);",
+          "tags": ["syntax", "static", "class", "utility"]
+        },
+        {
+          "id": "syntax-object-initializer",
+          "topic": "Syntax",
+          "category": "Classes & Objects",
+          "title": "Object Initializer",
+          "description": "Creates an object and sets its properties in a single expression.",
+          "code": "Person p = new Person {\n    Name = \"Alex\",\n    Age = 28\n};",
+          "tags": ["syntax", "object", "initializer", "properties"]
+        },
+        {
+          "id": "syntax-inheritance",
+          "topic": "Syntax",
+          "category": "OOP Concepts",
+          "title": "Inheritance",
+          "description": "Allows a class to inherit fields and methods from another class.",
+          "code": "public class Animal {\n    public void Speak() {\n        Console.WriteLine(\"Sound\");\n    }\n}\n\npublic class Dog : Animal { }",
+          "tags": ["syntax", "oop", "inheritance"]
+        },
+        {
+          "id": "syntax-virtual-override",
+          "topic": "Syntax",
+          "category": "OOP Concepts",
+          "title": "virtual and override",
+          "description": "Used to override a method in a derived class.",
+          "code": "public class Animal {\n    public virtual void Speak() {\n        Console.WriteLine(\"Sound\");\n    }\n}\n\npublic class Dog : Animal {\n    public override void Speak() {\n        Console.WriteLine(\"Bark\");\n    }\n}",
+          "tags": ["syntax", "oop", "virtual", "override"]
+        },
+        {
+          "id": "syntax-abstract-class",
+          "topic": "Syntax",
+          "category": "OOP Concepts",
+          "title": "Abstract Class",
+          "description": "Cannot be instantiated and may contain abstract (must override) members.",
+          "code": "public abstract class Shape {\n    public abstract double Area();\n}\n\npublic class Circle : Shape {\n    public override double Area() => 3.14 * 4 * 4;\n}",
+          "tags": ["syntax", "oop", "abstract", "class"]
+        },
+        {
+          "id": "syntax-interface",
+          "topic": "Syntax",
+          "category": "OOP Concepts",
+          "title": "Interface",
+          "description": "Defines a contract. A class must implement all members of the interface.",
+          "code": "public interface IDrive {\n    void Start();\n}\n\npublic class Car : IDrive {\n    public void Start() {\n        Console.WriteLine(\"Engine on\");\n    }\n}",
+          "tags": ["syntax", "oop", "interface", "contract"]
+        },
+        {
+          "id": "syntax-sealed-class",
+          "topic": "Syntax",
+          "category": "OOP Concepts",
+          "title": "Sealed Class",
+          "description": "Prevents a class from being inherited.",
+          "code": "public sealed class Config {\n    public string Name { get; set; }\n}",
+          "tags": ["syntax", "oop", "sealed", "inheritance"]
+        },
+        {
+          "id": "syntax-base-keyword",
+          "topic": "Syntax",
+          "category": "OOP Concepts",
+          "title": "base Keyword",
+          "description": "Calls a method or constructor from the parent class.",
+          "code": "public class Animal {\n    public virtual void Speak() {\n        Console.WriteLine(\"Sound\");\n    }\n}\n\npublic class Dog : Animal {\n    public override void Speak() {\n        base.Speak();\n        Console.WriteLine(\"Bark\");\n    }\n}",
+          "tags": ["syntax", "oop", "base", "inheritance"]
+        },
+        {
+          "id": "syntax-polymorphism",
+          "topic": "Syntax",
+          "category": "OOP Concepts",
+          "title": "Polymorphism",
+          "description": "Allows objects to be treated as instances of their base type.",
+          "code": "Animal animal = new Dog();\nanimal.Speak(); // Outputs: Bark",
+          "tags": ["syntax", "oop", "polymorphism", "base class"]
+        },
+          {
+            "id": "syntax-array-declaration",
+            "topic": "Syntax",
+            "category": "Collections & Arrays",
+            "title": "Array Declaration",
+            "description": "Fixed-size, strongly typed collection of elements.",
+            "code": "int[] numbers = new int[] { 1, 2, 3, 4 };",
+            "tags": ["syntax", "array", "collections"]
+          },
+          {
+            "id": "syntax-array-access",
+            "topic": "Syntax",
+            "category": "Collections & Arrays",
+            "title": "Array Access",
+            "description": "Access elements in an array using zero-based indexing.",
+            "code": "int first = numbers[0];\nConsole.WriteLine(first);",
+            "tags": ["syntax", "array", "index", "access"]
+          },
+          {
+            "id": "syntax-list-declaration",
+            "topic": "Syntax",
+            "category": "Collections & Arrays",
+            "title": "List<T> Declaration",
+            "description": "A dynamic, strongly typed generic list.",
+            "code": "List<string> fruits = new List<string>();\nfruits.Add(\"Apple\");",
+            "tags": ["syntax", "list", "collections", "generic"]
+          },
+          {
+            "id": "syntax-dictionary-declaration",
+            "topic": "Syntax",
+            "category": "Collections & Arrays",
+            "title": "Dictionary<TKey, TValue>",
+            "description": "Stores key-value pairs for quick lookups.",
+            "code": "Dictionary<string, int> scores = new Dictionary<string, int>();\nscores[\"Alice\"] = 90;",
+            "tags": ["syntax", "dictionary", "collections", "key-value"]
+          },
+          {
+            "id": "syntax-foreach-loop",
+            "topic": "Syntax",
+            "category": "Collections & Arrays",
+            "title": "foreach Loop",
+            "description": "Iterates over collections such as arrays or lists.",
+            "code": "foreach (string fruit in fruits)\n{\n    Console.WriteLine(fruit);\n}",
+            "tags": ["syntax", "loop", "foreach", "collections"]
+          },
+          {
+            "id": "syntax-collection-initializer",
+            "topic": "Syntax",
+            "category": "Collections & Arrays",
+            "title": "Collection Initializer",
+            "description": "Creates and populates a collection in one statement.",
+            "code": "var colors = new List<string> { \"Red\", \"Green\", \"Blue\" };",
+            "tags": ["syntax", "collection", "initializer"]
+          },
+          {
+            "id": "syntax-list-access",
+            "topic": "Syntax",
+            "category": "Collections & Arrays",
+            "title": "Access List Elements",
+            "description": "Use indexers to access elements from a list.",
+            "code": "string firstColor = colors[0];",
+            "tags": ["syntax", "list", "access", "index"]
+          },
+          {
+            "id": "syntax-enum-definition",
+            "topic": "Syntax",
+            "category": "Enums & Structs",
+            "title": "Enum Definition",
+            "description": "Defines a set of named integral constants.",
+            "code": "enum Status {\n    Pending,\n    Approved,\n    Rejected\n}",
+            "tags": ["syntax", "enum", "enums", "definition"]
+          },
+          {
+            "id": "syntax-enum-usage",
+            "topic": "Syntax",
+            "category": "Enums & Structs",
+            "title": "Using an Enum",
+            "description": "Use enum values like strongly typed constants.",
+            "code": "Status current = Status.Approved;\nConsole.WriteLine(current);",
+            "tags": ["syntax", "enum", "usage", "strong typing"]
+          },
+          {
+            "id": "syntax-enum-explicit-values",
+            "topic": "Syntax",
+            "category": "Enums & Structs",
+            "title": "Enum with Explicit Values",
+            "description": "You can assign specific values to enum members.",
+            "code": "enum Day {\n    Sunday = 1,\n    Monday = 2\n}",
+            "tags": ["syntax", "enum", "custom values"]
+          },
+          {
+            "id": "syntax-struct-definition",
+            "topic": "Syntax",
+            "category": "Enums & Structs",
+            "title": "Struct Definition",
+            "description": "A lightweight value type often used for small data models.",
+            "code": "struct Point {\n    public int X;\n    public int Y;\n}",
+            "tags": ["syntax", "struct", "value type"]
+          },
+          {
+            "id": "syntax-struct-instantiation",
+            "topic": "Syntax",
+            "category": "Enums & Structs",
+            "title": "Using a Struct",
+            "description": "Create and use a struct like an object, but it’s passed by value.",
+            "code": "Point p = new Point();\np.X = 5;\np.Y = 10;",
+            "tags": ["syntax", "struct", "instantiate", "value type"]
+          },
+          {
+            "id": "syntax-enum-to-int",
+            "topic": "Syntax",
+            "category": "Enums & Structs",
+            "title": "Enum to Int",
+            "description": "Enums can be cast to their underlying integer values.",
+            "code": "int code = (int)Status.Approved;\nConsole.WriteLine(code);",
+            "tags": ["syntax", "enum", "cast", "int"]
+          },
+          {
+            "id": "syntax-enum-flags",
+            "topic": "Syntax",
+            "category": "Enums & Structs",
+            "title": "[Flags] Enum",
+            "description": "Allows combining enum values using bitwise operations.",
+            "code": "[Flags]\nenum Permissions {\n    None = 0,\n    Read = 1,\n    Write = 2,\n    Execute = 4\n}\n\nPermissions p = Permissions.Read | Permissions.Write;",
+            "tags": ["syntax", "enum", "flags", "bitwise"]
+          },
+          {
+            "id": "syntax-readonly-struct",
+            "topic": "Syntax",
+            "category": "Enums & Structs",
+            "title": "readonly struct",
+            "description": "Prevents modification of struct fields after creation, improving performance and immutability.",
+            "code": "public readonly struct Coordinate {\n    public int X { get; }\n    public int Y { get; }\n\n    public Coordinate(int x, int y) {\n        X = x;\n        Y = y;\n    }\n}",
+            "tags": ["syntax", "struct", "readonly", "immutable"]
+          },
+          {
+            "id": "syntax-try-catch",
+            "topic": "Syntax",
+            "category": "Exceptions & Error Handling",
+            "title": "try-catch Block",
+            "description": "Catches and handles exceptions thrown during execution.",
+            "code": "try {\n    int x = 10 / 0;\n} catch (DivideByZeroException ex) {\n    Console.WriteLine(\"Cannot divide by zero.\");\n}",
+            "tags": ["syntax", "exceptions", "try", "catch"]
+          },
+          {
+            "id": "syntax-try-catch-finally",
+            "topic": "Syntax",
+            "category": "Exceptions & Error Handling",
+            "title": "try-catch-finally",
+            "description": "finally block runs regardless of whether an exception is thrown.",
+            "code": "try {\n    // risky code\n} catch (Exception ex) {\n    Console.WriteLine(ex.Message);\n} finally {\n    Console.WriteLine(\"Cleanup\");\n}",
+            "tags": ["syntax", "exceptions", "finally", "cleanup"]
+          },
+          {
+            "id": "syntax-throw-exception",
+            "topic": "Syntax",
+            "category": "Exceptions & Error Handling",
+            "title": "throw Keyword",
+            "description": "Throws a new or rethrows an existing exception.",
+            "code": "if (input == null) {\n    throw new ArgumentNullException(nameof(input));\n}",
+            "tags": ["syntax", "exceptions", "throw", "error"]
+          },
+          {
+            "id": "syntax-custom-exception",
+            "topic": "Syntax",
+            "category": "Exceptions & Error Handling",
+            "title": "Custom Exception",
+            "description": "You can define your own exception class by extending Exception.",
+            "code": "public class MyException : Exception {\n    public MyException(string msg) : base(msg) {}\n}",
+            "tags": ["syntax", "exceptions", "custom", "user-defined"]
+          },
+          {
+            "id": "syntax-multiple-catch",
+            "topic": "Syntax",
+            "category": "Exceptions & Error Handling",
+            "title": "Multiple catch Blocks",
+            "description": "You can catch different exception types with multiple catch blocks.",
+            "code": "try {\n    // code\n} catch (IOException ex) {\n    // file error\n} catch (Exception ex) {\n    // general\n}",
+            "tags": ["syntax", "exceptions", "multiple catch"]
+          },
+          {
+            "id": "syntax-rethrow-exception",
+            "topic": "Syntax",
+            "category": "Exceptions & Error Handling",
+            "title": "Rethrow Exception",
+            "description": "Use `throw;` to pass the exception up the call stack.",
+            "code": "try {\n    // code\n} catch (Exception ex) {\n    Log(ex);\n    throw;\n}",
+            "tags": ["syntax", "exceptions", "rethrow"]
+          },
+          {
+            "id": "syntax-catch-when",
+            "topic": "Syntax",
+            "category": "Exceptions & Error Handling",
+            "title": "catch with when Filter",
+            "description": "Adds a condition to a catch block using `when`.",
+            "code": "try {\n    // risky operation\n} catch (IOException ex) when (ex.Message.Contains(\"disk\")) {\n    Console.WriteLine(\"Disk-related IO error.\");\n}",
+            "tags": ["syntax", "exceptions", "catch", "when", "filter"]
+          },
+          {
+            "id": "syntax-exception-dispatch-info",
+            "topic": "Syntax",
+            "category": "Exceptions & Error Handling",
+            "title": "ExceptionDispatchInfo.Capture",
+            "description": "Preserves original exception stack trace when rethrowing.",
+            "code": "try {\n    throw new InvalidOperationException();\n} catch (Exception ex) {\n    var edi = ExceptionDispatchInfo.Capture(ex);\n    // log or handle\n    edi.Throw();\n}",
+            "tags": ["syntax", "exceptions", "dispatch", "preserve stacktrace"]
+          }
+]

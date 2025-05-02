@@ -12,14 +12,26 @@
     --bg-control-flow: #f5b7b1;         /* Coral pink */
     --bg-data-types: #abebc6;           /* Mint green */
     --bg-methods: #fad7a0;              /* Peach/orange */
-  
+    --bg-advanced-methods: #d6dbF5;     /* Muted Periwinkle Blue */
+    --bg-classes-objects: #fdebd0;       /* Light peachy beige */
+    --bg-oop-concepts: #e8daef;       /* Soft lavender */
+    --bg-collections: #d5f5e3;        /* Soft mint green */
+    --bg-enums-structs: #fcf3cf;     /* Soft buttery yellow */
+    --bg-exceptions: #fadbd8;         /* Soft blush pink */
+
     /* 💥 High-Punch Title Colors */
     --title-imports: #ff2d95;             /* Electric pink */
     --title-program-structure: #FF6f00;   /* Warm Orange */
     --title-control-flow: #6c3483; /* Rich Purple */
     --title-data-types: #bf40bf;          /* Hot purple */
     --title-methods: #2979ff;             /* Vivid blue */
-  
+    --title-advanced-methods: #6a1b9a;    /*Bold Violet Purple*/
+    --title-classes-objects: #c0392b;    /* Strong brick red */
+    --title-oop-concepts: #8e44ad;    /* Deep purple (high contrast) */
+    --title-collections: #512e5f;     /* Indigo Punch */
+    --title-enums-structs: #ca6f1e;  /* Rich rust orange */
+    --title-exceptions: #c0392b;      /* Strong error red */
+
     /* 🖋 Paragraph Text Colors */
     --text-dark: #222;                   /* Blackish for light backgrounds */
     --text-light: #ddd;                  /* Light grey/white for dark backgrounds */
@@ -75,6 +87,67 @@
 .card[data-category="Methods"] h3 {
   color: var(--title-methods);
 }
+
+/*Advanced Methods Category*/
+.card[data-category="Advanced Method Syntax"] {
+  background-color: var(--bg-advanced-methods);
+  color: var(--text-dark); /* Ensures readability for paragraphs */
+}
+
+.card[data-category="Advanced Method Syntax"] h3 {
+  color: var(--title-advanced-methods);
+}
+
+/* Classes and Objects */
+.card[data-category="Classes & Objects"] {
+  background-color: var(--bg-classes-objects);
+  color: var(--text-dark); /* dark text on light bg */
+}
+
+.card[data-category="Classes & Objects"] h3 {
+  color: var(--title-classes-objects);
+}
+
+/*OOP Concepts */
+.card[data-category="OOP Concepts"] {
+  background-color: var(--bg-oop-concepts);
+  color: var(--text-dark);
+}
+
+.card[data-category="OOP Concepts"] h3 {
+  color: var(--title-oop-concepts);
+}
+
+/* Collections and Arrays*/
+.card[data-category="Collections & Arrays"] {
+  background-color: var(--bg-collections);
+  color: var(--text-dark);
+}
+
+.card[data-category="Collections & Arrays"] h3 {
+  color: var(--title-collections);
+}
+
+/* Enums and Structs */
+.card[data-category="Enums & Structs"] {
+  background-color: var(--bg-enums-structs);
+  color: var(--text-dark);
+}
+
+.card[data-category="Enums & Structs"] h3 {
+  color: var(--title-enums-structs);
+}
+
+/* Exception and Error Handling */
+.card[data-category="Exceptions & Error Handling"] {
+  background-color: var(--bg-exceptions);
+  color: var(--text-dark);
+}
+
+.card[data-category="Exceptions & Error Handling"] h3 {
+  color: var(--title-exceptions);
+}
+
 
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

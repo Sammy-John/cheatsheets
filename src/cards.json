@@ -763,5 +763,536 @@
             "description": "Preserves original exception stack trace when rethrowing.",
             "code": "try {\n    throw new InvalidOperationException();\n} catch (Exception ex) {\n    var edi = ExceptionDispatchInfo.Capture(ex);\n    // log or handle\n    edi.Throw();\n}",
             "tags": ["syntax", "exceptions", "dispatch", "preserve stacktrace"]
-          }
+          },
+    {
+    "id": "syntax-namespace-definition",
+    "topic": "Syntax",
+    "category": "Namespaces",
+    "title": "Namespace Definition",
+    "description": "Organizes classes and types into logical groups.",
+    "code": "namespace MyApp.Utilities {\n    class Logger {\n        // ...\n    }\n}",
+    "tags": ["syntax", "namespace", "definition", "organization"]
+  },
+  {
+    "id": "syntax-nested-namespaces",
+    "topic": "Syntax",
+    "category": "Namespaces",
+    "title": "Nested Namespaces",
+    "description": "Defines namespaces inside another to represent hierarchy.",
+    "code": "namespace Company.Project.Module {\n    class Service {}\n}",
+    "tags": ["syntax", "namespace", "nested", "hierarchy"]
+  },
+  {
+    "id": "syntax-using-namespace",
+    "topic": "Syntax",
+    "category": "Namespaces",
+    "title": "using Namespace",
+    "description": "Imports types from a namespace to use without full qualification.",
+    "code": "using System.Text;\n\nStringBuilder sb = new StringBuilder();",
+    "tags": ["syntax", "using", "namespace", "import"]
+  },
+  {
+    "id": "syntax-alias-namespace",
+    "topic": "Syntax",
+    "category": "Namespaces",
+    "title": "Namespace Alias",
+    "description": "Defines an alias for a namespace to shorten long references.",
+    "code": "using Utils = MyCompany.Tools.Utilities;\n\nUtils.Logger.Log(\"Done\");",
+    "tags": ["syntax", "alias", "namespace"]
+  },
+  {
+    "id": "syntax-global-namespace",
+    "topic": "Syntax",
+    "category": "Namespaces",
+    "title": "Global Namespace",
+    "description": "Use `global::` to explicitly refer to the root namespace.",
+    "code": "global::System.Console.WriteLine(\"Hello\");",
+    "tags": ["syntax", "namespace", "global", "root"]
+  },
+  {
+    "id": "syntax-const-definition",
+    "topic": "Syntax",
+    "category": "Constants & Readonly",
+    "title": "const Keyword",
+    "description": "Defines a compile-time constant value.",
+    "code": "const double Pi = 3.14159;\nConsole.WriteLine(Pi);",
+    "tags": ["syntax", "const", "constants"]
+  },
+  {
+    "id": "syntax-readonly-field",
+    "topic": "Syntax",
+    "category": "Constants & Readonly",
+    "title": "readonly Field",
+    "description": "A field that can only be assigned during declaration or in a constructor.",
+    "code": "class Circle {\n    public readonly double Radius;\n    public Circle(double r) {\n        Radius = r;\n    }\n}",
+    "tags": ["syntax", "readonly", "field", "constructor"]
+  },
+  {
+    "id": "syntax-static-readonly",
+    "topic": "Syntax",
+    "category": "Constants & Readonly",
+    "title": "static readonly",
+    "description": "Shared across all instances and set once at runtime.",
+    "code": "public static readonly string AppName = \"Cheatsheet\";",
+    "tags": ["syntax", "static", "readonly", "field"]
+  },
+  {
+    "id": "syntax-const-vs-readonly",
+    "topic": "Syntax",
+    "category": "Constants & Readonly",
+    "title": "const vs readonly",
+    "description": "const is compile-time; readonly is runtime-settable (in constructor).",
+    "code": "// const: compile-time\nconst int MaxUsers = 100;\n\n// readonly: runtime\nreadonly Guid Id = Guid.NewGuid();",
+    "tags": ["syntax", "const", "readonly", "difference"]
+  },
+  {
+    "id": "syntax-nullable-declaration",
+    "topic": "Syntax",
+    "category": "Nullable Types",
+    "title": "Nullable Value Type",
+    "description": "Use `?` to allow value types to hold `null`.",
+    "code": "int? age = null;\nif (age.HasValue) {\n    Console.WriteLine(age.Value);\n}",
+    "tags": ["syntax", "nullable", "value types", "null"]
+  },
+  {
+    "id": "syntax-null-coalescing",
+    "topic": "Syntax",
+    "category": "Nullable Types",
+    "title": "?? Null Coalescing",
+    "description": "Provides a default value if the left-hand operand is null.",
+    "code": "string name = inputName ?? \"Guest\";",
+    "tags": ["syntax", "null", "coalescing", "default"]
+  },
+  {
+    "id": "syntax-null-conditional",
+    "topic": "Syntax",
+    "category": "Nullable Types",
+    "title": "?. Null Conditional",
+    "description": "Safely access members without throwing if the target is null.",
+    "code": "Console.WriteLine(user?.Profile?.Name);",
+    "tags": ["syntax", "null", "conditional", "safe access"]
+  },
+  {
+    "id": "syntax-null-forgiving",
+    "topic": "Syntax",
+    "category": "Nullable Types",
+    "title": "! Null Forgiving",
+    "description": "Suppresses compiler warnings about nullability.",
+    "code": "string definitelyNotNull = maybeNull!;",
+    "tags": ["syntax", "null", "suppress", "forgiving"]
+  },
+  {
+    "id": "syntax-nullable-reference",
+    "topic": "Syntax",
+    "category": "Nullable Types",
+    "title": "Nullable Reference Types",
+    "description": "Enable nullable reference types to get static analysis support.",
+    "code": "#nullable enable\nstring? name = null;\nConsole.WriteLine(name?.Length);",
+    "tags": ["syntax", "null", "reference types", "nullable"]
+  },
+  {
+    "id": "syntax-implicit-cast",
+    "topic": "Syntax",
+    "category": "Type Casting & Conversion",
+    "title": "Implicit Casting",
+    "description": "Automatically converts smaller types to larger compatible types.",
+    "code": "int num = 10;\ndouble result = num; // Implicit cast",
+    "tags": ["syntax", "casting", "implicit", "conversion"]
+  },
+  {
+    "id": "syntax-explicit-cast",
+    "topic": "Syntax",
+    "category": "Type Casting & Conversion",
+    "title": "Explicit Casting",
+    "description": "Manually convert types that require confirmation (may lose data).",
+    "code": "double d = 9.8;\nint i = (int)d;",
+    "tags": ["syntax", "casting", "explicit", "manual"]
+  },
+  {
+    "id": "syntax-as-keyword",
+    "topic": "Syntax",
+    "category": "Type Casting & Conversion",
+    "title": "as Keyword",
+    "description": "Attempts a safe cast to a reference type or nullable type, returns null if it fails.",
+    "code": "object obj = \"hello\";\nstring str = obj as string;",
+    "tags": ["syntax", "as", "casting", "safe", "nullable"]
+  },
+  {
+    "id": "syntax-is-check",
+    "topic": "Syntax",
+    "category": "Type Casting & Conversion",
+    "title": "is Keyword",
+    "description": "Checks if an object is of a specific type.",
+    "code": "if (obj is string s) {\n    Console.WriteLine(s);\n}",
+    "tags": ["syntax", "is", "type check", "pattern"]
+  },
+  {
+    "id": "syntax-convert-class",
+    "topic": "Syntax",
+    "category": "Type Casting & Conversion",
+    "title": "Convert Class",
+    "description": "Provides methods to convert between base types safely.",
+    "code": "string str = \"123\";\nint num = Convert.ToInt32(str);",
+    "tags": ["syntax", "convert", "class", "type"]
+  },
+  {
+    "id": "syntax-tryparse",
+    "topic": "Syntax",
+    "category": "Type Casting & Conversion",
+    "title": "TryParse Method",
+    "description": "Safely attempts to parse a string into a type without throwing exceptions.",
+    "code": "if (int.TryParse(\"42\", out int result)) {\n    Console.WriteLine(result);\n}",
+    "tags": ["syntax", "parse", "tryparse", "safe"]
+  },
+  {
+    "id": "syntax-obsolete-attribute",
+    "topic": "Syntax",
+    "category": "Attributes",
+    "title": "[Obsolete] Attribute",
+    "description": "Marks a method or class as outdated; shows a compile warning or error.",
+    "code": "[Obsolete(\"Use NewMethod instead\")]\nvoid OldMethod() {\n    // ...\n}",
+    "tags": ["syntax", "attribute", "obsolete", "warning"]
+  },
+  {
+    "id": "syntax-attribute-basic",
+    "topic": "Syntax",
+    "category": "Attributes",
+    "title": "Declaring an Attribute",
+    "description": "Attributes are applied with square brackets above declarations.",
+    "code": "[Serializable]\nclass MyData {\n    public int Id;\n}",
+    "tags": ["syntax", "attribute", "serializable"]
+  },
+  {
+    "id": "syntax-custom-attribute",
+    "topic": "Syntax",
+    "category": "Attributes",
+    "title": "Custom Attribute",
+    "description": "Create a new attribute by extending System.Attribute.",
+    "code": "public class AuthorAttribute : Attribute {\n    public string Name;\n    public AuthorAttribute(string name) {\n        Name = name;\n    }\n}",
+    "tags": ["syntax", "custom", "attribute", "metadata"]
+  },
+  {
+    "id": "syntax-multiple-attributes",
+    "topic": "Syntax",
+    "category": "Attributes",
+    "title": "Multiple Attributes",
+    "description": "You can apply multiple attributes using commas or multiple brackets.",
+    "code": "[Serializable, Obsolete]\nclass OldClass {}",
+    "tags": ["syntax", "attribute", "multiple"]
+  },
+  {
+    "id": "syntax-targeted-attribute",
+    "topic": "Syntax",
+    "category": "Attributes",
+    "title": "Targeted Attribute",
+    "description": "Attributes can be directed to specific parts like return types.",
+    "code": "[return: NotNull]\npublic string? GetName() => name;",
+    "tags": ["syntax", "attribute", "targeted", "return"]
+  },
+  {
+    "id": "syntax-basic-lambda",
+    "topic": "Syntax",
+    "category": "Lambda Expressions",
+    "title": "Basic Lambda",
+    "description": "A concise way to represent an anonymous method.",
+    "code": "Func<int, int> square = x => x * x;\nConsole.WriteLine(square(5));",
+    "tags": ["syntax", "lambda", "expression", "anonymous function"]
+  },
+  {
+    "id": "syntax-lambda-multiple-params",
+    "topic": "Syntax",
+    "category": "Lambda Expressions",
+    "title": "Lambda with Multiple Parameters",
+    "description": "Use parentheses for multiple parameters.",
+    "code": "Func<int, int, int> add = (a, b) => a + b;\nConsole.WriteLine(add(2, 3));",
+    "tags": ["syntax", "lambda", "parameters", "function"]
+  },
+  {
+    "id": "syntax-lambda-block",
+    "topic": "Syntax",
+    "category": "Lambda Expressions",
+    "title": "Lambda with Block Body",
+    "description": "Use braces for multiple statements or return logic.",
+    "code": "Func<int, int> doubleIt = x => {\n    Console.WriteLine(x);\n    return x * 2;\n};",
+    "tags": ["syntax", "lambda", "block", "multiline"]
+  },
+  {
+    "id": "syntax-lambda-in-linq",
+    "topic": "Syntax",
+    "category": "Lambda Expressions",
+    "title": "Lambda in LINQ",
+    "description": "Lambdas are frequently used in LINQ queries.",
+    "code": "var evens = numbers.Where(n => n % 2 == 0).ToList();",
+    "tags": ["syntax", "lambda", "linq", "filter"]
+  },
+  {
+    "id": "syntax-action-lambda",
+    "topic": "Syntax",
+    "category": "Lambda Expressions",
+    "title": "Action Delegate",
+    "description": "Use `Action` when the lambda does not return a value.",
+    "code": "Action<string> greet = name => Console.WriteLine($\"Hello, {name}\");\ngreet(\"Sam\");",
+    "tags": ["syntax", "lambda", "action", "void"]
+  },
+  {
+    "id": "syntax-is-pattern",
+    "topic": "Syntax",
+    "category": "Pattern Matching",
+    "title": "is Pattern Matching",
+    "description": "Checks type and declares variable if matched.",
+    "code": "if (obj is string s) {\n    Console.WriteLine(s.Length);\n}",
+    "tags": ["syntax", "pattern", "is", "type check"]
+  },
+  {
+    "id": "syntax-switch-pattern",
+    "topic": "Syntax",
+    "category": "Pattern Matching",
+    "title": "switch Expression Pattern",
+    "description": "Pattern match using modern `switch` expressions.",
+    "code": "string result = value switch {\n    1 => \"One\",\n    2 => \"Two\",\n    _ => \"Other\"\n};",
+    "tags": ["syntax", "pattern", "switch", "expression"]
+  },
+  {
+    "id": "syntax-relational-pattern",
+    "topic": "Syntax",
+    "category": "Pattern Matching",
+    "title": "Relational Pattern",
+    "description": "Match based on comparisons like `<`, `>=`, etc.",
+    "code": "string msg = number switch {\n    < 0 => \"Negative\",\n    0 => \"Zero\",\n    > 0 => \"Positive\"\n};",
+    "tags": ["syntax", "pattern", "relational", "switch"]
+  },
+  {
+    "id": "syntax-logical-pattern",
+    "topic": "Syntax",
+    "category": "Pattern Matching",
+    "title": "Logical Patterns",
+    "description": "Combine patterns with `and`, `or`, and `not`.",
+    "code": "if (x is > 0 and < 100) {\n    Console.WriteLine(\"In range\");\n}",
+    "tags": ["syntax", "pattern", "logical", "and", "or", "not"]
+  },
+  {
+    "id": "syntax-type-pattern",
+    "topic": "Syntax",
+    "category": "Pattern Matching",
+    "title": "Type Pattern with Property",
+    "description": "Use nested patterns to check properties inline.",
+    "code": "if (person is { Age: > 18 }) {\n    Console.WriteLine(\"Adult\");\n}",
+    "tags": ["syntax", "pattern", "nested", "property"]
+  },
+  {
+    "id": "syntax-basic-tuple",
+    "topic": "Syntax",
+    "category": "Tuples & Deconstruction",
+    "title": "Basic Tuple",
+    "description": "A lightweight way to return multiple values.",
+    "code": "var person = (\"Alice\", 30);\nConsole.WriteLine(person.Item1);",
+    "tags": ["syntax", "tuple", "basic", "multiple values"]
+  },
+  {
+    "id": "syntax-named-tuple",
+    "topic": "Syntax",
+    "category": "Tuples & Deconstruction",
+    "title": "Named Tuple",
+    "description": "Name tuple fields for more readable code.",
+    "code": "var person = (Name: \"Alice\", Age: 30);\nConsole.WriteLine(person.Name);",
+    "tags": ["syntax", "tuple", "named", "readability"]
+  },
+  {
+    "id": "syntax-tuple-return",
+    "topic": "Syntax",
+    "category": "Tuples & Deconstruction",
+    "title": "Return Tuple from Method",
+    "description": "Use tuples to return multiple values from methods.",
+    "code": "public (int sum, int diff) Calc(int a, int b) {\n    return (a + b, a - b);\n}",
+    "tags": ["syntax", "tuple", "method", "return"]
+  },
+  {
+    "id": "syntax-deconstruct-tuple",
+    "topic": "Syntax",
+    "category": "Tuples & Deconstruction",
+    "title": "Deconstruct Tuple",
+    "description": "Split tuple elements into separate variables.",
+    "code": "var (name, age) = (\"Bob\", 25);\nConsole.WriteLine(name);",
+    "tags": ["syntax", "deconstruct", "tuple", "destructure"]
+  },
+  {
+    "id": "syntax-deconstruct-object",
+    "topic": "Syntax",
+    "category": "Tuples & Deconstruction",
+    "title": "Deconstruct Custom Object",
+    "description": "Define `Deconstruct` method to enable tuple-style unpacking.",
+    "code": "public void Deconstruct(out string name, out int age) {\n    name = this.Name;\n    age = this.Age;\n}",
+    "tags": ["syntax", "deconstruct", "custom", "object"]
+  },
+   {
+    "id": "syntax-dynamic-type",
+    "topic": "Syntax",
+    "category": "Dynamic & ExpandoObject",
+    "title": "dynamic Type",
+    "description": "Bypasses compile-time type checking and resolves members at runtime.",
+    "code": "dynamic message = \"Hello\";\nConsole.WriteLine(message.ToUpper());",
+    "tags": ["syntax", "dynamic", "runtime", "type"]
+  },
+  {
+    "id": "syntax-dynamic-behavior",
+    "topic": "Syntax",
+    "category": "Dynamic & ExpandoObject",
+    "title": "Dynamic Behavior",
+    "description": "Supports interop scenarios, reflection, and COM object manipulation.",
+    "code": "dynamic excel = Activator.CreateInstance(Type.GetTypeFromProgID(\"Excel.Application\"));\nexcel.Visible = true;",
+    "tags": ["syntax", "dynamic", "interop", "excel"]
+  },
+  {
+    "id": "syntax-expandoobject",
+    "topic": "Syntax",
+    "category": "Dynamic & ExpandoObject",
+    "title": "ExpandoObject",
+    "description": "Allows you to dynamically add members to an object at runtime.",
+    "code": "dynamic person = new ExpandoObject();\nperson.Name = \"Jane\";\nperson.Age = 28;",
+    "tags": ["syntax", "expando", "dynamic", "runtime"]
+  },
+  {
+    "id": "syntax-expando-method",
+    "topic": "Syntax",
+    "category": "Dynamic & ExpandoObject",
+    "title": "ExpandoObject with Method",
+    "description": "You can attach delegates to `ExpandoObject` members.",
+    "code": "person.Speak = (Action)(() => Console.WriteLine(\"Hi!\"));\nperson.Speak();",
+    "tags": ["syntax", "expando", "delegate", "method"]
+  },
+  {
+    "id": "syntax-if-directive",
+    "topic": "Syntax",
+    "category": "Preprocessor Directives",
+    "title": "#if / #endif",
+    "description": "Conditionally compile code blocks based on symbols.",
+    "code": "#define DEBUG\n\n#if DEBUG\nConsole.WriteLine(\"Debug Mode\");\n#endif",
+    "tags": ["syntax", "preprocessor", "conditional", "#if"]
+  },
+  {
+    "id": "syntax-define-directive",
+    "topic": "Syntax",
+    "category": "Preprocessor Directives",
+    "title": "#define Directive",
+    "description": "Defines a symbol for conditional compilation.",
+    "code": "#define FEATURE_X\n\n#if FEATURE_X\nConsole.WriteLine(\"Feature Enabled\");\n#endif",
+    "tags": ["syntax", "preprocessor", "#define"]
+  },
+  {
+    "id": "syntax-region-directive",
+    "topic": "Syntax",
+    "category": "Preprocessor Directives",
+    "title": "#region / #endregion",
+    "description": "Organizes code into collapsible blocks in editors.",
+    "code": "#region Utility Methods\nvoid Log(string msg) {\n    Console.WriteLine(msg);\n}\n#endregion",
+    "tags": ["syntax", "preprocessor", "#region", "organization"]
+  },
+  {
+    "id": "syntax-warning-directive",
+    "topic": "Syntax",
+    "category": "Preprocessor Directives",
+    "title": "#warning / #error",
+    "description": "Generates compile-time warnings or errors.",
+    "code": "#warning Deprecated API usage\n#error Critical failure",
+    "tags": ["syntax", "preprocessor", "#warning", "#error"]
+  },
+  {
+    "id": "syntax-pragma-warning",
+    "topic": "Syntax",
+    "category": "Preprocessor Directives",
+    "title": "#pragma warning",
+    "description": "Disables or restores specific compiler warnings.",
+    "code": "#pragma warning disable CS0168\nint unused;\n#pragma warning restore CS0168",
+    "tags": ["syntax", "preprocessor", "#pragma", "warning"]
+  },
+  {
+    "id": "syntax-auto-property",
+    "topic": "Syntax",
+    "category": "Indexers & Properties",
+    "title": "Auto-Implemented Property",
+    "description": "Simplifies property declaration with an implicit backing field.",
+    "code": "public string Name { get; set; }",
+    "tags": ["syntax", "property", "auto", "getter", "setter"]
+  },
+  {
+    "id": "syntax-custom-property",
+    "topic": "Syntax",
+    "category": "Indexers & Properties",
+    "title": "Custom Property",
+    "description": "Define logic in `get` and `set` accessors.",
+    "code": "private int _age;\npublic int Age {\n    get => _age;\n    set {\n        if (value >= 0) _age = value;\n    }\n}",
+    "tags": ["syntax", "property", "get", "set", "custom logic"]
+  },
+  {
+    "id": "syntax-readonly-property",
+    "topic": "Syntax",
+    "category": "Indexers & Properties",
+    "title": "Read-Only Property",
+    "description": "Property with a `get` accessor only (no `set`).",
+    "code": "public DateTime Created { get; } = DateTime.Now;",
+    "tags": ["syntax", "property", "readonly", "init"]
+  },
+  {
+    "id": "syntax-init-property",
+    "topic": "Syntax",
+    "category": "Indexers & Properties",
+    "title": "Init-Only Property",
+    "description": "Allows assignment during object initialization only.",
+    "code": "public string Title { get; init; }",
+    "tags": ["syntax", "property", "init", "immutable"]
+  },
+  {
+    "id": "syntax-indexer-basic",
+    "topic": "Syntax",
+    "category": "Indexers & Properties",
+    "title": "Basic Indexer",
+    "description": "Allow objects to be accessed like arrays.",
+    "code": "public string this[int index] {\n    get => items[index];\n    set => items[index] = value;\n}",
+    "tags": ["syntax", "indexer", "access", "array-like"]
+  },
+  {
+    "id": "syntax-unsafe-keyword",
+    "topic": "Syntax",
+    "category": "Unsafe & Pointers",
+    "title": "unsafe Keyword",
+    "description": "Marks a block of code as unsafe for pointer operations.",
+    "code": "unsafe {\n    int* p = &number;\n    Console.WriteLine(*p);\n}",
+    "tags": ["syntax", "unsafe", "pointer", "memory"]
+  },
+  {
+    "id": "syntax-fixed-statement",
+    "topic": "Syntax",
+    "category": "Unsafe & Pointers",
+    "title": "fixed Statement",
+    "description": "Pins a variable in memory to prevent GC from moving it.",
+    "code": "fixed (int* p = &array[0]) {\n    Console.WriteLine(*p);\n}",
+    "tags": ["syntax", "unsafe", "fixed", "gc", "memory"]
+  },
+  {
+    "id": "syntax-pointer-declaration",
+    "topic": "Syntax",
+    "category": "Unsafe & Pointers",
+    "title": "Pointer Declaration",
+    "description": "Declares a pointer using the `*` symbol.",
+    "code": "int* ptr;\nint value = 10;\nptr = &value;",
+    "tags": ["syntax", "pointer", "declaration"]
+  },
+  {
+    "id": "syntax-stackalloc",
+    "topic": "Syntax",
+    "category": "Unsafe & Pointers",
+    "title": "stackalloc",
+    "description": "Allocates memory on the stack instead of the heap.",
+    "code": "Span<int> numbers = stackalloc int[5];",
+    "tags": ["syntax", "stackalloc", "memory", "span"]
+  },
+  {
+    "id": "syntax-enable-unsafe",
+    "topic": "Syntax",
+    "category": "Unsafe & Pointers",
+    "title": "Enable Unsafe Code",
+    "description": "Must be enabled in project settings to use unsafe code.",
+    "code": "// In .csproj file\n<AllowUnsafeBlocks>true</AllowUnsafeBlocks>",
+    "tags": ["syntax", "unsafe", "project", "settings"]
+  }
 ]

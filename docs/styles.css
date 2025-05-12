@@ -18,6 +18,22 @@
     --bg-collections: #d5f5e3;        /* Soft mint green */
     --bg-enums-structs: #fcf3cf;     /* Soft buttery yellow */
     --bg-exceptions: #fadbd8;         /* Soft blush pink */
+    --bg-namespaces: #ffeaa7;
+    --bg-constants: #fab1a0;
+    --bg-nullables: #dff9fb;
+    --bg-type-casting: #f6e58d;
+    --bg-attributes: #f8c291;
+    --bg-lambda: #c7ecee;
+    --bg-patterns: #fdcb6e;
+    --bg-tuples: #dff0d8;
+    --bg-dynamic: #ffeaa7;
+    --bg-preprocessor: #dfe6e9;
+    --bg-indexers: #d6a2e8;
+    --bg-events: #f3a683;
+    --bg-memory: #55efc4;
+    --bg-unsafe: #ff7675;
+    --bg-async: #81ecec;
+    --bg-linq: #ffeaa7;
 
     /* 💥 High-Punch Title Colors */
     --title-imports: #ff2d95;             /* Electric pink */
@@ -31,6 +47,22 @@
     --title-collections: #512e5f;     /* Indigo Punch */
     --title-enums-structs: #ca6f1e;  /* Rich rust orange */
     --title-exceptions: #c0392b;      /* Strong error red */
+    --title-namespaces: #d63031;
+    --title-constants: #6c3483;
+    --title-nullables: #130f40;
+    --title-type-casting: #2d3436;
+    --title-attributes: #e55039;
+    --title-lambda: #0984e3;
+    --title-patterns: #6c5ce7;
+    --title-tuples: #27ae60;
+    --title-dynamic: #fd79a8;
+    --title-preprocessor: #2d3436;
+    --title-indexers: #6a0572;
+    --title-events: #2e86de;
+    --title-memory: #00cec9;
+    --title-unsafe: #b71540;
+    --title-async: #006266;
+    --title-linq: #6c5ce7;
 
     /* 🖋 Paragraph Text Colors */
     --text-dark: #222;                   /* Blackish for light backgrounds */
@@ -146,6 +178,134 @@
 
 .card[data-category="Exceptions & Error Handling"] h3 {
   color: var(--title-exceptions);
+}
+
+.card[data-category="Namespaces"] {
+  background-color: var(--bg-namespaces);
+  color: var(--text-dark);
+}
+.card[data-category="Namespaces"] h3 {
+  color: var(--title-namespaces);
+}
+
+.card[data-category="Constants & Readonly"] {
+  background-color: var(--bg-constants);
+  color: var(--text-dark);
+}
+.card[data-category="Constants & Readonly"] h3 {
+  color: var(--title-constants);
+}
+
+.card[data-category="Nullable Types"] {
+  background-color: var(--bg-nullables);
+  color: var(--text-dark);
+}
+.card[data-category="Nullable Types"] h3 {
+  color: var(--title-nullables);
+}
+
+.card[data-category="Type Casting & Conversion"] {
+  background-color: var(--bg-type-casting);
+  color: var(--text-dark);
+}
+.card[data-category="Type Casting & Conversion"] h3 {
+  color: var(--title-type-casting);
+}
+
+.card[data-category="Attributes"] {
+  background-color: var(--bg-attributes);
+  color: var(--text-dark);
+}
+.card[data-category="Attributes"] h3 {
+  color: var(--title-attributes);
+}
+
+.card[data-category="Lambda Expressions"] {
+  background-color: var(--bg-lambda);
+  color: var(--text-dark);
+}
+.card[data-category="Lambda Expressions"] h3 {
+  color: var(--title-lambda);
+}
+
+.card[data-category="Pattern Matching"] {
+  background-color: var(--bg-patterns);
+  color: var(--text-dark);
+}
+.card[data-category="Pattern Matching"] h3 {
+  color: var(--title-patterns);
+}
+
+.card[data-category="Tuples & Deconstruction"] {
+  background-color: var(--bg-tuples);
+  color: var(--text-dark);
+}
+.card[data-category="Tuples & Deconstruction"] h3 {
+  color: var(--title-tuples);
+}
+
+.card[data-category="Dynamic & ExpandoObject"] {
+  background-color: var(--bg-dynamic);
+  color: var(--text-dark);
+}
+.card[data-category="Dynamic & ExpandoObject"] h3 {
+  color: var(--title-dynamic);
+}
+
+.card[data-category="Preprocessor Directives"] {
+  background-color: var(--bg-preprocessor);
+  color: var(--text-dark);
+}
+.card[data-category="Preprocessor Directives"] h3 {
+  color: var(--title-preprocessor);
+}
+
+.card[data-category="Indexers & Properties"] {
+  background-color: var(--bg-indexers);
+  color: var(--text-dark);
+}
+.card[data-category="Indexers & Properties"] h3 {
+  color: var(--title-indexers);
+}
+
+.card[data-category="Events & Delegates"] {
+  background-color: var(--bg-events);
+  color: var(--text-dark);
+}
+.card[data-category="Events & Delegates"] h3 {
+  color: var(--title-events);
+}
+
+.card[data-category="Memory Management"] {
+  background-color: var(--bg-memory);
+  color: var(--text-dark);
+}
+.card[data-category="Memory Management"] h3 {
+  color: var(--title-memory);
+}
+
+.card[data-category="Unsafe Code & Pointers"] {
+  background-color: var(--bg-unsafe);
+  color: var(--text-dark);
+}
+.card[data-category="Unsafe Code & Pointers"] h3 {
+  color: var(--title-unsafe);
+}
+
+.card[data-category="Async & Await"] {
+  background-color: var(--bg-async);
+  color: var(--text-dark);
+}
+.card[data-category="Async & Await"] h3 {
+  color: var(--title-async);
+}
+
+.card[data-category="LINQ Basics"] {
+  background-color: var(--bg-linq);
+  color: var(--text-dark);
+}
+.card[data-category="LINQ Basics"] h3 {
+  color: var(--title-linq);
 }
 
 

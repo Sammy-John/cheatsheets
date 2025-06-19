@@ -13,8 +13,8 @@
   <aside class="sidebar">
     <h2>Topics</h2>
     
-        <div class="topic-section">
-          <h3>Syntax</h3>
+        <details class="topic-block">
+          <summary>Syntax</summary>
           
               <details class="category-block">
                 <summary>Imports</summary>
@@ -989,70 +989,328 @@
                 </div>
               </details>
             
-        </div>
+        </details>
+      
+        <details class="topic-block">
+          <summary>Output</summary>
+          
+              <details class="category-block">
+                <summary>Console Output</summary>
+                <div class="card-filters">
+                  <label>
+                    <input type="checkbox" class="category-toggle" data-category="Console Output" onchange="toggleCategory('Console Output', this.checked)">
+                    Show All
+                  </label>
+                  
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="output-console-writeline" onchange="toggleCard('output-console-writeline', this.checked)">
+                        Console.WriteLine()
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="output-console-write" onchange="toggleCard('output-console-write', this.checked)">
+                        Console.Write()
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="output-console-writeline-format" onchange="toggleCard('output-console-writeline-format', this.checked)">
+                        Console.WriteLine with Format String
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="output-console-write-format" onchange="toggleCard('output-console-write-format', this.checked)">
+                        Console.Write with Format String
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="output-string-interpolation" onchange="toggleCard('output-string-interpolation', this.checked)">
+                        String Interpolation
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="output-string-format" onchange="toggleCard('output-string-format', this.checked)">
+                        String.Format()
+                      </label>
+                    
+                </div>
+              </details>
+            
+              <details class="category-block">
+                <summary>Debug & Trace Output</summary>
+                <div class="card-filters">
+                  <label>
+                    <input type="checkbox" class="category-toggle" data-category="Debug & Trace Output" onchange="toggleCategory('Debug & Trace Output', this.checked)">
+                    Show All
+                  </label>
+                  
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="output-debug-writeline" onchange="toggleCard('output-debug-writeline', this.checked)">
+                        Debug.WriteLine
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="output-trace-writeline" onchange="toggleCard('output-trace-writeline', this.checked)">
+                        Trace.WriteLine
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="output-debug-assert" onchange="toggleCard('output-debug-assert', this.checked)">
+                        Debug.Assert
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="output-trace-listeners" onchange="toggleCard('output-trace-listeners', this.checked)">
+                        Trace Listeners
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="output-trace-switch" onchange="toggleCard('output-trace-switch', this.checked)">
+                        TraceSwitch
+                      </label>
+                    
+                </div>
+              </details>
+            
+              <details class="category-block">
+                <summary>Logging Techniques</summary>
+                <div class="card-filters">
+                  <label>
+                    <input type="checkbox" class="category-toggle" data-category="Logging Techniques" onchange="toggleCategory('Logging Techniques', this.checked)">
+                    Show All
+                  </label>
+                  
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="output-logging-console-basic" onchange="toggleCard('output-logging-console-basic', this.checked)">
+                        Console Logging
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="output-logging-trace" onchange="toggleCard('output-logging-trace', this.checked)">
+                        Trace Logging
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="output-logging-debug-vs-trace" onchange="toggleCard('output-logging-debug-vs-trace', this.checked)">
+                        Debug vs Trace
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="output-logging-serilog" onchange="toggleCard('output-logging-serilog', this.checked)">
+                        Structured Logging (Serilog)
+                      </label>
+                    
+                </div>
+              </details>
+            
+              <details class="category-block">
+                <summary>File Output (Write/Append)</summary>
+                <div class="card-filters">
+                  <label>
+                    <input type="checkbox" class="category-toggle" data-category="File Output (Write/Append)" onchange="toggleCategory('File Output (Write/Append)', this.checked)">
+                    Show All
+                  </label>
+                  
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="output-write-all-text" onchange="toggleCard('output-write-all-text', this.checked)">
+                        WriteAllText
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="output-append-all-text" onchange="toggleCard('output-append-all-text', this.checked)">
+                        AppendAllText
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="output-stream-writer" onchange="toggleCard('output-stream-writer', this.checked)">
+                        StreamWriter
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="output-write-all-lines" onchange="toggleCard('output-write-all-lines', this.checked)">
+                        WriteAllLines
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="output-append-all-lines" onchange="toggleCard('output-append-all-lines', this.checked)">
+                        AppendAllLines
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="output-create-text" onchange="toggleCard('output-create-text', this.checked)">
+                        CreateText
+                      </label>
+                    
+                </div>
+              </details>
+            
+              <details class="category-block">
+                <summary>Formatting Output (Interpolation, Composite)</summary>
+                <div class="card-filters">
+                  <label>
+                    <input type="checkbox" class="category-toggle" data-category="Formatting Output (Interpolation, Composite)" onchange="toggleCategory('Formatting Output (Interpolation, Composite)', this.checked)">
+                    Show All
+                  </label>
+                  
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="output-interpolation" onchange="toggleCard('output-interpolation', this.checked)">
+                        String Interpolation
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="output-composite-format" onchange="toggleCard('output-composite-format', this.checked)">
+                        Composite Formatting
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="output-composite-format" onchange="toggleCard('output-composite-format', this.checked)">
+                        Composite Formatting
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="output-tostring-format" onchange="toggleCard('output-tostring-format', this.checked)">
+                        ToString Format Specifiers
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="output-string-format-specifier" onchange="toggleCard('output-string-format-specifier', this.checked)">
+                        String.Format with Specifiers
+                      </label>
+                    
+                </div>
+              </details>
+            
+              <details class="category-block">
+                <summary>Verbatim and Escape Sequences</summary>
+                <div class="card-filters">
+                  <label>
+                    <input type="checkbox" class="category-toggle" data-category="Verbatim and Escape Sequences" onchange="toggleCategory('Verbatim and Escape Sequences', this.checked)">
+                    Show All
+                  </label>
+                  
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="output-verbatim-string" onchange="toggleCard('output-verbatim-string', this.checked)">
+                        Verbatim String Literals
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="output-escape-sequence" onchange="toggleCard('output-escape-sequence', this.checked)">
+                        Escape Sequences
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="output-escape-sequence" onchange="toggleCard('output-escape-sequence', this.checked)">
+                        Escape Sequences
+                      </label>
+                    
+                </div>
+              </details>
+            
+              <details class="category-block">
+                <summary>Colored Console Output</summary>
+                <div class="card-filters">
+                  <label>
+                    <input type="checkbox" class="category-toggle" data-category="Colored Console Output" onchange="toggleCategory('Colored Console Output', this.checked)">
+                    Show All
+                  </label>
+                  
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="output-foreground-color" onchange="toggleCard('output-foreground-color', this.checked)">
+                        Set Foreground Color
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="output-background-color" onchange="toggleCard('output-background-color', this.checked)">
+                        Set Background Color
+                      </label>
+                    
+                </div>
+              </details>
+            
+              <details class="category-block">
+                <summary>Custom Output Streams</summary>
+                <div class="card-filters">
+                  <label>
+                    <input type="checkbox" class="category-toggle" data-category="Custom Output Streams" onchange="toggleCategory('Custom Output Streams', this.checked)">
+                    Show All
+                  </label>
+                  
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="output-custom-textwriter" onchange="toggleCard('output-custom-textwriter', this.checked)">
+                        Custom TextWriter
+                      </label>
+                    
+                      <label>
+                        <input type="checkbox" class="card-toggle" data-id="output-memory-stream" onchange="toggleCard('output-memory-stream', this.checked)">
+                        Write to MemoryStream
+                      </label>
+                    
+                </div>
+              </details>
+            
+        </details>
       
   </aside>
 
   <main class="card-container">
     
-  <div class="card" id="syntax-using-system" data-category="Imports" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>using System;</h3>
-    <p>Includes core system functionality such as Console, Math, String, etc.</p>
-    <pre><code>using System;
+    <div class="card" id="syntax-using-system" data-category="Imports" data-topic="Syntax" style="background:#f9e79f; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#ff2d95">using System;</h3>
+      <p>Includes core system functionality such as Console, Math, String, etc.</p>
+      <pre><code>using System;
 
 Console.WriteLine("Hello, World!");</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-using-system-collections-generic" data-category="Imports" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>using System.Collections.Generic;</h3>
-    <p>Enables usage of generic collections like List<T>, Dictionary<TKey, TValue>.</p>
-    <pre><code>using System.Collections.Generic;
+    <div class="card" id="syntax-using-system-collections-generic" data-category="Imports" data-topic="Syntax" style="background:#f9e79f; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#ff2d95">using System.Collections.Generic;</h3>
+      <p>Enables usage of generic collections like List<T>, Dictionary<TKey, TValue>.</p>
+      <pre><code>using System.Collections.Generic;
 
 List<string> names = new List<string>();</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-using-system-linq" data-category="Imports" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>using System.Linq;</h3>
-    <p>Provides LINQ functionality to query collections using a functional approach.</p>
-    <pre><code>using System.Linq;
+    <div class="card" id="syntax-using-system-linq" data-category="Imports" data-topic="Syntax" style="background:#f9e79f; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#ff2d95">using System.Linq;</h3>
+      <p>Provides LINQ functionality to query collections using a functional approach.</p>
+      <pre><code>using System.Linq;
 
 var evenNumbers = numbers.Where(n => n % 2 == 0);</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-using-system-text" data-category="Imports" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>using System.Text;</h3>
-    <p>Gives access to classes for string encoding and StringBuilder.</p>
-    <pre><code>using System.Text;
+    <div class="card" id="syntax-using-system-text" data-category="Imports" data-topic="Syntax" style="background:#f9e79f; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#ff2d95">using System.Text;</h3>
+      <p>Gives access to classes for string encoding and StringBuilder.</p>
+      <pre><code>using System.Text;
 
 StringBuilder sb = new StringBuilder();</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-using-system-threading" data-category="Imports" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>using System.Threading;</h3>
-    <p>Provides classes and methods for multithreading.</p>
-    <pre><code>using System.Threading;
+    <div class="card" id="syntax-using-system-threading" data-category="Imports" data-topic="Syntax" style="background:#f9e79f; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#ff2d95">using System.Threading;</h3>
+      <p>Provides classes and methods for multithreading.</p>
+      <pre><code>using System.Threading;
 
 Thread.Sleep(1000);</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-using-system-io" data-category="Imports" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>using System.IO;</h3>
-    <p>Used for file and stream I/O operations.</p>
-    <pre><code>using System.IO;
+    <div class="card" id="syntax-using-system-io" data-category="Imports" data-topic="Syntax" style="background:#f9e79f; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#ff2d95">using System.IO;</h3>
+      <p>Used for file and stream I/O operations.</p>
+      <pre><code>using System.IO;
 
 File.WriteAllText("file.txt", "Hello");</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-namespace-declaration" data-category="Program Structure" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>namespace Declaration</h3>
-    <p>Defines a scope to group related classes and avoid naming conflicts.</p>
-    <pre><code>namespace MyApplication
+    <div class="card" id="syntax-namespace-declaration" data-category="Program Structure" data-topic="Syntax" style="background:#aed6f1; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#ff6f00">namespace Declaration</h3>
+      <p>Defines a scope to group related classes and avoid naming conflicts.</p>
+      <pre><code>namespace MyApplication
 {
     public class Program
     {
@@ -1062,66 +1320,66 @@ File.WriteAllText("file.txt", "Hello");</code></pre>
         }
     }
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-class-declaration" data-category="Program Structure" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>class Declaration</h3>
-    <p>Defines a class as the core building block of a C# program. Can contain methods, properties, and fields.</p>
-    <pre><code>public class Calculator
+    <div class="card" id="syntax-class-declaration" data-category="Program Structure" data-topic="Syntax" style="background:#aed6f1; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#ff6f00">class Declaration</h3>
+      <p>Defines a class as the core building block of a C# program. Can contain methods, properties, and fields.</p>
+      <pre><code>public class Calculator
 {
     public int Add(int a, int b)
     {
         return a + b;
     }
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-entry-point-main-method" data-category="Program Structure" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Entry Point: static void Main(string[] args)</h3>
-    <p>The starting point of a C# console application. Executes when the program runs.</p>
-    <pre><code>static void Main(string[] args)
+    <div class="card" id="syntax-entry-point-main-method" data-category="Program Structure" data-topic="Syntax" style="background:#aed6f1; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#ff6f00">Entry Point: static void Main(string[] args)</h3>
+      <p>The starting point of a C# console application. Executes when the program runs.</p>
+      <pre><code>static void Main(string[] args)
 {
     Console.WriteLine("Welcome to the program!");
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-method-declaration" data-category="Program Structure" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Method Declaration</h3>
-    <p>Defines a reusable block of code. Includes access modifiers, return type, method name, and parameters.</p>
-    <pre><code>public void GreetUser(string name)
+    <div class="card" id="syntax-method-declaration" data-category="Program Structure" data-topic="Syntax" style="background:#aed6f1; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#ff6f00">Method Declaration</h3>
+      <p>Defines a reusable block of code. Includes access modifiers, return type, method name, and parameters.</p>
+      <pre><code>public void GreetUser(string name)
 {
     Console.WriteLine($"Hello, {name}!");
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-static-method-declaration" data-category="Program Structure" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Static Method Declaration</h3>
-    <p>A method that belongs to the class itself rather than to instances of the class.</p>
-    <pre><code>public static int Square(int number)
+    <div class="card" id="syntax-static-method-declaration" data-category="Program Structure" data-topic="Syntax" style="background:#aed6f1; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#ff6f00">Static Method Declaration</h3>
+      <p>A method that belongs to the class itself rather than to instances of the class.</p>
+      <pre><code>public static int Square(int number)
 {
     return number * number;
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-if-statement" data-category="Control Flow" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>if Statement</h3>
-    <p>Executes a block of code if a specified condition is true.</p>
-    <pre><code>if (score >= 50)
+    <div class="card" id="syntax-if-statement" data-category="Control Flow" data-topic="Syntax" style="background:#f5b7b1; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#6c3483">if Statement</h3>
+      <p>Executes a block of code if a specified condition is true.</p>
+      <pre><code>if (score >= 50)
 {
     Console.WriteLine("You passed!");
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-if-else-statement" data-category="Control Flow" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>if-else Statement</h3>
-    <p>Executes one block of code if the condition is true, another block if the condition is false.</p>
-    <pre><code>if (score >= 50)
+    <div class="card" id="syntax-if-else-statement" data-category="Control Flow" data-topic="Syntax" style="background:#f5b7b1; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#6c3483">if-else Statement</h3>
+      <p>Executes one block of code if the condition is true, another block if the condition is false.</p>
+      <pre><code>if (score >= 50)
 {
     Console.WriteLine("You passed!");
 }
@@ -1129,13 +1387,13 @@ else
 {
     Console.WriteLine("You failed.");
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-else-if-statement" data-category="Control Flow" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>else-if Ladder</h3>
-    <p>Checks multiple conditions in sequence and executes the first true block.</p>
-    <pre><code>if (score >= 90)
+    <div class="card" id="syntax-else-if-statement" data-category="Control Flow" data-topic="Syntax" style="background:#f5b7b1; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#6c3483">else-if Ladder</h3>
+      <p>Checks multiple conditions in sequence and executes the first true block.</p>
+      <pre><code>if (score >= 90)
 {
     Console.WriteLine("Grade: A");
 }
@@ -1147,13 +1405,13 @@ else
 {
     Console.WriteLine("Grade: C or below");
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-switch-statement" data-category="Control Flow" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>switch Statement</h3>
-    <p>Selects one of many code blocks to be executed based on a matching value.</p>
-    <pre><code>switch (day)
+    <div class="card" id="syntax-switch-statement" data-category="Control Flow" data-topic="Syntax" style="background:#f5b7b1; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#6c3483">switch Statement</h3>
+      <p>Selects one of many code blocks to be executed based on a matching value.</p>
+      <pre><code>switch (day)
 {
     case "Monday":
         Console.WriteLine("Start of the week!");
@@ -1165,58 +1423,58 @@ else
         Console.WriteLine("Just another day.");
         break;
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-for-loop" data-category="Control Flow" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>for Loop</h3>
-    <p>Executes a block of code a specific number of times.</p>
-    <pre><code>for (int i = 0; i < 5; i++)
+    <div class="card" id="syntax-for-loop" data-category="Control Flow" data-topic="Syntax" style="background:#f5b7b1; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#6c3483">for Loop</h3>
+      <p>Executes a block of code a specific number of times.</p>
+      <pre><code>for (int i = 0; i < 5; i++)
 {
     Console.WriteLine($"Iteration {i}");
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-while-loop" data-category="Control Flow" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>while Loop</h3>
-    <p>Repeats a block of code while a specified condition is true.</p>
-    <pre><code>int count = 0;
+    <div class="card" id="syntax-while-loop" data-category="Control Flow" data-topic="Syntax" style="background:#f5b7b1; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#6c3483">while Loop</h3>
+      <p>Repeats a block of code while a specified condition is true.</p>
+      <pre><code>int count = 0;
 while (count < 3)
 {
     Console.WriteLine($"Count: {count}");
     count++;
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-do-while-loop" data-category="Control Flow" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>do-while Loop</h3>
-    <p>Similar to a while loop, but guarantees the block runs at least once.</p>
-    <pre><code>int number;
+    <div class="card" id="syntax-do-while-loop" data-category="Control Flow" data-topic="Syntax" style="background:#f5b7b1; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#6c3483">do-while Loop</h3>
+      <p>Similar to a while loop, but guarantees the block runs at least once.</p>
+      <pre><code>int number;
 do
 {
     Console.Write("Enter a number (0 to stop): ");
     number = int.Parse(Console.ReadLine());
 } while (number != 0);</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-foreach-loop" data-category="Control Flow" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>foreach Loop</h3>
-    <p>Iterates over each element in a collection or array.</p>
-    <pre><code>string[] fruits = {"Apple", "Banana", "Cherry"};
+    <div class="card" id="syntax-foreach-loop" data-category="Control Flow" data-topic="Syntax" style="background:#f5b7b1; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#6c3483">foreach Loop</h3>
+      <p>Iterates over each element in a collection or array.</p>
+      <pre><code>string[] fruits = {"Apple", "Banana", "Cherry"};
 foreach (string fruit in fruits)
 {
     Console.WriteLine(fruit);
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-break-statement" data-category="Control Flow" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>break Statement</h3>
-    <p>Terminates the closest enclosing loop or switch statement immediately.</p>
-    <pre><code>for (int i = 0; i < 10; i++)
+    <div class="card" id="syntax-break-statement" data-category="Control Flow" data-topic="Syntax" style="background:#f5b7b1; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#6c3483">break Statement</h3>
+      <p>Terminates the closest enclosing loop or switch statement immediately.</p>
+      <pre><code>for (int i = 0; i < 10; i++)
 {
     if (i == 5)
     {
@@ -1224,13 +1482,13 @@ foreach (string fruit in fruits)
     }
     Console.WriteLine(i);
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-continue-statement" data-category="Control Flow" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>continue Statement</h3>
-    <p>Skips the current iteration of a loop and continues with the next iteration.</p>
-    <pre><code>for (int i = 0; i < 5; i++)
+    <div class="card" id="syntax-continue-statement" data-category="Control Flow" data-topic="Syntax" style="background:#f5b7b1; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#6c3483">continue Statement</h3>
+      <p>Skips the current iteration of a loop and continues with the next iteration.</p>
+      <pre><code>for (int i = 0; i < 5; i++)
 {
     if (i == 2)
     {
@@ -1238,236 +1496,236 @@ foreach (string fruit in fruits)
     }
     Console.WriteLine(i);
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-int-type" data-category="Data Types" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>int</h3>
-    <p>Stores whole numbers between -2,147,483,648 and 2,147,483,647.</p>
-    <pre><code>int age = 30;
+    <div class="card" id="syntax-int-type" data-category="Data Types" data-topic="Syntax" style="background:#abebc6; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#bf40bf">int</h3>
+      <p>Stores whole numbers between -2,147,483,648 and 2,147,483,647.</p>
+      <pre><code>int age = 30;
 Console.WriteLine(age);</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-double-type" data-category="Data Types" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>double</h3>
-    <p>Stores decimal numbers with double precision floating point.</p>
-    <pre><code>double price = 19.99;
+    <div class="card" id="syntax-double-type" data-category="Data Types" data-topic="Syntax" style="background:#abebc6; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#bf40bf">double</h3>
+      <p>Stores decimal numbers with double precision floating point.</p>
+      <pre><code>double price = 19.99;
 Console.WriteLine(price);</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-bool-type" data-category="Data Types" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>bool</h3>
-    <p>Stores true or false values.</p>
-    <pre><code>bool isActive = true;
+    <div class="card" id="syntax-bool-type" data-category="Data Types" data-topic="Syntax" style="background:#abebc6; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#bf40bf">bool</h3>
+      <p>Stores true or false values.</p>
+      <pre><code>bool isActive = true;
 Console.WriteLine(isActive);</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-char-type" data-category="Data Types" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>char</h3>
-    <p>Stores a single Unicode character.</p>
-    <pre><code>char grade = 'A';
+    <div class="card" id="syntax-char-type" data-category="Data Types" data-topic="Syntax" style="background:#abebc6; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#bf40bf">char</h3>
+      <p>Stores a single Unicode character.</p>
+      <pre><code>char grade = 'A';
 Console.WriteLine(grade);</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-string-type" data-category="Data Types" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>string</h3>
-    <p>Stores a sequence of characters (text).</p>
-    <pre><code>string message = "Hello, World!";
+    <div class="card" id="syntax-string-type" data-category="Data Types" data-topic="Syntax" style="background:#abebc6; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#bf40bf">string</h3>
+      <p>Stores a sequence of characters (text).</p>
+      <pre><code>string message = "Hello, World!";
 Console.WriteLine(message);</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-var-keyword" data-category="Data Types" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>var (Implicit Typing)</h3>
-    <p>Infers the type from the assigned value (must be initialized).</p>
-    <pre><code>var count = 10; // inferred as int
+    <div class="card" id="syntax-var-keyword" data-category="Data Types" data-topic="Syntax" style="background:#abebc6; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#bf40bf">var (Implicit Typing)</h3>
+      <p>Infers the type from the assigned value (must be initialized).</p>
+      <pre><code>var count = 10; // inferred as int
 Console.WriteLine(count);</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-const-keyword" data-category="Data Types" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>const</h3>
-    <p>Declares an unchangeable (compile-time) constant.</p>
-    <pre><code>const double Pi = 3.14159;
+    <div class="card" id="syntax-const-keyword" data-category="Data Types" data-topic="Syntax" style="background:#abebc6; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#bf40bf">const</h3>
+      <p>Declares an unchangeable (compile-time) constant.</p>
+      <pre><code>const double Pi = 3.14159;
 Console.WriteLine(Pi);</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-object-type" data-category="Data Types" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>object</h3>
-    <p>Base type of all data types in C#. Can hold any type.</p>
-    <pre><code>object data = 42;
+    <div class="card" id="syntax-object-type" data-category="Data Types" data-topic="Syntax" style="background:#abebc6; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#bf40bf">object</h3>
+      <p>Base type of all data types in C#. Can hold any type.</p>
+      <pre><code>object data = 42;
 Console.WriteLine(data);</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-dynamic-type" data-category="Data Types" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>dynamic</h3>
-    <p>Stores any type and resolves at runtime (no compile-time type checking).</p>
-    <pre><code>dynamic value = "Hello";
+    <div class="card" id="syntax-dynamic-type" data-category="Data Types" data-topic="Syntax" style="background:#abebc6; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#bf40bf">dynamic</h3>
+      <p>Stores any type and resolves at runtime (no compile-time type checking).</p>
+      <pre><code>dynamic value = "Hello";
 value = 123;
 Console.WriteLine(value);</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-decimal-type" data-category="Data Types" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>decimal</h3>
-    <p>Precise decimal numbers for financial and monetary calculations.</p>
-    <pre><code>decimal balance = 1000.75m;
+    <div class="card" id="syntax-decimal-type" data-category="Data Types" data-topic="Syntax" style="background:#abebc6; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#bf40bf">decimal</h3>
+      <p>Precise decimal numbers for financial and monetary calculations.</p>
+      <pre><code>decimal balance = 1000.75m;
 Console.WriteLine(balance);</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-method-declaration" data-category="Methods" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Method Declaration</h3>
-    <p>Defines a reusable block of code with a return type, name, and optional parameters.</p>
-    <pre><code>public void SayHello()
+    <div class="card" id="syntax-method-declaration" data-category="Methods" data-topic="Syntax" style="background:#fad7a0; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#2979ff">Method Declaration</h3>
+      <p>Defines a reusable block of code with a return type, name, and optional parameters.</p>
+      <pre><code>public void SayHello()
 {
     Console.WriteLine("Hello!");
 }</code></pre>
-  </div>
+    </div>
+  
 
+    <div class="card" id="syntax-method-call" data-category="Methods" data-topic="Syntax" style="background:#fad7a0; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#2979ff">Calling a Method</h3>
+      <p>Invoke a method by using its name followed by parentheses.</p>
+      <pre><code>SayHello();</code></pre>
+    </div>
+  
 
-  <div class="card" id="syntax-method-call" data-category="Methods" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Calling a Method</h3>
-    <p>Invoke a method by using its name followed by parentheses.</p>
-    <pre><code>SayHello();</code></pre>
-  </div>
-
-
-  <div class="card" id="syntax-method-parameters" data-category="Methods" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Method with Parameters</h3>
-    <p>Pass values to a method using parameters.</p>
-    <pre><code>public void Greet(string name)
+    <div class="card" id="syntax-method-parameters" data-category="Methods" data-topic="Syntax" style="background:#fad7a0; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#2979ff">Method with Parameters</h3>
+      <p>Pass values to a method using parameters.</p>
+      <pre><code>public void Greet(string name)
 {
     Console.WriteLine($"Hello, {name}!");
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-method-return-value" data-category="Methods" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Returning a Value</h3>
-    <p>Methods can return values using a return type and the return keyword.</p>
-    <pre><code>public int Add(int a, int b)
+    <div class="card" id="syntax-method-return-value" data-category="Methods" data-topic="Syntax" style="background:#fad7a0; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#2979ff">Returning a Value</h3>
+      <p>Methods can return values using a return type and the return keyword.</p>
+      <pre><code>public int Add(int a, int b)
 {
     return a + b;
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-method-overloading" data-category="Methods" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Method Overloading</h3>
-    <p>Multiple methods can share the same name if they differ in parameters.</p>
-    <pre><code>public void Print(string message) { }
+    <div class="card" id="syntax-method-overloading" data-category="Methods" data-topic="Syntax" style="background:#fad7a0; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#2979ff">Method Overloading</h3>
+      <p>Multiple methods can share the same name if they differ in parameters.</p>
+      <pre><code>public void Print(string message) { }
 public void Print(int number) { }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-method-default-parameters" data-category="Methods" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Default Parameters</h3>
-    <p>Provide default values for parameters so they are optional when calling the method.</p>
-    <pre><code>public void ShowMessage(string msg = "Default")
+    <div class="card" id="syntax-method-default-parameters" data-category="Methods" data-topic="Syntax" style="background:#fad7a0; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#2979ff">Default Parameters</h3>
+      <p>Provide default values for parameters so they are optional when calling the method.</p>
+      <pre><code>public void ShowMessage(string msg = "Default")
 {
     Console.WriteLine(msg);
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-method-static" data-category="Methods" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Static Methods</h3>
-    <p>Belong to the class itself and can be called without an instance.</p>
-    <pre><code>public static void Log(string message)
+    <div class="card" id="syntax-method-static" data-category="Methods" data-topic="Syntax" style="background:#fad7a0; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#2979ff">Static Methods</h3>
+      <p>Belong to the class itself and can be called without an instance.</p>
+      <pre><code>public static void Log(string message)
 {
     Console.WriteLine(message);
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-method-main" data-category="Methods" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Main Method</h3>
-    <p>The entry point of a C# application. Must be static.</p>
-    <pre><code>static void Main(string[] args)
+    <div class="card" id="syntax-method-main" data-category="Methods" data-topic="Syntax" style="background:#fad7a0; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#2979ff">Main Method</h3>
+      <p>The entry point of a C# application. Must be static.</p>
+      <pre><code>static void Main(string[] args)
 {
     Console.WriteLine("Program started.");
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-method-async" data-category="Methods" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Async Methods</h3>
-    <p>Methods marked with async can use the await keyword for asynchronous operations.</p>
-    <pre><code>public async Task LoadDataAsync()
+    <div class="card" id="syntax-method-async" data-category="Methods" data-topic="Syntax" style="background:#fad7a0; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#2979ff">Async Methods</h3>
+      <p>Methods marked with async can use the await keyword for asynchronous operations.</p>
+      <pre><code>public async Task LoadDataAsync()
 {
     await Task.Delay(1000);
     Console.WriteLine("Done.");
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-ref-parameter" data-category="Advanced Method Syntax" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>ref Parameter</h3>
-    <p>Allows a method to modify the caller’s variable directly.</p>
-    <pre><code>void Modify(ref int number)
+    <div class="card" id="syntax-ref-parameter" data-category="Advanced Method Syntax" data-topic="Syntax" style="background:#d6dbf5; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#6a1b9a">ref Parameter</h3>
+      <p>Allows a method to modify the caller’s variable directly.</p>
+      <pre><code>void Modify(ref int number)
 {
     number += 10;
 }
 
 int val = 5;
 Modify(ref val);</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-out-parameter" data-category="Advanced Method Syntax" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>out Parameter</h3>
-    <p>Used to return multiple values from a method.</p>
-    <pre><code>void GetValues(out int x, out int y)
+    <div class="card" id="syntax-out-parameter" data-category="Advanced Method Syntax" data-topic="Syntax" style="background:#d6dbf5; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#6a1b9a">out Parameter</h3>
+      <p>Used to return multiple values from a method.</p>
+      <pre><code>void GetValues(out int x, out int y)
 {
     x = 10;
     y = 20;
 }
 
 GetValues(out int a, out int b);</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-in-parameter" data-category="Advanced Method Syntax" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>in Parameter</h3>
-    <p>Passes a parameter by reference but does not allow modification.</p>
-    <pre><code>void Show(in int value)
+    <div class="card" id="syntax-in-parameter" data-category="Advanced Method Syntax" data-topic="Syntax" style="background:#d6dbf5; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#6a1b9a">in Parameter</h3>
+      <p>Passes a parameter by reference but does not allow modification.</p>
+      <pre><code>void Show(in int value)
 {
     Console.WriteLine(value);
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-params-array" data-category="Advanced Method Syntax" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>params Array</h3>
-    <p>Allows passing a variable number of arguments to a method.</p>
-    <pre><code>void PrintNumbers(params int[] numbers)
+    <div class="card" id="syntax-params-array" data-category="Advanced Method Syntax" data-topic="Syntax" style="background:#d6dbf5; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#6a1b9a">params Array</h3>
+      <p>Allows passing a variable number of arguments to a method.</p>
+      <pre><code>void PrintNumbers(params int[] numbers)
 {
     foreach (int n in numbers)
         Console.WriteLine(n);
 }
 
 PrintNumbers(1, 2, 3);</code></pre>
-  </div>
+    </div>
+  
 
+    <div class="card" id="syntax-expression-bodied-method" data-category="Advanced Method Syntax" data-topic="Syntax" style="background:#d6dbf5; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#6a1b9a">Expression-Bodied Method</h3>
+      <p>Concise method syntax for simple return expressions.</p>
+      <pre><code>int Square(int x) => x * x;</code></pre>
+    </div>
+  
 
-  <div class="card" id="syntax-expression-bodied-method" data-category="Advanced Method Syntax" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Expression-Bodied Method</h3>
-    <p>Concise method syntax for simple return expressions.</p>
-    <pre><code>int Square(int x) => x * x;</code></pre>
-  </div>
-
-
-  <div class="card" id="syntax-extension-method" data-category="Advanced Method Syntax" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Extension Method</h3>
-    <p>Adds a method to an existing type without modifying it directly.</p>
-    <pre><code>public static class StringExtensions
+    <div class="card" id="syntax-extension-method" data-category="Advanced Method Syntax" data-topic="Syntax" style="background:#d6dbf5; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#6a1b9a">Extension Method</h3>
+      <p>Adds a method to an existing type without modifying it directly.</p>
+      <pre><code>public static class StringExtensions
 {
     public static int WordCount(this string str)
     {
@@ -1477,13 +1735,13 @@ PrintNumbers(1, 2, 3);</code></pre>
 
 string s = "Hello world";
 int count = s.WordCount();</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-local-function" data-category="Advanced Method Syntax" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Local Function</h3>
-    <p>A method defined inside another method.</p>
-    <pre><code>void Outer()
+    <div class="card" id="syntax-local-function" data-category="Advanced Method Syntax" data-topic="Syntax" style="background:#d6dbf5; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#6a1b9a">Local Function</h3>
+      <p>A method defined inside another method.</p>
+      <pre><code>void Outer()
 {
     void Inner()
     {
@@ -1491,81 +1749,81 @@ int count = s.WordCount();</code></pre>
     }
     Inner();
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-class-definition" data-category="Classes & Objects" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Class Definition</h3>
-    <p>Defines a blueprint for creating objects with fields, properties, and methods.</p>
-    <pre><code>public class Person
+    <div class="card" id="syntax-class-definition" data-category="Classes & Objects" data-topic="Syntax" style="background:#fdebd0; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#c0392b">Class Definition</h3>
+      <p>Defines a blueprint for creating objects with fields, properties, and methods.</p>
+      <pre><code>public class Person
 {
     public string Name;
     public void Greet() {
         Console.WriteLine($"Hello, {Name}!");
     }
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-object-instantiation" data-category="Classes & Objects" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Object Instantiation</h3>
-    <p>Creates an instance of a class using the `new` keyword.</p>
-    <pre><code>Person p = new Person();
+    <div class="card" id="syntax-object-instantiation" data-category="Classes & Objects" data-topic="Syntax" style="background:#fdebd0; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#c0392b">Object Instantiation</h3>
+      <p>Creates an instance of a class using the `new` keyword.</p>
+      <pre><code>Person p = new Person();
 p.Name = "Sam";
 p.Greet();</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-constructor" data-category="Classes & Objects" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Constructor</h3>
-    <p>Special method that runs when a new object is created.</p>
-    <pre><code>public class Person
+    <div class="card" id="syntax-constructor" data-category="Classes & Objects" data-topic="Syntax" style="background:#fdebd0; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#c0392b">Constructor</h3>
+      <p>Special method that runs when a new object is created.</p>
+      <pre><code>public class Person
 {
     public string Name;
     public Person(string name) {
         Name = name;
     }
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-access-modifiers" data-category="Classes & Objects" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Access Modifiers</h3>
-    <p>Control visibility of class members using `public`, `private`, etc.</p>
-    <pre><code>public class Car {
+    <div class="card" id="syntax-access-modifiers" data-category="Classes & Objects" data-topic="Syntax" style="background:#fdebd0; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#c0392b">Access Modifiers</h3>
+      <p>Control visibility of class members using `public`, `private`, etc.</p>
+      <pre><code>public class Car {
     private int speed;
     public void Accelerate() {
         speed += 10;
     }
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-this-keyword" data-category="Classes & Objects" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>this Keyword</h3>
-    <p>Refers to the current instance of the class.</p>
-    <pre><code>public class Box {
+    <div class="card" id="syntax-this-keyword" data-category="Classes & Objects" data-topic="Syntax" style="background:#fdebd0; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#c0392b">this Keyword</h3>
+      <p>Refers to the current instance of the class.</p>
+      <pre><code>public class Box {
     private int width;
     public Box(int width) {
         this.width = width;
     }
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-properties" data-category="Classes & Objects" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Auto-Implemented Properties</h3>
-    <p>Simplified syntax for defining public properties with getters/setters.</p>
-    <pre><code>public class User {
+    <div class="card" id="syntax-properties" data-category="Classes & Objects" data-topic="Syntax" style="background:#fdebd0; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#c0392b">Auto-Implemented Properties</h3>
+      <p>Simplified syntax for defining public properties with getters/setters.</p>
+      <pre><code>public class User {
     public string Name { get; set; }
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-static-class" data-category="Classes & Objects" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Static Class</h3>
-    <p>A class that cannot be instantiated and only contains static members.</p>
-    <pre><code>public static class MathHelper
+    <div class="card" id="syntax-static-class" data-category="Classes & Objects" data-topic="Syntax" style="background:#fdebd0; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#c0392b">Static Class</h3>
+      <p>A class that cannot be instantiated and only contains static members.</p>
+      <pre><code>public static class MathHelper
 {
     public static int Double(int x)
     {
@@ -1574,36 +1832,36 @@ p.Greet();</code></pre>
 }
 
 int result = MathHelper.Double(4);</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-object-initializer" data-category="Classes & Objects" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Object Initializer</h3>
-    <p>Creates an object and sets its properties in a single expression.</p>
-    <pre><code>Person p = new Person {
+    <div class="card" id="syntax-object-initializer" data-category="Classes & Objects" data-topic="Syntax" style="background:#fdebd0; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#c0392b">Object Initializer</h3>
+      <p>Creates an object and sets its properties in a single expression.</p>
+      <pre><code>Person p = new Person {
     Name = "Alex",
     Age = 28
 };</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-inheritance" data-category="OOP Concepts" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Inheritance</h3>
-    <p>Allows a class to inherit fields and methods from another class.</p>
-    <pre><code>public class Animal {
+    <div class="card" id="syntax-inheritance" data-category="OOP Concepts" data-topic="Syntax" style="background:#e8daef; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#8e44ad">Inheritance</h3>
+      <p>Allows a class to inherit fields and methods from another class.</p>
+      <pre><code>public class Animal {
     public void Speak() {
         Console.WriteLine("Sound");
     }
 }
 
 public class Dog : Animal { }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-virtual-override" data-category="OOP Concepts" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>virtual and override</h3>
-    <p>Used to override a method in a derived class.</p>
-    <pre><code>public class Animal {
+    <div class="card" id="syntax-virtual-override" data-category="OOP Concepts" data-topic="Syntax" style="background:#e8daef; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#8e44ad">virtual and override</h3>
+      <p>Used to override a method in a derived class.</p>
+      <pre><code>public class Animal {
     public virtual void Speak() {
         Console.WriteLine("Sound");
     }
@@ -1614,26 +1872,26 @@ public class Dog : Animal {
         Console.WriteLine("Bark");
     }
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-abstract-class" data-category="OOP Concepts" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Abstract Class</h3>
-    <p>Cannot be instantiated and may contain abstract (must override) members.</p>
-    <pre><code>public abstract class Shape {
+    <div class="card" id="syntax-abstract-class" data-category="OOP Concepts" data-topic="Syntax" style="background:#e8daef; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#8e44ad">Abstract Class</h3>
+      <p>Cannot be instantiated and may contain abstract (must override) members.</p>
+      <pre><code>public abstract class Shape {
     public abstract double Area();
 }
 
 public class Circle : Shape {
     public override double Area() => 3.14 * 4 * 4;
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-interface" data-category="OOP Concepts" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Interface</h3>
-    <p>Defines a contract. A class must implement all members of the interface.</p>
-    <pre><code>public interface IDrive {
+    <div class="card" id="syntax-interface" data-category="OOP Concepts" data-topic="Syntax" style="background:#e8daef; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#8e44ad">Interface</h3>
+      <p>Defines a contract. A class must implement all members of the interface.</p>
+      <pre><code>public interface IDrive {
     void Start();
 }
 
@@ -1642,22 +1900,22 @@ public class Car : IDrive {
         Console.WriteLine("Engine on");
     }
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-sealed-class" data-category="OOP Concepts" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Sealed Class</h3>
-    <p>Prevents a class from being inherited.</p>
-    <pre><code>public sealed class Config {
+    <div class="card" id="syntax-sealed-class" data-category="OOP Concepts" data-topic="Syntax" style="background:#e8daef; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#8e44ad">Sealed Class</h3>
+      <p>Prevents a class from being inherited.</p>
+      <pre><code>public sealed class Config {
     public string Name { get; set; }
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-base-keyword" data-category="OOP Concepts" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>base Keyword</h3>
-    <p>Calls a method or constructor from the parent class.</p>
-    <pre><code>public class Animal {
+    <div class="card" id="syntax-base-keyword" data-category="OOP Concepts" data-topic="Syntax" style="background:#e8daef; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#8e44ad">base Keyword</h3>
+      <p>Calls a method or constructor from the parent class.</p>
+      <pre><code>public class Animal {
     public virtual void Speak() {
         Console.WriteLine("Sound");
     }
@@ -1669,132 +1927,132 @@ public class Dog : Animal {
         Console.WriteLine("Bark");
     }
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-polymorphism" data-category="OOP Concepts" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Polymorphism</h3>
-    <p>Allows objects to be treated as instances of their base type.</p>
-    <pre><code>Animal animal = new Dog();
+    <div class="card" id="syntax-polymorphism" data-category="OOP Concepts" data-topic="Syntax" style="background:#e8daef; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#8e44ad">Polymorphism</h3>
+      <p>Allows objects to be treated as instances of their base type.</p>
+      <pre><code>Animal animal = new Dog();
 animal.Speak(); // Outputs: Bark</code></pre>
-  </div>
+    </div>
+  
 
+    <div class="card" id="syntax-array-declaration" data-category="Collections & Arrays" data-topic="Syntax" style="background:#d5f5e3; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#512e5f">Array Declaration</h3>
+      <p>Fixed-size, strongly typed collection of elements.</p>
+      <pre><code>int[] numbers = new int[] { 1, 2, 3, 4 };</code></pre>
+    </div>
+  
 
-  <div class="card" id="syntax-array-declaration" data-category="Collections & Arrays" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Array Declaration</h3>
-    <p>Fixed-size, strongly typed collection of elements.</p>
-    <pre><code>int[] numbers = new int[] { 1, 2, 3, 4 };</code></pre>
-  </div>
-
-
-  <div class="card" id="syntax-array-access" data-category="Collections & Arrays" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Array Access</h3>
-    <p>Access elements in an array using zero-based indexing.</p>
-    <pre><code>int first = numbers[0];
+    <div class="card" id="syntax-array-access" data-category="Collections & Arrays" data-topic="Syntax" style="background:#d5f5e3; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#512e5f">Array Access</h3>
+      <p>Access elements in an array using zero-based indexing.</p>
+      <pre><code>int first = numbers[0];
 Console.WriteLine(first);</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-list-declaration" data-category="Collections & Arrays" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>List<T> Declaration</h3>
-    <p>A dynamic, strongly typed generic list.</p>
-    <pre><code>List<string> fruits = new List<string>();
+    <div class="card" id="syntax-list-declaration" data-category="Collections & Arrays" data-topic="Syntax" style="background:#d5f5e3; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#512e5f">List<T> Declaration</h3>
+      <p>A dynamic, strongly typed generic list.</p>
+      <pre><code>List<string> fruits = new List<string>();
 fruits.Add("Apple");</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-dictionary-declaration" data-category="Collections & Arrays" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Dictionary<TKey, TValue></h3>
-    <p>Stores key-value pairs for quick lookups.</p>
-    <pre><code>Dictionary<string, int> scores = new Dictionary<string, int>();
+    <div class="card" id="syntax-dictionary-declaration" data-category="Collections & Arrays" data-topic="Syntax" style="background:#d5f5e3; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#512e5f">Dictionary<TKey, TValue></h3>
+      <p>Stores key-value pairs for quick lookups.</p>
+      <pre><code>Dictionary<string, int> scores = new Dictionary<string, int>();
 scores["Alice"] = 90;</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-foreach-loop" data-category="Collections & Arrays" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>foreach Loop</h3>
-    <p>Iterates over collections such as arrays or lists.</p>
-    <pre><code>foreach (string fruit in fruits)
+    <div class="card" id="syntax-foreach-loop" data-category="Collections & Arrays" data-topic="Syntax" style="background:#d5f5e3; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#512e5f">foreach Loop</h3>
+      <p>Iterates over collections such as arrays or lists.</p>
+      <pre><code>foreach (string fruit in fruits)
 {
     Console.WriteLine(fruit);
 }</code></pre>
-  </div>
+    </div>
+  
 
+    <div class="card" id="syntax-collection-initializer" data-category="Collections & Arrays" data-topic="Syntax" style="background:#d5f5e3; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#512e5f">Collection Initializer</h3>
+      <p>Creates and populates a collection in one statement.</p>
+      <pre><code>var colors = new List<string> { "Red", "Green", "Blue" };</code></pre>
+    </div>
+  
 
-  <div class="card" id="syntax-collection-initializer" data-category="Collections & Arrays" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Collection Initializer</h3>
-    <p>Creates and populates a collection in one statement.</p>
-    <pre><code>var colors = new List<string> { "Red", "Green", "Blue" };</code></pre>
-  </div>
+    <div class="card" id="syntax-list-access" data-category="Collections & Arrays" data-topic="Syntax" style="background:#d5f5e3; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#512e5f">Access List Elements</h3>
+      <p>Use indexers to access elements from a list.</p>
+      <pre><code>string firstColor = colors[0];</code></pre>
+    </div>
+  
 
-
-  <div class="card" id="syntax-list-access" data-category="Collections & Arrays" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Access List Elements</h3>
-    <p>Use indexers to access elements from a list.</p>
-    <pre><code>string firstColor = colors[0];</code></pre>
-  </div>
-
-
-  <div class="card" id="syntax-enum-definition" data-category="Enums & Structs" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Enum Definition</h3>
-    <p>Defines a set of named integral constants.</p>
-    <pre><code>enum Status {
+    <div class="card" id="syntax-enum-definition" data-category="Enums & Structs" data-topic="Syntax" style="background:#fcf3cf; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#ca6f1e">Enum Definition</h3>
+      <p>Defines a set of named integral constants.</p>
+      <pre><code>enum Status {
     Pending,
     Approved,
     Rejected
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-enum-usage" data-category="Enums & Structs" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Using an Enum</h3>
-    <p>Use enum values like strongly typed constants.</p>
-    <pre><code>Status current = Status.Approved;
+    <div class="card" id="syntax-enum-usage" data-category="Enums & Structs" data-topic="Syntax" style="background:#fcf3cf; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#ca6f1e">Using an Enum</h3>
+      <p>Use enum values like strongly typed constants.</p>
+      <pre><code>Status current = Status.Approved;
 Console.WriteLine(current);</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-enum-explicit-values" data-category="Enums & Structs" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Enum with Explicit Values</h3>
-    <p>You can assign specific values to enum members.</p>
-    <pre><code>enum Day {
+    <div class="card" id="syntax-enum-explicit-values" data-category="Enums & Structs" data-topic="Syntax" style="background:#fcf3cf; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#ca6f1e">Enum with Explicit Values</h3>
+      <p>You can assign specific values to enum members.</p>
+      <pre><code>enum Day {
     Sunday = 1,
     Monday = 2
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-struct-definition" data-category="Enums & Structs" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Struct Definition</h3>
-    <p>A lightweight value type often used for small data models.</p>
-    <pre><code>struct Point {
+    <div class="card" id="syntax-struct-definition" data-category="Enums & Structs" data-topic="Syntax" style="background:#fcf3cf; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#ca6f1e">Struct Definition</h3>
+      <p>A lightweight value type often used for small data models.</p>
+      <pre><code>struct Point {
     public int X;
     public int Y;
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-struct-instantiation" data-category="Enums & Structs" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Using a Struct</h3>
-    <p>Create and use a struct like an object, but it’s passed by value.</p>
-    <pre><code>Point p = new Point();
+    <div class="card" id="syntax-struct-instantiation" data-category="Enums & Structs" data-topic="Syntax" style="background:#fcf3cf; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#ca6f1e">Using a Struct</h3>
+      <p>Create and use a struct like an object, but it’s passed by value.</p>
+      <pre><code>Point p = new Point();
 p.X = 5;
 p.Y = 10;</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-enum-to-int" data-category="Enums & Structs" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Enum to Int</h3>
-    <p>Enums can be cast to their underlying integer values.</p>
-    <pre><code>int code = (int)Status.Approved;
+    <div class="card" id="syntax-enum-to-int" data-category="Enums & Structs" data-topic="Syntax" style="background:#fcf3cf; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#ca6f1e">Enum to Int</h3>
+      <p>Enums can be cast to their underlying integer values.</p>
+      <pre><code>int code = (int)Status.Approved;
 Console.WriteLine(code);</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-enum-flags" data-category="Enums & Structs" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>[Flags] Enum</h3>
-    <p>Allows combining enum values using bitwise operations.</p>
-    <pre><code>[Flags]
+    <div class="card" id="syntax-enum-flags" data-category="Enums & Structs" data-topic="Syntax" style="background:#fcf3cf; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#ca6f1e">[Flags] Enum</h3>
+      <p>Allows combining enum values using bitwise operations.</p>
+      <pre><code>[Flags]
 enum Permissions {
     None = 0,
     Read = 1,
@@ -1803,13 +2061,13 @@ enum Permissions {
 }
 
 Permissions p = Permissions.Read | Permissions.Write;</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-readonly-struct" data-category="Enums & Structs" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>readonly struct</h3>
-    <p>Prevents modification of struct fields after creation, improving performance and immutability.</p>
-    <pre><code>public readonly struct Coordinate {
+    <div class="card" id="syntax-readonly-struct" data-category="Enums & Structs" data-topic="Syntax" style="background:#fcf3cf; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#ca6f1e">readonly struct</h3>
+      <p>Prevents modification of struct fields after creation, improving performance and immutability.</p>
+      <pre><code>public readonly struct Coordinate {
     public int X { get; }
     public int Y { get; }
 
@@ -1818,628 +2076,893 @@ Permissions p = Permissions.Read | Permissions.Write;</code></pre>
         Y = y;
     }
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-try-catch" data-category="Exceptions & Error Handling" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>try-catch Block</h3>
-    <p>Catches and handles exceptions thrown during execution.</p>
-    <pre><code>try {
+    <div class="card" id="syntax-try-catch" data-category="Exceptions & Error Handling" data-topic="Syntax" style="background:#fadbd8; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#c0392b">try-catch Block</h3>
+      <p>Catches and handles exceptions thrown during execution.</p>
+      <pre><code>try {
     int x = 10 / 0;
 } catch (DivideByZeroException ex) {
     Console.WriteLine("Cannot divide by zero.");
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-try-catch-finally" data-category="Exceptions & Error Handling" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>try-catch-finally</h3>
-    <p>finally block runs regardless of whether an exception is thrown.</p>
-    <pre><code>try {
+    <div class="card" id="syntax-try-catch-finally" data-category="Exceptions & Error Handling" data-topic="Syntax" style="background:#fadbd8; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#c0392b">try-catch-finally</h3>
+      <p>finally block runs regardless of whether an exception is thrown.</p>
+      <pre><code>try {
     // risky code
 } catch (Exception ex) {
     Console.WriteLine(ex.Message);
 } finally {
     Console.WriteLine("Cleanup");
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-throw-exception" data-category="Exceptions & Error Handling" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>throw Keyword</h3>
-    <p>Throws a new or rethrows an existing exception.</p>
-    <pre><code>if (input == null) {
+    <div class="card" id="syntax-throw-exception" data-category="Exceptions & Error Handling" data-topic="Syntax" style="background:#fadbd8; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#c0392b">throw Keyword</h3>
+      <p>Throws a new or rethrows an existing exception.</p>
+      <pre><code>if (input == null) {
     throw new ArgumentNullException(nameof(input));
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-custom-exception" data-category="Exceptions & Error Handling" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Custom Exception</h3>
-    <p>You can define your own exception class by extending Exception.</p>
-    <pre><code>public class MyException : Exception {
+    <div class="card" id="syntax-custom-exception" data-category="Exceptions & Error Handling" data-topic="Syntax" style="background:#fadbd8; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#c0392b">Custom Exception</h3>
+      <p>You can define your own exception class by extending Exception.</p>
+      <pre><code>public class MyException : Exception {
     public MyException(string msg) : base(msg) {}
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-multiple-catch" data-category="Exceptions & Error Handling" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Multiple catch Blocks</h3>
-    <p>You can catch different exception types with multiple catch blocks.</p>
-    <pre><code>try {
+    <div class="card" id="syntax-multiple-catch" data-category="Exceptions & Error Handling" data-topic="Syntax" style="background:#fadbd8; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#c0392b">Multiple catch Blocks</h3>
+      <p>You can catch different exception types with multiple catch blocks.</p>
+      <pre><code>try {
     // code
 } catch (IOException ex) {
     // file error
 } catch (Exception ex) {
     // general
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-rethrow-exception" data-category="Exceptions & Error Handling" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Rethrow Exception</h3>
-    <p>Use `throw;` to pass the exception up the call stack.</p>
-    <pre><code>try {
+    <div class="card" id="syntax-rethrow-exception" data-category="Exceptions & Error Handling" data-topic="Syntax" style="background:#fadbd8; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#c0392b">Rethrow Exception</h3>
+      <p>Use `throw;` to pass the exception up the call stack.</p>
+      <pre><code>try {
     // code
 } catch (Exception ex) {
     Log(ex);
     throw;
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-catch-when" data-category="Exceptions & Error Handling" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>catch with when Filter</h3>
-    <p>Adds a condition to a catch block using `when`.</p>
-    <pre><code>try {
+    <div class="card" id="syntax-catch-when" data-category="Exceptions & Error Handling" data-topic="Syntax" style="background:#fadbd8; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#c0392b">catch with when Filter</h3>
+      <p>Adds a condition to a catch block using `when`.</p>
+      <pre><code>try {
     // risky operation
 } catch (IOException ex) when (ex.Message.Contains("disk")) {
     Console.WriteLine("Disk-related IO error.");
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-exception-dispatch-info" data-category="Exceptions & Error Handling" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>ExceptionDispatchInfo.Capture</h3>
-    <p>Preserves original exception stack trace when rethrowing.</p>
-    <pre><code>try {
+    <div class="card" id="syntax-exception-dispatch-info" data-category="Exceptions & Error Handling" data-topic="Syntax" style="background:#fadbd8; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#c0392b">ExceptionDispatchInfo.Capture</h3>
+      <p>Preserves original exception stack trace when rethrowing.</p>
+      <pre><code>try {
     throw new InvalidOperationException();
 } catch (Exception ex) {
     var edi = ExceptionDispatchInfo.Capture(ex);
     // log or handle
     edi.Throw();
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-namespace-definition" data-category="Namespaces" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Namespace Definition</h3>
-    <p>Organizes classes and types into logical groups.</p>
-    <pre><code>namespace MyApp.Utilities {
+    <div class="card" id="syntax-namespace-definition" data-category="Namespaces" data-topic="Syntax" style="background:#ffeaa7; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#d63031">Namespace Definition</h3>
+      <p>Organizes classes and types into logical groups.</p>
+      <pre><code>namespace MyApp.Utilities {
     class Logger {
         // ...
     }
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-nested-namespaces" data-category="Namespaces" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Nested Namespaces</h3>
-    <p>Defines namespaces inside another to represent hierarchy.</p>
-    <pre><code>namespace Company.Project.Module {
+    <div class="card" id="syntax-nested-namespaces" data-category="Namespaces" data-topic="Syntax" style="background:#ffeaa7; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#d63031">Nested Namespaces</h3>
+      <p>Defines namespaces inside another to represent hierarchy.</p>
+      <pre><code>namespace Company.Project.Module {
     class Service {}
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-using-namespace" data-category="Namespaces" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>using Namespace</h3>
-    <p>Imports types from a namespace to use without full qualification.</p>
-    <pre><code>using System.Text;
+    <div class="card" id="syntax-using-namespace" data-category="Namespaces" data-topic="Syntax" style="background:#ffeaa7; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#d63031">using Namespace</h3>
+      <p>Imports types from a namespace to use without full qualification.</p>
+      <pre><code>using System.Text;
 
 StringBuilder sb = new StringBuilder();</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-alias-namespace" data-category="Namespaces" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Namespace Alias</h3>
-    <p>Defines an alias for a namespace to shorten long references.</p>
-    <pre><code>using Utils = MyCompany.Tools.Utilities;
+    <div class="card" id="syntax-alias-namespace" data-category="Namespaces" data-topic="Syntax" style="background:#ffeaa7; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#d63031">Namespace Alias</h3>
+      <p>Defines an alias for a namespace to shorten long references.</p>
+      <pre><code>using Utils = MyCompany.Tools.Utilities;
 
 Utils.Logger.Log("Done");</code></pre>
-  </div>
+    </div>
+  
 
+    <div class="card" id="syntax-global-namespace" data-category="Namespaces" data-topic="Syntax" style="background:#ffeaa7; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#d63031">Global Namespace</h3>
+      <p>Use `global::` to explicitly refer to the root namespace.</p>
+      <pre><code>global::System.Console.WriteLine("Hello");</code></pre>
+    </div>
+  
 
-  <div class="card" id="syntax-global-namespace" data-category="Namespaces" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Global Namespace</h3>
-    <p>Use `global::` to explicitly refer to the root namespace.</p>
-    <pre><code>global::System.Console.WriteLine("Hello");</code></pre>
-  </div>
-
-
-  <div class="card" id="syntax-const-definition" data-category="Constants & Readonly" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>const Keyword</h3>
-    <p>Defines a compile-time constant value.</p>
-    <pre><code>const double Pi = 3.14159;
+    <div class="card" id="syntax-const-definition" data-category="Constants & Readonly" data-topic="Syntax" style="background:#fab1a0; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#6c3483">const Keyword</h3>
+      <p>Defines a compile-time constant value.</p>
+      <pre><code>const double Pi = 3.14159;
 Console.WriteLine(Pi);</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-readonly-field" data-category="Constants & Readonly" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>readonly Field</h3>
-    <p>A field that can only be assigned during declaration or in a constructor.</p>
-    <pre><code>class Circle {
+    <div class="card" id="syntax-readonly-field" data-category="Constants & Readonly" data-topic="Syntax" style="background:#fab1a0; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#6c3483">readonly Field</h3>
+      <p>A field that can only be assigned during declaration or in a constructor.</p>
+      <pre><code>class Circle {
     public readonly double Radius;
     public Circle(double r) {
         Radius = r;
     }
 }</code></pre>
-  </div>
+    </div>
+  
 
+    <div class="card" id="syntax-static-readonly" data-category="Constants & Readonly" data-topic="Syntax" style="background:#fab1a0; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#6c3483">static readonly</h3>
+      <p>Shared across all instances and set once at runtime.</p>
+      <pre><code>public static readonly string AppName = "Cheatsheet";</code></pre>
+    </div>
+  
 
-  <div class="card" id="syntax-static-readonly" data-category="Constants & Readonly" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>static readonly</h3>
-    <p>Shared across all instances and set once at runtime.</p>
-    <pre><code>public static readonly string AppName = "Cheatsheet";</code></pre>
-  </div>
-
-
-  <div class="card" id="syntax-const-vs-readonly" data-category="Constants & Readonly" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>const vs readonly</h3>
-    <p>const is compile-time; readonly is runtime-settable (in constructor).</p>
-    <pre><code>// const: compile-time
+    <div class="card" id="syntax-const-vs-readonly" data-category="Constants & Readonly" data-topic="Syntax" style="background:#fab1a0; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#6c3483">const vs readonly</h3>
+      <p>const is compile-time; readonly is runtime-settable (in constructor).</p>
+      <pre><code>// const: compile-time
 const int MaxUsers = 100;
 
 // readonly: runtime
 readonly Guid Id = Guid.NewGuid();</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-nullable-declaration" data-category="Nullable Types" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Nullable Value Type</h3>
-    <p>Use `?` to allow value types to hold `null`.</p>
-    <pre><code>int? age = null;
+    <div class="card" id="syntax-nullable-declaration" data-category="Nullable Types" data-topic="Syntax" style="background:#dff9fb; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#130f40">Nullable Value Type</h3>
+      <p>Use `?` to allow value types to hold `null`.</p>
+      <pre><code>int? age = null;
 if (age.HasValue) {
     Console.WriteLine(age.Value);
 }</code></pre>
-  </div>
+    </div>
+  
 
+    <div class="card" id="syntax-null-coalescing" data-category="Nullable Types" data-topic="Syntax" style="background:#dff9fb; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#130f40">?? Null Coalescing</h3>
+      <p>Provides a default value if the left-hand operand is null.</p>
+      <pre><code>string name = inputName ?? "Guest";</code></pre>
+    </div>
+  
 
-  <div class="card" id="syntax-null-coalescing" data-category="Nullable Types" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>?? Null Coalescing</h3>
-    <p>Provides a default value if the left-hand operand is null.</p>
-    <pre><code>string name = inputName ?? "Guest";</code></pre>
-  </div>
+    <div class="card" id="syntax-null-conditional" data-category="Nullable Types" data-topic="Syntax" style="background:#dff9fb; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#130f40">?. Null Conditional</h3>
+      <p>Safely access members without throwing if the target is null.</p>
+      <pre><code>Console.WriteLine(user?.Profile?.Name);</code></pre>
+    </div>
+  
 
+    <div class="card" id="syntax-null-forgiving" data-category="Nullable Types" data-topic="Syntax" style="background:#dff9fb; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#130f40">! Null Forgiving</h3>
+      <p>Suppresses compiler warnings about nullability.</p>
+      <pre><code>string definitelyNotNull = maybeNull!;</code></pre>
+    </div>
+  
 
-  <div class="card" id="syntax-null-conditional" data-category="Nullable Types" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>?. Null Conditional</h3>
-    <p>Safely access members without throwing if the target is null.</p>
-    <pre><code>Console.WriteLine(user?.Profile?.Name);</code></pre>
-  </div>
-
-
-  <div class="card" id="syntax-null-forgiving" data-category="Nullable Types" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>! Null Forgiving</h3>
-    <p>Suppresses compiler warnings about nullability.</p>
-    <pre><code>string definitelyNotNull = maybeNull!;</code></pre>
-  </div>
-
-
-  <div class="card" id="syntax-nullable-reference" data-category="Nullable Types" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Nullable Reference Types</h3>
-    <p>Enable nullable reference types to get static analysis support.</p>
-    <pre><code>#nullable enable
+    <div class="card" id="syntax-nullable-reference" data-category="Nullable Types" data-topic="Syntax" style="background:#dff9fb; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#130f40">Nullable Reference Types</h3>
+      <p>Enable nullable reference types to get static analysis support.</p>
+      <pre><code>#nullable enable
 string? name = null;
 Console.WriteLine(name?.Length);</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-implicit-cast" data-category="Type Casting & Conversion" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Implicit Casting</h3>
-    <p>Automatically converts smaller types to larger compatible types.</p>
-    <pre><code>int num = 10;
+    <div class="card" id="syntax-implicit-cast" data-category="Type Casting & Conversion" data-topic="Syntax" style="background:#f6e58d; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#2d3436">Implicit Casting</h3>
+      <p>Automatically converts smaller types to larger compatible types.</p>
+      <pre><code>int num = 10;
 double result = num; // Implicit cast</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-explicit-cast" data-category="Type Casting & Conversion" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Explicit Casting</h3>
-    <p>Manually convert types that require confirmation (may lose data).</p>
-    <pre><code>double d = 9.8;
+    <div class="card" id="syntax-explicit-cast" data-category="Type Casting & Conversion" data-topic="Syntax" style="background:#f6e58d; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#2d3436">Explicit Casting</h3>
+      <p>Manually convert types that require confirmation (may lose data).</p>
+      <pre><code>double d = 9.8;
 int i = (int)d;</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-as-keyword" data-category="Type Casting & Conversion" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>as Keyword</h3>
-    <p>Attempts a safe cast to a reference type or nullable type, returns null if it fails.</p>
-    <pre><code>object obj = "hello";
+    <div class="card" id="syntax-as-keyword" data-category="Type Casting & Conversion" data-topic="Syntax" style="background:#f6e58d; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#2d3436">as Keyword</h3>
+      <p>Attempts a safe cast to a reference type or nullable type, returns null if it fails.</p>
+      <pre><code>object obj = "hello";
 string str = obj as string;</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-is-check" data-category="Type Casting & Conversion" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>is Keyword</h3>
-    <p>Checks if an object is of a specific type.</p>
-    <pre><code>if (obj is string s) {
+    <div class="card" id="syntax-is-check" data-category="Type Casting & Conversion" data-topic="Syntax" style="background:#f6e58d; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#2d3436">is Keyword</h3>
+      <p>Checks if an object is of a specific type.</p>
+      <pre><code>if (obj is string s) {
     Console.WriteLine(s);
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-convert-class" data-category="Type Casting & Conversion" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Convert Class</h3>
-    <p>Provides methods to convert between base types safely.</p>
-    <pre><code>string str = "123";
+    <div class="card" id="syntax-convert-class" data-category="Type Casting & Conversion" data-topic="Syntax" style="background:#f6e58d; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#2d3436">Convert Class</h3>
+      <p>Provides methods to convert between base types safely.</p>
+      <pre><code>string str = "123";
 int num = Convert.ToInt32(str);</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-tryparse" data-category="Type Casting & Conversion" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>TryParse Method</h3>
-    <p>Safely attempts to parse a string into a type without throwing exceptions.</p>
-    <pre><code>if (int.TryParse("42", out int result)) {
+    <div class="card" id="syntax-tryparse" data-category="Type Casting & Conversion" data-topic="Syntax" style="background:#f6e58d; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#2d3436">TryParse Method</h3>
+      <p>Safely attempts to parse a string into a type without throwing exceptions.</p>
+      <pre><code>if (int.TryParse("42", out int result)) {
     Console.WriteLine(result);
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-obsolete-attribute" data-category="Attributes" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>[Obsolete] Attribute</h3>
-    <p>Marks a method or class as outdated; shows a compile warning or error.</p>
-    <pre><code>[Obsolete("Use NewMethod instead")]
+    <div class="card" id="syntax-obsolete-attribute" data-category="Attributes" data-topic="Syntax" style="background:#f8c291; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#e55039">[Obsolete] Attribute</h3>
+      <p>Marks a method or class as outdated; shows a compile warning or error.</p>
+      <pre><code>[Obsolete("Use NewMethod instead")]
 void OldMethod() {
     // ...
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-attribute-basic" data-category="Attributes" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Declaring an Attribute</h3>
-    <p>Attributes are applied with square brackets above declarations.</p>
-    <pre><code>[Serializable]
+    <div class="card" id="syntax-attribute-basic" data-category="Attributes" data-topic="Syntax" style="background:#f8c291; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#e55039">Declaring an Attribute</h3>
+      <p>Attributes are applied with square brackets above declarations.</p>
+      <pre><code>[Serializable]
 class MyData {
     public int Id;
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-custom-attribute" data-category="Attributes" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Custom Attribute</h3>
-    <p>Create a new attribute by extending System.Attribute.</p>
-    <pre><code>public class AuthorAttribute : Attribute {
+    <div class="card" id="syntax-custom-attribute" data-category="Attributes" data-topic="Syntax" style="background:#f8c291; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#e55039">Custom Attribute</h3>
+      <p>Create a new attribute by extending System.Attribute.</p>
+      <pre><code>public class AuthorAttribute : Attribute {
     public string Name;
     public AuthorAttribute(string name) {
         Name = name;
     }
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-multiple-attributes" data-category="Attributes" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Multiple Attributes</h3>
-    <p>You can apply multiple attributes using commas or multiple brackets.</p>
-    <pre><code>[Serializable, Obsolete]
+    <div class="card" id="syntax-multiple-attributes" data-category="Attributes" data-topic="Syntax" style="background:#f8c291; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#e55039">Multiple Attributes</h3>
+      <p>You can apply multiple attributes using commas or multiple brackets.</p>
+      <pre><code>[Serializable, Obsolete]
 class OldClass {}</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-targeted-attribute" data-category="Attributes" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Targeted Attribute</h3>
-    <p>Attributes can be directed to specific parts like return types.</p>
-    <pre><code>[return: NotNull]
+    <div class="card" id="syntax-targeted-attribute" data-category="Attributes" data-topic="Syntax" style="background:#f8c291; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#e55039">Targeted Attribute</h3>
+      <p>Attributes can be directed to specific parts like return types.</p>
+      <pre><code>[return: NotNull]
 public string? GetName() => name;</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-basic-lambda" data-category="Lambda Expressions" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Basic Lambda</h3>
-    <p>A concise way to represent an anonymous method.</p>
-    <pre><code>Func<int, int> square = x => x * x;
+    <div class="card" id="syntax-basic-lambda" data-category="Lambda Expressions" data-topic="Syntax" style="background:#c7ecee; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#0984e3">Basic Lambda</h3>
+      <p>A concise way to represent an anonymous method.</p>
+      <pre><code>Func<int, int> square = x => x * x;
 Console.WriteLine(square(5));</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-lambda-multiple-params" data-category="Lambda Expressions" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Lambda with Multiple Parameters</h3>
-    <p>Use parentheses for multiple parameters.</p>
-    <pre><code>Func<int, int, int> add = (a, b) => a + b;
+    <div class="card" id="syntax-lambda-multiple-params" data-category="Lambda Expressions" data-topic="Syntax" style="background:#c7ecee; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#0984e3">Lambda with Multiple Parameters</h3>
+      <p>Use parentheses for multiple parameters.</p>
+      <pre><code>Func<int, int, int> add = (a, b) => a + b;
 Console.WriteLine(add(2, 3));</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-lambda-block" data-category="Lambda Expressions" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Lambda with Block Body</h3>
-    <p>Use braces for multiple statements or return logic.</p>
-    <pre><code>Func<int, int> doubleIt = x => {
+    <div class="card" id="syntax-lambda-block" data-category="Lambda Expressions" data-topic="Syntax" style="background:#c7ecee; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#0984e3">Lambda with Block Body</h3>
+      <p>Use braces for multiple statements or return logic.</p>
+      <pre><code>Func<int, int> doubleIt = x => {
     Console.WriteLine(x);
     return x * 2;
 };</code></pre>
-  </div>
+    </div>
+  
 
+    <div class="card" id="syntax-lambda-in-linq" data-category="Lambda Expressions" data-topic="Syntax" style="background:#c7ecee; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#0984e3">Lambda in LINQ</h3>
+      <p>Lambdas are frequently used in LINQ queries.</p>
+      <pre><code>var evens = numbers.Where(n => n % 2 == 0).ToList();</code></pre>
+    </div>
+  
 
-  <div class="card" id="syntax-lambda-in-linq" data-category="Lambda Expressions" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Lambda in LINQ</h3>
-    <p>Lambdas are frequently used in LINQ queries.</p>
-    <pre><code>var evens = numbers.Where(n => n % 2 == 0).ToList();</code></pre>
-  </div>
-
-
-  <div class="card" id="syntax-action-lambda" data-category="Lambda Expressions" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Action Delegate</h3>
-    <p>Use `Action` when the lambda does not return a value.</p>
-    <pre><code>Action<string> greet = name => Console.WriteLine($"Hello, {name}");
+    <div class="card" id="syntax-action-lambda" data-category="Lambda Expressions" data-topic="Syntax" style="background:#c7ecee; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#0984e3">Action Delegate</h3>
+      <p>Use `Action` when the lambda does not return a value.</p>
+      <pre><code>Action<string> greet = name => Console.WriteLine($"Hello, {name}");
 greet("Sam");</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-is-pattern" data-category="Pattern Matching" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>is Pattern Matching</h3>
-    <p>Checks type and declares variable if matched.</p>
-    <pre><code>if (obj is string s) {
+    <div class="card" id="syntax-is-pattern" data-category="Pattern Matching" data-topic="Syntax" style="background:#fdcb6e; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#6c5ce7">is Pattern Matching</h3>
+      <p>Checks type and declares variable if matched.</p>
+      <pre><code>if (obj is string s) {
     Console.WriteLine(s.Length);
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-switch-pattern" data-category="Pattern Matching" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>switch Expression Pattern</h3>
-    <p>Pattern match using modern `switch` expressions.</p>
-    <pre><code>string result = value switch {
+    <div class="card" id="syntax-switch-pattern" data-category="Pattern Matching" data-topic="Syntax" style="background:#fdcb6e; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#6c5ce7">switch Expression Pattern</h3>
+      <p>Pattern match using modern `switch` expressions.</p>
+      <pre><code>string result = value switch {
     1 => "One",
     2 => "Two",
     _ => "Other"
 };</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-relational-pattern" data-category="Pattern Matching" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Relational Pattern</h3>
-    <p>Match based on comparisons like `<`, `>=`, etc.</p>
-    <pre><code>string msg = number switch {
+    <div class="card" id="syntax-relational-pattern" data-category="Pattern Matching" data-topic="Syntax" style="background:#fdcb6e; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#6c5ce7">Relational Pattern</h3>
+      <p>Match based on comparisons like `<`, `>=`, etc.</p>
+      <pre><code>string msg = number switch {
     < 0 => "Negative",
     0 => "Zero",
     > 0 => "Positive"
 };</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-logical-pattern" data-category="Pattern Matching" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Logical Patterns</h3>
-    <p>Combine patterns with `and`, `or`, and `not`.</p>
-    <pre><code>if (x is > 0 and < 100) {
+    <div class="card" id="syntax-logical-pattern" data-category="Pattern Matching" data-topic="Syntax" style="background:#fdcb6e; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#6c5ce7">Logical Patterns</h3>
+      <p>Combine patterns with `and`, `or`, and `not`.</p>
+      <pre><code>if (x is > 0 and < 100) {
     Console.WriteLine("In range");
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-type-pattern" data-category="Pattern Matching" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Type Pattern with Property</h3>
-    <p>Use nested patterns to check properties inline.</p>
-    <pre><code>if (person is { Age: > 18 }) {
+    <div class="card" id="syntax-type-pattern" data-category="Pattern Matching" data-topic="Syntax" style="background:#fdcb6e; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#6c5ce7">Type Pattern with Property</h3>
+      <p>Use nested patterns to check properties inline.</p>
+      <pre><code>if (person is { Age: > 18 }) {
     Console.WriteLine("Adult");
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-basic-tuple" data-category="Tuples & Deconstruction" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Basic Tuple</h3>
-    <p>A lightweight way to return multiple values.</p>
-    <pre><code>var person = ("Alice", 30);
+    <div class="card" id="syntax-basic-tuple" data-category="Tuples & Deconstruction" data-topic="Syntax" style="background:#dff0d8; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#27ae60">Basic Tuple</h3>
+      <p>A lightweight way to return multiple values.</p>
+      <pre><code>var person = ("Alice", 30);
 Console.WriteLine(person.Item1);</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-named-tuple" data-category="Tuples & Deconstruction" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Named Tuple</h3>
-    <p>Name tuple fields for more readable code.</p>
-    <pre><code>var person = (Name: "Alice", Age: 30);
+    <div class="card" id="syntax-named-tuple" data-category="Tuples & Deconstruction" data-topic="Syntax" style="background:#dff0d8; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#27ae60">Named Tuple</h3>
+      <p>Name tuple fields for more readable code.</p>
+      <pre><code>var person = (Name: "Alice", Age: 30);
 Console.WriteLine(person.Name);</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-tuple-return" data-category="Tuples & Deconstruction" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Return Tuple from Method</h3>
-    <p>Use tuples to return multiple values from methods.</p>
-    <pre><code>public (int sum, int diff) Calc(int a, int b) {
+    <div class="card" id="syntax-tuple-return" data-category="Tuples & Deconstruction" data-topic="Syntax" style="background:#dff0d8; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#27ae60">Return Tuple from Method</h3>
+      <p>Use tuples to return multiple values from methods.</p>
+      <pre><code>public (int sum, int diff) Calc(int a, int b) {
     return (a + b, a - b);
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-deconstruct-tuple" data-category="Tuples & Deconstruction" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Deconstruct Tuple</h3>
-    <p>Split tuple elements into separate variables.</p>
-    <pre><code>var (name, age) = ("Bob", 25);
+    <div class="card" id="syntax-deconstruct-tuple" data-category="Tuples & Deconstruction" data-topic="Syntax" style="background:#dff0d8; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#27ae60">Deconstruct Tuple</h3>
+      <p>Split tuple elements into separate variables.</p>
+      <pre><code>var (name, age) = ("Bob", 25);
 Console.WriteLine(name);</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-deconstruct-object" data-category="Tuples & Deconstruction" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Deconstruct Custom Object</h3>
-    <p>Define `Deconstruct` method to enable tuple-style unpacking.</p>
-    <pre><code>public void Deconstruct(out string name, out int age) {
+    <div class="card" id="syntax-deconstruct-object" data-category="Tuples & Deconstruction" data-topic="Syntax" style="background:#dff0d8; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#27ae60">Deconstruct Custom Object</h3>
+      <p>Define `Deconstruct` method to enable tuple-style unpacking.</p>
+      <pre><code>public void Deconstruct(out string name, out int age) {
     name = this.Name;
     age = this.Age;
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-dynamic-type" data-category="Dynamic & ExpandoObject" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>dynamic Type</h3>
-    <p>Bypasses compile-time type checking and resolves members at runtime.</p>
-    <pre><code>dynamic message = "Hello";
+    <div class="card" id="syntax-dynamic-type" data-category="Dynamic & ExpandoObject" data-topic="Syntax" style="background:#ffeaa7; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#fd79a8">dynamic Type</h3>
+      <p>Bypasses compile-time type checking and resolves members at runtime.</p>
+      <pre><code>dynamic message = "Hello";
 Console.WriteLine(message.ToUpper());</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-dynamic-behavior" data-category="Dynamic & ExpandoObject" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Dynamic Behavior</h3>
-    <p>Supports interop scenarios, reflection, and COM object manipulation.</p>
-    <pre><code>dynamic excel = Activator.CreateInstance(Type.GetTypeFromProgID("Excel.Application"));
+    <div class="card" id="syntax-dynamic-behavior" data-category="Dynamic & ExpandoObject" data-topic="Syntax" style="background:#ffeaa7; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#fd79a8">Dynamic Behavior</h3>
+      <p>Supports interop scenarios, reflection, and COM object manipulation.</p>
+      <pre><code>dynamic excel = Activator.CreateInstance(Type.GetTypeFromProgID("Excel.Application"));
 excel.Visible = true;</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-expandoobject" data-category="Dynamic & ExpandoObject" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>ExpandoObject</h3>
-    <p>Allows you to dynamically add members to an object at runtime.</p>
-    <pre><code>dynamic person = new ExpandoObject();
+    <div class="card" id="syntax-expandoobject" data-category="Dynamic & ExpandoObject" data-topic="Syntax" style="background:#ffeaa7; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#fd79a8">ExpandoObject</h3>
+      <p>Allows you to dynamically add members to an object at runtime.</p>
+      <pre><code>dynamic person = new ExpandoObject();
 person.Name = "Jane";
 person.Age = 28;</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-expando-method" data-category="Dynamic & ExpandoObject" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>ExpandoObject with Method</h3>
-    <p>You can attach delegates to `ExpandoObject` members.</p>
-    <pre><code>person.Speak = (Action)(() => Console.WriteLine("Hi!"));
+    <div class="card" id="syntax-expando-method" data-category="Dynamic & ExpandoObject" data-topic="Syntax" style="background:#ffeaa7; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#fd79a8">ExpandoObject with Method</h3>
+      <p>You can attach delegates to `ExpandoObject` members.</p>
+      <pre><code>person.Speak = (Action)(() => Console.WriteLine("Hi!"));
 person.Speak();</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-if-directive" data-category="Preprocessor Directives" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>#if / #endif</h3>
-    <p>Conditionally compile code blocks based on symbols.</p>
-    <pre><code>#define DEBUG
+    <div class="card" id="syntax-if-directive" data-category="Preprocessor Directives" data-topic="Syntax" style="background:#dfe6e9; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#2d3436">#if / #endif</h3>
+      <p>Conditionally compile code blocks based on symbols.</p>
+      <pre><code>#define DEBUG
 
 #if DEBUG
 Console.WriteLine("Debug Mode");
 #endif</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-define-directive" data-category="Preprocessor Directives" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>#define Directive</h3>
-    <p>Defines a symbol for conditional compilation.</p>
-    <pre><code>#define FEATURE_X
+    <div class="card" id="syntax-define-directive" data-category="Preprocessor Directives" data-topic="Syntax" style="background:#dfe6e9; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#2d3436">#define Directive</h3>
+      <p>Defines a symbol for conditional compilation.</p>
+      <pre><code>#define FEATURE_X
 
 #if FEATURE_X
 Console.WriteLine("Feature Enabled");
 #endif</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-region-directive" data-category="Preprocessor Directives" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>#region / #endregion</h3>
-    <p>Organizes code into collapsible blocks in editors.</p>
-    <pre><code>#region Utility Methods
+    <div class="card" id="syntax-region-directive" data-category="Preprocessor Directives" data-topic="Syntax" style="background:#dfe6e9; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#2d3436">#region / #endregion</h3>
+      <p>Organizes code into collapsible blocks in editors.</p>
+      <pre><code>#region Utility Methods
 void Log(string msg) {
     Console.WriteLine(msg);
 }
 #endregion</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-warning-directive" data-category="Preprocessor Directives" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>#warning / #error</h3>
-    <p>Generates compile-time warnings or errors.</p>
-    <pre><code>#warning Deprecated API usage
+    <div class="card" id="syntax-warning-directive" data-category="Preprocessor Directives" data-topic="Syntax" style="background:#dfe6e9; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#2d3436">#warning / #error</h3>
+      <p>Generates compile-time warnings or errors.</p>
+      <pre><code>#warning Deprecated API usage
 #error Critical failure</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-pragma-warning" data-category="Preprocessor Directives" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>#pragma warning</h3>
-    <p>Disables or restores specific compiler warnings.</p>
-    <pre><code>#pragma warning disable CS0168
+    <div class="card" id="syntax-pragma-warning" data-category="Preprocessor Directives" data-topic="Syntax" style="background:#dfe6e9; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#2d3436">#pragma warning</h3>
+      <p>Disables or restores specific compiler warnings.</p>
+      <pre><code>#pragma warning disable CS0168
 int unused;
 #pragma warning restore CS0168</code></pre>
-  </div>
+    </div>
+  
 
+    <div class="card" id="syntax-auto-property" data-category="Indexers & Properties" data-topic="Syntax" style="background:#d6a2e8; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#6a0572">Auto-Implemented Property</h3>
+      <p>Simplifies property declaration with an implicit backing field.</p>
+      <pre><code>public string Name { get; set; }</code></pre>
+    </div>
+  
 
-  <div class="card" id="syntax-auto-property" data-category="Indexers & Properties" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Auto-Implemented Property</h3>
-    <p>Simplifies property declaration with an implicit backing field.</p>
-    <pre><code>public string Name { get; set; }</code></pre>
-  </div>
-
-
-  <div class="card" id="syntax-custom-property" data-category="Indexers & Properties" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Custom Property</h3>
-    <p>Define logic in `get` and `set` accessors.</p>
-    <pre><code>private int _age;
+    <div class="card" id="syntax-custom-property" data-category="Indexers & Properties" data-topic="Syntax" style="background:#d6a2e8; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#6a0572">Custom Property</h3>
+      <p>Define logic in `get` and `set` accessors.</p>
+      <pre><code>private int _age;
 public int Age {
     get => _age;
     set {
         if (value >= 0) _age = value;
     }
 }</code></pre>
-  </div>
+    </div>
+  
 
+    <div class="card" id="syntax-readonly-property" data-category="Indexers & Properties" data-topic="Syntax" style="background:#d6a2e8; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#6a0572">Read-Only Property</h3>
+      <p>Property with a `get` accessor only (no `set`).</p>
+      <pre><code>public DateTime Created { get; } = DateTime.Now;</code></pre>
+    </div>
+  
 
-  <div class="card" id="syntax-readonly-property" data-category="Indexers & Properties" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Read-Only Property</h3>
-    <p>Property with a `get` accessor only (no `set`).</p>
-    <pre><code>public DateTime Created { get; } = DateTime.Now;</code></pre>
-  </div>
+    <div class="card" id="syntax-init-property" data-category="Indexers & Properties" data-topic="Syntax" style="background:#d6a2e8; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#6a0572">Init-Only Property</h3>
+      <p>Allows assignment during object initialization only.</p>
+      <pre><code>public string Title { get; init; }</code></pre>
+    </div>
+  
 
-
-  <div class="card" id="syntax-init-property" data-category="Indexers & Properties" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Init-Only Property</h3>
-    <p>Allows assignment during object initialization only.</p>
-    <pre><code>public string Title { get; init; }</code></pre>
-  </div>
-
-
-  <div class="card" id="syntax-indexer-basic" data-category="Indexers & Properties" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Basic Indexer</h3>
-    <p>Allow objects to be accessed like arrays.</p>
-    <pre><code>public string this[int index] {
+    <div class="card" id="syntax-indexer-basic" data-category="Indexers & Properties" data-topic="Syntax" style="background:#d6a2e8; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#6a0572">Basic Indexer</h3>
+      <p>Allow objects to be accessed like arrays.</p>
+      <pre><code>public string this[int index] {
     get => items[index];
     set => items[index] = value;
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-unsafe-keyword" data-category="Unsafe & Pointers" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>unsafe Keyword</h3>
-    <p>Marks a block of code as unsafe for pointer operations.</p>
-    <pre><code>unsafe {
+    <div class="card" id="syntax-unsafe-keyword" data-category="Unsafe & Pointers" data-topic="Syntax" style="background:#ccc; color:#222; transform: translate(0px, 0px);">
+      <h3 style="color:#000">unsafe Keyword</h3>
+      <p>Marks a block of code as unsafe for pointer operations.</p>
+      <pre><code>unsafe {
     int* p = &number;
     Console.WriteLine(*p);
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-fixed-statement" data-category="Unsafe & Pointers" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>fixed Statement</h3>
-    <p>Pins a variable in memory to prevent GC from moving it.</p>
-    <pre><code>fixed (int* p = &array[0]) {
+    <div class="card" id="syntax-fixed-statement" data-category="Unsafe & Pointers" data-topic="Syntax" style="background:#ccc; color:#222; transform: translate(0px, 0px);">
+      <h3 style="color:#000">fixed Statement</h3>
+      <p>Pins a variable in memory to prevent GC from moving it.</p>
+      <pre><code>fixed (int* p = &array[0]) {
     Console.WriteLine(*p);
 }</code></pre>
-  </div>
+    </div>
+  
 
-
-  <div class="card" id="syntax-pointer-declaration" data-category="Unsafe & Pointers" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Pointer Declaration</h3>
-    <p>Declares a pointer using the `*` symbol.</p>
-    <pre><code>int* ptr;
+    <div class="card" id="syntax-pointer-declaration" data-category="Unsafe & Pointers" data-topic="Syntax" style="background:#ccc; color:#222; transform: translate(0px, 0px);">
+      <h3 style="color:#000">Pointer Declaration</h3>
+      <p>Declares a pointer using the `*` symbol.</p>
+      <pre><code>int* ptr;
 int value = 10;
 ptr = &value;</code></pre>
-  </div>
+    </div>
+  
 
+    <div class="card" id="syntax-stackalloc" data-category="Unsafe & Pointers" data-topic="Syntax" style="background:#ccc; color:#222; transform: translate(0px, 0px);">
+      <h3 style="color:#000">stackalloc</h3>
+      <p>Allocates memory on the stack instead of the heap.</p>
+      <pre><code>Span<int> numbers = stackalloc int[5];</code></pre>
+    </div>
+  
 
-  <div class="card" id="syntax-stackalloc" data-category="Unsafe & Pointers" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>stackalloc</h3>
-    <p>Allocates memory on the stack instead of the heap.</p>
-    <pre><code>Span<int> numbers = stackalloc int[5];</code></pre>
-  </div>
-
-
-  <div class="card" id="syntax-enable-unsafe" data-category="Unsafe & Pointers" data-topic="Syntax" style="transform: translate(0px, 0px);">
-    <h3>Enable Unsafe Code</h3>
-    <p>Must be enabled in project settings to use unsafe code.</p>
-    <pre><code>// In .csproj file
+    <div class="card" id="syntax-enable-unsafe" data-category="Unsafe & Pointers" data-topic="Syntax" style="background:#ccc; color:#222; transform: translate(0px, 0px);">
+      <h3 style="color:#000">Enable Unsafe Code</h3>
+      <p>Must be enabled in project settings to use unsafe code.</p>
+      <pre><code>// In .csproj file
 <AllowUnsafeBlocks>true</AllowUnsafeBlocks></code></pre>
-  </div>
+    </div>
+  
 
+    <div class="card" id="output-console-writeline" data-category="Console Output" data-topic="Output" style="background:#fce4b0; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#d35400">Console.WriteLine()</h3>
+      <p>Writes a line to the console and moves to the next line.</p>
+      <pre><code>Console.WriteLine("Hello, world!");</code></pre>
+    </div>
+  
+
+    <div class="card" id="output-console-write" data-category="Console Output" data-topic="Output" style="background:#fce4b0; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#d35400">Console.Write()</h3>
+      <p>Writes text to the console without a newline.</p>
+      <pre><code>Console.Write("Enter value: ");</code></pre>
+    </div>
+  
+
+    <div class="card" id="output-console-writeline-format" data-category="Console Output" data-topic="Output" style="background:#fce4b0; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#d35400">Console.WriteLine with Format String</h3>
+      <p>Writes formatted values using placeholders like {0}.</p>
+      <pre><code>Console.WriteLine("Name: {0}, Age: {1}", name, age);</code></pre>
+    </div>
+  
+
+    <div class="card" id="output-console-write-format" data-category="Console Output" data-topic="Output" style="background:#fce4b0; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#d35400">Console.Write with Format String</h3>
+      <p>Writes formatted text without a newline.</p>
+      <pre><code>Console.Write("X = {0}", x);</code></pre>
+    </div>
+  
+
+    <div class="card" id="output-string-interpolation" data-category="Console Output" data-topic="Output" style="background:#fce4b0; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#d35400">String Interpolation</h3>
+      <p>Embeds expressions inside string literals using `$` prefix.</p>
+      <pre><code>Console.WriteLine($"Hello, {name}! You are {age} years old.");</code></pre>
+    </div>
+  
+
+    <div class="card" id="output-string-format" data-category="Console Output" data-topic="Output" style="background:#fce4b0; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#d35400">String.Format()</h3>
+      <p>Formats a string with placeholders, returns a result string.</p>
+      <pre><code>var message = String.Format("{0} scored {1} points.", player, score);
+Console.WriteLine(message);</code></pre>
+    </div>
+  
+
+    <div class="card" id="output-debug-writeline" data-category="Debug & Trace Output" data-topic="Output" style="background:#e1f5fe; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#0277bd">Debug.WriteLine</h3>
+      <p>Writes diagnostic messages to the Output window in debug mode.</p>
+      <pre><code>using System.Diagnostics;
+
+Debug.WriteLine("Debug message");</code></pre>
+    </div>
+  
+
+    <div class="card" id="output-trace-writeline" data-category="Debug & Trace Output" data-topic="Output" style="background:#e1f5fe; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#0277bd">Trace.WriteLine</h3>
+      <p>Outputs messages that remain in production builds if trace is enabled.</p>
+      <pre><code>using System.Diagnostics;
+
+Trace.WriteLine("Trace message");</code></pre>
+    </div>
+  
+
+    <div class="card" id="output-debug-assert" data-category="Debug & Trace Output" data-topic="Output" style="background:#e1f5fe; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#0277bd">Debug.Assert</h3>
+      <p>Checks a condition and displays a dialog if the condition is false (only in debug mode).</p>
+      <pre><code>Debug.Assert(user != null, "User should not be null");</code></pre>
+    </div>
+  
+
+    <div class="card" id="output-trace-listeners" data-category="Debug & Trace Output" data-topic="Output" style="background:#e1f5fe; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#0277bd">Trace Listeners</h3>
+      <p>Redirect trace output to files, logs, or other destinations using listeners.</p>
+      <pre><code>Trace.Listeners.Add(new TextWriterTraceListener("log.txt"));
+Trace.AutoFlush = true;
+Trace.WriteLine("Logging to file");</code></pre>
+    </div>
+  
+
+    <div class="card" id="output-trace-switch" data-category="Debug & Trace Output" data-topic="Output" style="background:#e1f5fe; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#0277bd">TraceSwitch</h3>
+      <p>Controls tracing behavior via configuration or code.</p>
+      <pre><code>TraceSwitch ts = new TraceSwitch("General", "Entire App");
+if (ts.TraceInfo) Trace.WriteLine("Info message");</code></pre>
+    </div>
+  
+
+    <div class="card" id="output-logging-console-basic" data-category="Logging Techniques" data-topic="Output" style="background:#fff3e0; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#e65100">Console Logging</h3>
+      <p>Use `Console.WriteLine` or `Console.Error.WriteLine` for simple logs in small apps.</p>
+      <pre><code>Console.WriteLine("[INFO] Operation started");
+Console.Error.WriteLine("[ERROR] Something went wrong");</code></pre>
+    </div>
+  
+
+    <div class="card" id="output-logging-trace" data-category="Logging Techniques" data-topic="Output" style="background:#fff3e0; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#e65100">Trace Logging</h3>
+      <p>Use `System.Diagnostics.Trace` to send logs to listeners like files or logs.</p>
+      <pre><code>using System.Diagnostics;
+
+Trace.WriteLine("[TRACE] Application started");
+Trace.TraceError("[ERROR] Critical failure");</code></pre>
+    </div>
+  
+
+    <div class="card" id="output-logging-debug-vs-trace" data-category="Logging Techniques" data-topic="Output" style="background:#fff3e0; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#e65100">Debug vs Trace</h3>
+      <p>`Debug` logs are only active in Debug builds. `Trace` works in all builds with listeners.</p>
+      <pre><code>Debug.WriteLine("[DEBUG] This only appears in debug mode");
+Trace.WriteLine("[TRACE] This works in any build");</code></pre>
+    </div>
+  
+
+    <div class="card" id="output-logging-serilog" data-category="Logging Techniques" data-topic="Output" style="background:#fff3e0; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#e65100">Structured Logging (Serilog)</h3>
+      <p>Use Serilog or similar libraries for structured logs with metadata and output formats.</p>
+      <pre><code>// Example with Serilog
+Log.Information("Order processed {@Order}", order);</code></pre>
+    </div>
+  
+
+    <div class="card" id="output-write-all-text" data-category="File Output (Write/Append)" data-topic="Output" style="background:#ccc; color:#222; transform: translate(0px, 0px);">
+      <h3 style="color:#000">WriteAllText</h3>
+      <p>Writes text to a file, replacing any existing content.</p>
+      <pre><code>File.WriteAllText("output.txt", "Hello, file!");</code></pre>
+    </div>
+  
+
+    <div class="card" id="output-append-all-text" data-category="File Output (Write/Append)" data-topic="Output" style="background:#ccc; color:#222; transform: translate(0px, 0px);">
+      <h3 style="color:#000">AppendAllText</h3>
+      <p>Appends text to the end of a file.</p>
+      <pre><code>File.AppendAllText("output.txt", "\nMore data.");</code></pre>
+    </div>
+  
+
+    <div class="card" id="output-stream-writer" data-category="File Output (Write/Append)" data-topic="Output" style="background:#ccc; color:#222; transform: translate(0px, 0px);">
+      <h3 style="color:#000">StreamWriter</h3>
+      <p>Provides advanced control over writing to files.</p>
+      <pre><code>using (var writer = new StreamWriter("output.txt")) {
+    writer.WriteLine("Line 1");
+    writer.WriteLine("Line 2");
+}</code></pre>
+    </div>
+  
+
+    <div class="card" id="output-write-all-lines" data-category="File Output (Write/Append)" data-topic="Output" style="background:#ccc; color:#222; transform: translate(0px, 0px);">
+      <h3 style="color:#000">WriteAllLines</h3>
+      <p>Writes an array of strings to a file, one line each.</p>
+      <pre><code>string[] lines = { "Line A", "Line B" };
+File.WriteAllLines("log.txt", lines);</code></pre>
+    </div>
+  
+
+    <div class="card" id="output-append-all-lines" data-category="File Output (Write/Append)" data-topic="Output" style="background:#ccc; color:#222; transform: translate(0px, 0px);">
+      <h3 style="color:#000">AppendAllLines</h3>
+      <p>Appends lines of text to a file from an array.</p>
+      <pre><code>string[] extra = { "Line C", "Line D" };
+File.AppendAllLines("log.txt", extra);</code></pre>
+    </div>
+  
+
+    <div class="card" id="output-create-text" data-category="File Output (Write/Append)" data-topic="Output" style="background:#ccc; color:#222; transform: translate(0px, 0px);">
+      <h3 style="color:#000">CreateText</h3>
+      <p>Creates or overwrites a file and returns a StreamWriter.</p>
+      <pre><code>using var writer = File.CreateText("data.txt");
+writer.WriteLine("New file content.");</code></pre>
+    </div>
+  
+
+    <div class="card" id="output-interpolation" data-category="Formatting Output (Interpolation, Composite)" data-topic="Output" style="background:#ccc; color:#222; transform: translate(0px, 0px);">
+      <h3 style="color:#000">String Interpolation</h3>
+      <p>Embed expressions directly in string literals using `$` syntax.</p>
+      <pre><code>string name = "Sam";
+int age = 30;
+string output = $"{name} is {age} years old.";</code></pre>
+    </div>
+  
+
+    <div class="card" id="output-composite-format" data-category="Formatting Output (Interpolation, Composite)" data-topic="Output" style="background:#ccc; color:#222; transform: translate(0px, 0px);">
+      <h3 style="color:#000">Composite Formatting</h3>
+      <p>Uses numbered placeholders to insert values in strings.</p>
+      <pre><code>string result = string.Format("{0} is {1} years old.", "Sam", 30);</code></pre>
+    </div>
+  
+
+    <div class="card" id="output-composite-format" data-category="Formatting Output (Interpolation, Composite)" data-topic="Output" style="background:#ccc; color:#222; transform: translate(0px, 0px);">
+      <h3 style="color:#000">Composite Formatting</h3>
+      <p>Uses numbered placeholders to insert values in strings.</p>
+      <pre><code>string result = string.Format("{0} is {1} years old.", "Sam", 30);</code></pre>
+    </div>
+  
+
+    <div class="card" id="output-tostring-format" data-category="Formatting Output (Interpolation, Composite)" data-topic="Output" style="background:#ccc; color:#222; transform: translate(0px, 0px);">
+      <h3 style="color:#000">ToString Format Specifiers</h3>
+      <p>Apply numeric or date formats using ToString.</p>
+      <pre><code>DateTime now = DateTime.Now;
+string formatted = now.ToString("yyyy-MM-dd");</code></pre>
+    </div>
+  
+
+    <div class="card" id="output-string-format-specifier" data-category="Formatting Output (Interpolation, Composite)" data-topic="Output" style="background:#ccc; color:#222; transform: translate(0px, 0px);">
+      <h3 style="color:#000">String.Format with Specifiers</h3>
+      <p>Combine composite formatting and format specifiers.</p>
+      <pre><code>double price = 123.456;
+string text = string.Format("Price: {0:C2}", price);</code></pre>
+    </div>
+  
+
+    <div class="card" id="output-verbatim-string" data-category="Verbatim and Escape Sequences" data-topic="Output" style="background:#ffebee; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#c62828">Verbatim String Literals</h3>
+      <p>Use @ to avoid escaping backslashes and newlines.</p>
+      <pre><code>string path = @"C:\Users\John\Documents\file.txt";</code></pre>
+    </div>
+  
+
+    <div class="card" id="output-escape-sequence" data-category="Verbatim and Escape Sequences" data-topic="Output" style="background:#ffebee; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#c62828">Escape Sequences</h3>
+      <p>Use escape characters like \n, \t for formatting.</p>
+      <pre><code>Console.WriteLine("Line1\nLine2\tIndented");</code></pre>
+    </div>
+  
+
+    <div class="card" id="output-escape-sequence" data-category="Verbatim and Escape Sequences" data-topic="Output" style="background:#ffebee; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#c62828">Escape Sequences</h3>
+      <p>Use escape characters like \n, \t for formatting.</p>
+      <pre><code>Console.WriteLine("Line1\nLine2\tIndented");</code></pre>
+    </div>
+  
+
+    <div class="card" id="output-foreground-color" data-category="Colored Console Output" data-topic="Output" style="background:#ede7f6; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#5e35b1">Set Foreground Color</h3>
+      <p>Change the console text color using Console.ForegroundColor.</p>
+      <pre><code>Console.ForegroundColor = ConsoleColor.Green;
+Console.WriteLine("Success!");
+Console.ResetColor();</code></pre>
+    </div>
+  
+
+    <div class="card" id="output-background-color" data-category="Colored Console Output" data-topic="Output" style="background:#ede7f6; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#5e35b1">Set Background Color</h3>
+      <p>Customize the console background color.</p>
+      <pre><code>Console.BackgroundColor = ConsoleColor.DarkBlue;
+Console.WriteLine("Notice");
+Console.ResetColor();</code></pre>
+    </div>
+  
+
+    <div class="card" id="output-custom-textwriter" data-category="Custom Output Streams" data-topic="Output" style="background:#f0f4c3; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#827717">Custom TextWriter</h3>
+      <p>Redirect output by creating a custom TextWriter and assigning it to Console.SetOut.</p>
+      <pre><code>using (var writer = new StreamWriter("log.txt"))
+{
+    Console.SetOut(writer);
+    Console.WriteLine("Logging to file");
+}</code></pre>
+    </div>
+  
+
+    <div class="card" id="output-memory-stream" data-category="Custom Output Streams" data-topic="Output" style="background:#f0f4c3; color:undefined; transform: translate(0px, 0px);">
+      <h3 style="color:#827717">Write to MemoryStream</h3>
+      <p>Use MemoryStream with StreamWriter for temporary, in-memory output.</p>
+      <pre><code>using var mem = new MemoryStream();
+using var writer = new StreamWriter(mem);
+writer.Write("Hello in memory");
+writer.Flush();</code></pre>
+    </div>
+  
   </main>
 
   <script>
     const cardPositions = {};
-    
     function toggleCard(id, visible) {
       const el = document.getElementById(id);
       if (el) {
@@ -2449,11 +2972,10 @@ ptr = &value;</code></pre>
     }
 
     document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.card').forEach(card => {
-    card.style.display = 'none';
-  });
-});
-
+      document.querySelectorAll('.card').forEach(card => {
+        card.style.display = 'none';
+      });
+    });
 
     function toggleCategory(category, visible) {
       const checkboxes = document.querySelectorAll('.card-toggle[data-id]');
@@ -2469,54 +2991,53 @@ ptr = &value;</code></pre>
     function applyCardPosition(card) {
       const pos = cardPositions[card.id];
       if (pos) {
-        card.style.transform = `translate(${pos.x}px, ${pos.y}px)`;
+        card.style.transform = "translate(" + pos.x + "px, " + pos.y + "px)";
       } else {
         card.style.transform = "translate(0px, 0px)";
       }
     }
-document.addEventListener('DOMContentLoaded', () => {
-  const gridSize = 30; // Adjust grid snapping size here
-  const cards = document.querySelectorAll('.card');
-  const cardPositions = {};
-  let activeCard = null;
-  let offsetX = 0, offsetY = 0, isDragging = false;
 
-  function snapToGrid(value) {
-    return Math.round(value / gridSize) * gridSize;
-  }
 
-  cards.forEach(card => {
-    card.addEventListener('mousedown', (e) => {
-      if (window.innerWidth <= 768) return; // Fully disable drag on mobile
-      isDragging = true;
-      activeCard = card;
-      const pos = cardPositions[card.id] || { x: 0, y: 0 };
-      offsetX = e.clientX - pos.x;
-      offsetY = e.clientY - pos.y;
-      activeCard.style.zIndex = 1000;
+    document.addEventListener('DOMContentLoaded', () => {
+      const gridSize = 30;
+      const cards = document.querySelectorAll('.card');
+      let activeCard = null;
+      let offsetX = 0, offsetY = 0, isDragging = false;
+
+      function snapToGrid(value) {
+        return Math.round(value / gridSize) * gridSize;
+      }
+
+      cards.forEach(card => {
+        card.addEventListener('mousedown', (e) => {
+          if (window.innerWidth <= 768) return;
+          isDragging = true;
+          activeCard = card;
+          const pos = cardPositions[card.id] || { x: 0, y: 0 };
+          offsetX = e.clientX - pos.x;
+          offsetY = e.clientY - pos.y;
+          activeCard.style.zIndex = 1000;
+        });
+      });
+
+      document.addEventListener('mousemove', (e) => {
+        if (!isDragging || !activeCard) return;
+        let x = e.clientX - offsetX;
+        let y = e.clientY - offsetY;
+        x = snapToGrid(x);
+        y = snapToGrid(y);
+        activeCard.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
+        cardPositions[activeCard.id] = { x, y };
+      });
+
+      document.addEventListener('mouseup', () => {
+        if (activeCard) {
+          activeCard.style.zIndex = "";
+        }
+        isDragging = false;
+        activeCard = null;
+      });
     });
-  });
-
-  document.addEventListener('mousemove', (e) => {
-    if (!isDragging || !activeCard) return;
-    let x = e.clientX - offsetX;
-    let y = e.clientY - offsetY;
-    x = snapToGrid(x);
-    y = snapToGrid(y);
-    activeCard.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
-    cardPositions[activeCard.id] = { x, y };
-  });
-
-  document.addEventListener('mouseup', () => {
-    if (activeCard) {
-      activeCard.style.zIndex = "";
-    }
-    isDragging = false;
-    activeCard = null;
-  });
-});
-
-
   </script>
 </body>
 </html>

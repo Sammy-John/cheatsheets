@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 const cards = require("./cards.json");
+const styles = require("./category-styles.json"); // 🆕 Load category style data
 
 const buildPath = path.join(__dirname, "..", "docs");
 const outputHtml = path.join(buildPath, "index.html");
@@ -24,8 +25,8 @@ const generateSidebarHTML = () => `
     ${Object.entries(grouped)
       .map(
         ([topic, categories]) => `
-        <div class="topic-section">
-          <h3>${topic}</h3>
+        <details class="topic-block">
+          <summary>${topic}</summary>
           ${Object.entries(categories)
             .map(
               ([category, cards]) => `
@@ -51,20 +52,24 @@ const generateSidebarHTML = () => `
             `
             )
             .join("")}
-        </div>
+        </details>
       `
       )
       .join("")}
   </aside>
 `;
 
-const generateCardHTML = (card) => `
-  <div class="card" id="${card.id}" data-category="${card.category}" data-topic="${card.topic}" style="transform: translate(0px, 0px);">
-    <h3>${card.title}</h3>
-    <p>${card.description}</p>
-    <pre><code>${card.code}</code></pre>
-  </div>
-`;
+const generateCardHTML = (card) => {
+const slug = card.category.toLowerCase().replace(/[^\w]+/g, "-");
+const style = styles[slug] || { background: "#ccc", titleColor: "#000", text: "#222" };
+  return `
+    <div class="card" id="${card.id}" data-category="${card.category}" data-topic="${card.topic}" style="background:${style.background}; color:${style.text}; transform: translate(0px, 0px);">
+      <h3 style="color:${style.titleColor}">${card.title}</h3>
+      <p>${card.description}</p>
+      <pre><code>${card.code}</code></pre>
+    </div>
+  `;
+};
 
 const html = `
 <!DOCTYPE html>
@@ -84,7 +89,6 @@ const html = `
 
   <script>
     const cardPositions = {};
-    
     function toggleCard(id, visible) {
       const el = document.getElementById(id);
       if (el) {
@@ -94,11 +98,10 @@ const html = `
     }
 
     document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.card').forEach(card => {
-    card.style.display = 'none';
-  });
-});
-
+      document.querySelectorAll('.card').forEach(card => {
+        card.style.display = 'none';
+      });
+    });
 
     function toggleCategory(category, visible) {
       const checkboxes = document.querySelectorAll('.card-toggle[data-id]');
@@ -114,58 +117,57 @@ const html = `
     function applyCardPosition(card) {
       const pos = cardPositions[card.id];
       if (pos) {
-        card.style.transform = \`translate(\${pos.x}px, \${pos.y}px)\`;
+        card.style.transform = "translate(" + pos.x + "px, " + pos.y + "px)";
       } else {
         card.style.transform = "translate(0px, 0px)";
       }
     }
-document.addEventListener('DOMContentLoaded', () => {
-  const gridSize = 30; // Adjust grid snapping size here
-  const cards = document.querySelectorAll('.card');
-  const cardPositions = {};
-  let activeCard = null;
-  let offsetX = 0, offsetY = 0, isDragging = false;
 
-  function snapToGrid(value) {
-    return Math.round(value / gridSize) * gridSize;
-  }
 
-  cards.forEach(card => {
-    card.addEventListener('mousedown', (e) => {
-      if (window.innerWidth <= 768) return; // Fully disable drag on mobile
-      isDragging = true;
-      activeCard = card;
-      const pos = cardPositions[card.id] || { x: 0, y: 0 };
-      offsetX = e.clientX - pos.x;
-      offsetY = e.clientY - pos.y;
-      activeCard.style.zIndex = 1000;
+    document.addEventListener('DOMContentLoaded', () => {
+      const gridSize = 30;
+      const cards = document.querySelectorAll('.card');
+      let activeCard = null;
+      let offsetX = 0, offsetY = 0, isDragging = false;
+
+      function snapToGrid(value) {
+        return Math.round(value / gridSize) * gridSize;
+      }
+
+      cards.forEach(card => {
+        card.addEventListener('mousedown', (e) => {
+          if (window.innerWidth <= 768) return;
+          isDragging = true;
+          activeCard = card;
+          const pos = cardPositions[card.id] || { x: 0, y: 0 };
+          offsetX = e.clientX - pos.x;
+          offsetY = e.clientY - pos.y;
+          activeCard.style.zIndex = 1000;
+        });
+      });
+
+      document.addEventListener('mousemove', (e) => {
+        if (!isDragging || !activeCard) return;
+        let x = e.clientX - offsetX;
+        let y = e.clientY - offsetY;
+        x = snapToGrid(x);
+        y = snapToGrid(y);
+        activeCard.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
+        cardPositions[activeCard.id] = { x, y };
+      });
+
+      document.addEventListener('mouseup', () => {
+        if (activeCard) {
+          activeCard.style.zIndex = "";
+        }
+        isDragging = false;
+        activeCard = null;
+      });
     });
-  });
-
-  document.addEventListener('mousemove', (e) => {
-    if (!isDragging || !activeCard) return;
-    let x = e.clientX - offsetX;
-    let y = e.clientY - offsetY;
-    x = snapToGrid(x);
-    y = snapToGrid(y);
-    activeCard.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
-    cardPositions[activeCard.id] = { x, y };
-  });
-
-  document.addEventListener('mouseup', () => {
-    if (activeCard) {
-      activeCard.style.zIndex = "";
-    }
-    isDragging = false;
-    activeCard = null;
-  });
-});
-
-
   </script>
 </body>
 </html>
 `;
 
 fs.writeFileSync(outputHtml, html, "utf-8");
-console.log("✅ Cheatsheet generated with free drag-and-drop positioning (session memory only).");
+console.log("✅ Cheatsheet generated using dynamic category styles.");

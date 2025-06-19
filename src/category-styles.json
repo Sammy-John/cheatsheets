@@ -1,0 +1,145 @@
+{
+  "imports": {
+    "background": "#f9e79f",
+    "titleColor": "#ff2d95"
+  },
+  "program-structure": {
+    "background": "#aed6f1",
+    "titleColor": "#ff6f00"
+  },
+  "control-flow": {
+    "background": "#f5b7b1",
+    "titleColor": "#6c3483"
+  },
+  "data-types": {
+    "background": "#abebc6",
+    "titleColor": "#bf40bf"
+  },
+  "methods": {
+    "background": "#fad7a0",
+    "titleColor": "#2979ff"
+  },
+  "advanced-method-syntax": {
+    "background": "#d6dbf5",
+    "titleColor": "#6a1b9a"
+  },
+  "classes-objects": {
+    "background": "#fdebd0",
+    "titleColor": "#c0392b"
+  },
+  "oop-concepts": {
+    "background": "#e8daef",
+    "titleColor": "#8e44ad"
+  },
+  "collections-arrays": {
+    "background": "#d5f5e3",
+    "titleColor": "#512e5f"
+  },
+  "enums-structs": {
+    "background": "#fcf3cf",
+    "titleColor": "#ca6f1e"
+  },
+  "exceptions-error-handling": {
+    "background": "#fadbd8",
+    "titleColor": "#c0392b"
+  },
+  "namespaces": {
+    "background": "#ffeaa7",
+    "titleColor": "#d63031"
+  },
+  "constants-readonly": {
+    "background": "#fab1a0",
+    "titleColor": "#6c3483"
+  },
+  "nullable-types": {
+    "background": "#dff9fb",
+    "titleColor": "#130f40"
+  },
+  "type-casting-conversion": {
+    "background": "#f6e58d",
+    "titleColor": "#2d3436"
+  },
+  "attributes": {
+    "background": "#f8c291",
+    "titleColor": "#e55039"
+  },
+  "lambda-expressions": {
+    "background": "#c7ecee",
+    "titleColor": "#0984e3"
+  },
+  "pattern-matching": {
+    "background": "#fdcb6e",
+    "titleColor": "#6c5ce7"
+  },
+  "tuples-deconstruction": {
+    "background": "#dff0d8",
+    "titleColor": "#27ae60"
+  },
+  "dynamic-expandoobject": {
+    "background": "#ffeaa7",
+    "titleColor": "#fd79a8"
+  },
+  "preprocessor-directives": {
+    "background": "#dfe6e9",
+    "titleColor": "#2d3436"
+  },
+  "indexers-properties": {
+    "background": "#d6a2e8",
+    "titleColor": "#6a0572"
+  },
+  "events-delegates": {
+    "background": "#f3a683",
+    "titleColor": "#2e86de"
+  },
+  "memory-management": {
+    "background": "#55efc4",
+    "titleColor": "#00cec9"
+  },
+  "unsafe-code-pointers": {
+    "background": "#ff7675",
+    "titleColor": "#b71540"
+  },
+  "async-await": {
+    "background": "#81ecec",
+    "titleColor": "#006266"
+  },
+  "linq-basics": {
+    "background": "#ffeaa7",
+    "titleColor": "#6c5ce7"
+  },
+  "console-output": {
+    "background": "#fce4b0",
+    "titleColor": "#d35400"
+  },
+  "debug-trace-output": {
+    "background": "#e1f5fe",          
+    "titleColor": "#0277bd"          
+},
+"logging-techniques": {
+  "background": "#fff3e0",           
+  "titleColor": "#e65100"            
+},
+"file-output": {
+  "background": "#e8f5e9",          
+  "titleColor": "#2e7d32"           
+},
+"formatting-output": {
+  "background": "#f1f8e9",
+  "titleColor": "#558b2f"
+},
+"verbatim-and-escape-sequences": {
+  "background": "#ffebee",
+  "titleColor": "#c62828"
+},
+"colored-console-output": {
+  "background": "#ede7f6",
+  "titleColor": "#5e35b1"
+},
+"custom-output-streams": {
+  "background": "#f0f4c3",
+  "titleColor": "#827717"
+}
+
+
+
+}

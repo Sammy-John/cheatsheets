@@ -1294,5 +1294,310 @@
     "description": "Must be enabled in project settings to use unsafe code.",
     "code": "// In .csproj file\n<AllowUnsafeBlocks>true</AllowUnsafeBlocks>",
     "tags": ["syntax", "unsafe", "project", "settings"]
-  }
+  },
+  {
+    "id": "output-console-writeline",
+    "topic": "Output",
+    "category": "Console Output",
+    "title": "Console.WriteLine()",
+    "description": "Writes a line to the console and moves to the next line.",
+    "code": "Console.WriteLine(\"Hello, world!\");",
+    "tags": ["output", "console", "write", "line"]
+  },
+  {
+    "id": "output-console-write",
+    "topic": "Output",
+    "category": "Console Output",
+    "title": "Console.Write()",
+    "description": "Writes text to the console without a newline.",
+    "code": "Console.Write(\"Enter value: \");",
+    "tags": ["output", "console", "write"]
+  },
+  {
+    "id": "output-console-writeline-format",
+    "topic": "Output",
+    "category": "Console Output",
+    "title": "Console.WriteLine with Format String",
+    "description": "Writes formatted values using placeholders like {0}.",
+    "code": "Console.WriteLine(\"Name: {0}, Age: {1}\", name, age);",
+    "tags": ["output", "console", "format", "placeholders"]
+  },
+  {
+    "id": "output-console-write-format",
+    "topic": "Output",
+    "category": "Console Output",
+    "title": "Console.Write with Format String",
+    "description": "Writes formatted text without a newline.",
+    "code": "Console.Write(\"X = {0}\", x);",
+    "tags": ["output", "console", "format", "inline"]
+  },
+  {
+    "id": "output-string-interpolation",
+    "topic": "Output",
+    "category": "Console Output",
+    "title": "String Interpolation",
+    "description": "Embeds expressions inside string literals using `$` prefix.",
+    "code": "Console.WriteLine($\"Hello, {name}! You are {age} years old.\");",
+    "tags": ["output", "interpolation", "string", "csharp6"]
+  },
+  {
+    "id": "output-string-format",
+    "topic": "Output",
+    "category": "Console Output",
+    "title": "String.Format()",
+    "description": "Formats a string with placeholders, returns a result string.",
+    "code": "var message = String.Format(\"{0} scored {1} points.\", player, score);\nConsole.WriteLine(message);",
+    "tags": ["output", "string", "formatting"]
+  },
+    {
+    "id": "output-debug-writeline",
+    "topic": "Output",
+    "category": "Debug & Trace Output",
+    "title": "Debug.WriteLine",
+    "description": "Writes diagnostic messages to the Output window in debug mode.",
+    "code": "using System.Diagnostics;\n\nDebug.WriteLine(\"Debug message\");",
+    "tags": ["output", "debug", "diagnostic", "writeline"]
+  },
+  {
+    "id": "output-trace-writeline",
+    "topic": "Output",
+    "category": "Debug & Trace Output",
+    "title": "Trace.WriteLine",
+    "description": "Outputs messages that remain in production builds if trace is enabled.",
+    "code": "using System.Diagnostics;\n\nTrace.WriteLine(\"Trace message\");",
+    "tags": ["output", "trace", "diagnostic", "logging"]
+  },
+  {
+    "id": "output-debug-assert",
+    "topic": "Output",
+    "category": "Debug & Trace Output",
+    "title": "Debug.Assert",
+    "description": "Checks a condition and displays a dialog if the condition is false (only in debug mode).",
+    "code": "Debug.Assert(user != null, \"User should not be null\");",
+    "tags": ["debug", "assert", "testing", "validation"]
+  },
+  {
+    "id": "output-trace-listeners",
+    "topic": "Output",
+    "category": "Debug & Trace Output",
+    "title": "Trace Listeners",
+    "description": "Redirect trace output to files, logs, or other destinations using listeners.",
+    "code": "Trace.Listeners.Add(new TextWriterTraceListener(\"log.txt\"));\nTrace.AutoFlush = true;\nTrace.WriteLine(\"Logging to file\");",
+    "tags": ["trace", "listeners", "logging", "diagnostic"]
+  },
+  {
+    "id": "output-trace-switch",
+    "topic": "Output",
+    "category": "Debug & Trace Output",
+    "title": "TraceSwitch",
+    "description": "Controls tracing behavior via configuration or code.",
+    "code": "TraceSwitch ts = new TraceSwitch(\"General\", \"Entire App\");\nif (ts.TraceInfo) Trace.WriteLine(\"Info message\");",
+    "tags": ["trace", "switch", "configurable", "diagnostic"]
+  },
+  {
+    "id": "output-logging-console-basic",
+    "topic": "Output",
+    "category": "Logging Techniques",
+    "title": "Console Logging",
+    "description": "Use `Console.WriteLine` or `Console.Error.WriteLine` for simple logs in small apps.",
+    "code": "Console.WriteLine(\"[INFO] Operation started\");\nConsole.Error.WriteLine(\"[ERROR] Something went wrong\");",
+    "tags": ["console", "logging", "debug", "error"]
+  },
+  {
+    "id": "output-logging-trace",
+    "topic": "Output",
+    "category": "Logging Techniques",
+    "title": "Trace Logging",
+    "description": "Use `System.Diagnostics.Trace` to send logs to listeners like files or logs.",
+    "code": "using System.Diagnostics;\n\nTrace.WriteLine(\"[TRACE] Application started\");\nTrace.TraceError(\"[ERROR] Critical failure\");",
+    "tags": ["trace", "diagnostic", "listeners", "logging"]
+  },
+  {
+    "id": "output-logging-debug-vs-trace",
+    "topic": "Output",
+    "category": "Logging Techniques",
+    "title": "Debug vs Trace",
+    "description": "`Debug` logs are only active in Debug builds. `Trace` works in all builds with listeners.",
+    "code": "Debug.WriteLine(\"[DEBUG] This only appears in debug mode\");\nTrace.WriteLine(\"[TRACE] This works in any build\");",
+    "tags": ["debug", "trace", "build", "diagnostic"]
+  },
+  {
+    "id": "output-logging-serilog",
+    "topic": "Output",
+    "category": "Logging Techniques",
+    "title": "Structured Logging (Serilog)",
+    "description": "Use Serilog or similar libraries for structured logs with metadata and output formats.",
+    "code": "// Example with Serilog\nLog.Information(\"Order processed {@Order}\", order);",
+    "tags": ["serilog", "structured", "logging", "metadata"]
+  },
+  {
+    "id": "output-write-all-text",
+    "topic": "Output",
+    "category": "File Output (Write/Append)",
+    "title": "WriteAllText",
+    "description": "Writes text to a file, replacing any existing content.",
+    "code": "File.WriteAllText(\"output.txt\", \"Hello, file!\");",
+    "tags": ["file", "write", "text", "overwrite"]
+  },
+  {
+    "id": "output-append-all-text",
+    "topic": "Output",
+    "category": "File Output (Write/Append)",
+    "title": "AppendAllText",
+    "description": "Appends text to the end of a file.",
+    "code": "File.AppendAllText(\"output.txt\", \"\\nMore data.\");",
+    "tags": ["file", "append", "text"]
+  },
+  {
+    "id": "output-stream-writer",
+    "topic": "Output",
+    "category": "File Output (Write/Append)",
+    "title": "StreamWriter",
+    "description": "Provides advanced control over writing to files.",
+    "code": "using (var writer = new StreamWriter(\"output.txt\")) {\n    writer.WriteLine(\"Line 1\");\n    writer.WriteLine(\"Line 2\");\n}",
+    "tags": ["file", "write", "stream", "streamwriter"]
+  },
+  {
+  "id": "output-write-all-lines",
+  "topic": "Output",
+  "category": "File Output (Write/Append)",
+  "title": "WriteAllLines",
+  "description": "Writes an array of strings to a file, one line each.",
+  "code": "string[] lines = { \"Line A\", \"Line B\" };\nFile.WriteAllLines(\"log.txt\", lines);",
+  "tags": ["file", "write", "lines", "overwrite"]
+},
+{
+  "id": "output-append-all-lines",
+  "topic": "Output",
+  "category": "File Output (Write/Append)",
+  "title": "AppendAllLines",
+  "description": "Appends lines of text to a file from an array.",
+  "code": "string[] extra = { \"Line C\", \"Line D\" };\nFile.AppendAllLines(\"log.txt\", extra);",
+  "tags": ["file", "append", "lines"]
+},
+{
+  "id": "output-create-text",
+  "topic": "Output",
+  "category": "File Output (Write/Append)",
+  "title": "CreateText",
+  "description": "Creates or overwrites a file and returns a StreamWriter.",
+  "code": "using var writer = File.CreateText(\"data.txt\");\nwriter.WriteLine(\"New file content.\");",
+  "tags": ["file", "create", "streamwriter", "write"]
+},
+{
+  "id": "output-interpolation",
+  "topic": "Output",
+  "category": "Formatting Output (Interpolation, Composite)",
+  "title": "String Interpolation",
+  "description": "Embed expressions directly in string literals using `$` syntax.",
+  "code": "string name = \"Sam\";\nint age = 30;\nstring output = $\"{name} is {age} years old.\";",
+  "tags": ["interpolation", "string", "format", "output"]
+},
+{
+  "id": "output-composite-format",
+  "topic": "Output",
+  "category": "Formatting Output (Interpolation, Composite)",
+  "title": "Composite Formatting",
+  "description": "Uses numbered placeholders to insert values in strings.",
+  "code": "string result = string.Format(\"{0} is {1} years old.\", \"Sam\", 30);",
+  "tags": ["composite", "format", "placeholder", "string"]
+},
+{
+  "id": "output-composite-format",
+  "topic": "Output",
+  "category": "Formatting Output (Interpolation, Composite)",
+  "title": "Composite Formatting",
+  "description": "Uses numbered placeholders to insert values in strings.",
+  "code": "string result = string.Format(\"{0} is {1} years old.\", \"Sam\", 30);",
+  "tags": ["composite", "format", "placeholder", "string"]
+},
+{
+  "id": "output-tostring-format",
+  "topic": "Output",
+  "category": "Formatting Output (Interpolation, Composite)",
+  "title": "ToString Format Specifiers",
+  "description": "Apply numeric or date formats using ToString.",
+  "code": "DateTime now = DateTime.Now;\nstring formatted = now.ToString(\"yyyy-MM-dd\");",
+  "tags": ["format", "tostring", "date", "number"]
+},
+{
+  "id": "output-string-format-specifier",
+  "topic": "Output",
+  "category": "Formatting Output (Interpolation, Composite)",
+  "title": "String.Format with Specifiers",
+  "description": "Combine composite formatting and format specifiers.",
+  "code": "double price = 123.456;\nstring text = string.Format(\"Price: {0:C2}\", price);",
+  "tags": ["format", "string", "currency", "specifier"]
+},
+{
+  "id": "output-verbatim-string",
+  "topic": "Output",
+  "category": "Verbatim and Escape Sequences",
+  "title": "Verbatim String Literals",
+  "description": "Use @ to avoid escaping backslashes and newlines.",
+  "code": "string path = @\"C:\\Users\\John\\Documents\\file.txt\";",
+  "tags": ["verbatim", "escape", "string", "path"]
+},
+{
+  "id": "output-escape-sequence",
+  "topic": "Output",
+  "category": "Verbatim and Escape Sequences",
+  "title": "Escape Sequences",
+  "description": "Use escape characters like \\n, \\t for formatting.",
+  "code": "Console.WriteLine(\"Line1\\nLine2\\tIndented\");",
+  "tags": ["escape", "newline", "tab", "string"]
+},
+{
+  "id": "output-escape-sequence",
+  "topic": "Output",
+  "category": "Verbatim and Escape Sequences",
+  "title": "Escape Sequences",
+  "description": "Use escape characters like \\n, \\t for formatting.",
+  "code": "Console.WriteLine(\"Line1\\nLine2\\tIndented\");",
+  "tags": ["escape", "newline", "tab", "string"]
+},
+{
+  "id": "output-foreground-color",
+  "topic": "Output",
+  "category": "Colored Console Output",
+  "title": "Set Foreground Color",
+  "description": "Change the console text color using Console.ForegroundColor.",
+  "code": "Console.ForegroundColor = ConsoleColor.Green;\nConsole.WriteLine(\"Success!\");\nConsole.ResetColor();",
+  "tags": ["console", "color", "foreground", "output"]
+},
+{
+  "id": "output-background-color",
+  "topic": "Output",
+  "category": "Colored Console Output",
+  "title": "Set Background Color",
+  "description": "Customize the console background color.",
+  "code": "Console.BackgroundColor = ConsoleColor.DarkBlue;\nConsole.WriteLine(\"Notice\");\nConsole.ResetColor();",
+  "tags": ["console", "color", "background", "output"]
+},
+{
+  "id": "output-custom-textwriter",
+  "topic": "Output",
+  "category": "Custom Output Streams",
+  "title": "Custom TextWriter",
+  "description": "Redirect output by creating a custom TextWriter and assigning it to Console.SetOut.",
+  "code": "using (var writer = new StreamWriter(\"log.txt\"))\n{\n    Console.SetOut(writer);\n    Console.WriteLine(\"Logging to file\");\n}",
+  "tags": ["console", "setout", "textwriter", "stream", "redirect"]
+},
+{
+  "id": "output-memory-stream",
+  "topic": "Output",
+  "category": "Custom Output Streams",
+  "title": "Write to MemoryStream",
+  "description": "Use MemoryStream with StreamWriter for temporary, in-memory output.",
+  "code": "using var mem = new MemoryStream();\nusing var writer = new StreamWriter(mem);\nwriter.Write(\"Hello in memory\");\nwriter.Flush();",
+  "tags": ["memory", "stream", "in-memory", "output", "temp"]
+}
+
+
+
+
+
+
+
+
 ]

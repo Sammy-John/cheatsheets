@@ -1591,13 +1591,233 @@
   "description": "Use MemoryStream with StreamWriter for temporary, in-memory output.",
   "code": "using var mem = new MemoryStream();\nusing var writer = new StreamWriter(mem);\nwriter.Write(\"Hello in memory\");\nwriter.Flush();",
   "tags": ["memory", "stream", "in-memory", "output", "temp"]
-}
-
-
-
-
-
-
-
-
+},
+{
+  "id": "input-console-readline",
+  "topic": "Input",
+  "category": "Console Input",
+  "title": "Console.ReadLine()",
+  "description": "Reads the next line of input from the console.",
+  "code": "Console.Write(\"Enter your name: \");\nstring name = Console.ReadLine();\nConsole.WriteLine($\"Hello, {name}!\");",
+  "tags": ["input", "console", "readline"]
+},
+{
+  "id": "input-console-readkey",
+  "topic": "Input",
+  "category": "Console Input",
+  "title": "Console.ReadKey()",
+  "description": "Reads the next key press and optionally displays it.",
+  "code": "Console.Write(\"Press any key to continue...\");\nConsole.ReadKey();",
+  "tags": ["input", "console", "readkey", "keypress"]
+},
+{
+  "id": "input-console-parsing",
+  "topic": "Input",
+  "category": "Console Input",
+  "title": "Parsing Input from ReadLine",
+  "description": "Convert user input from a string to a number or other type.",
+  "code": "Console.Write(\"Enter your age: \");\nstring input = Console.ReadLine();\nint age = int.Parse(input);",
+  "tags": ["input", "console", "parse", "readline"]
+},
+{
+  "id": "input-validation-tryparse",
+  "topic": "Input",
+  "category": "Input Validation",
+  "title": "TryParse for Safe Input",
+  "description": "Validates and parses user input without throwing exceptions.",
+  "code": "Console.Write(\"Enter a number: \");\nstring input = Console.ReadLine();\nif (int.TryParse(input, out int number))\n{\n    Console.WriteLine($\"You entered: {number}\");\n}\nelse\n{\n    Console.WriteLine(\"Invalid number\");\n}",
+  "tags": ["input", "validation", "tryparse", "safe"]
+},
+{
+  "id": "input-validation-loop",
+  "topic": "Input",
+  "category": "Input Validation",
+  "title": "Loop Until Valid Input",
+  "description": "Continuously prompt until valid input is received.",
+  "code": "int age;\ndo\n{\n    Console.Write(\"Enter your age: \");\n} while (!int.TryParse(Console.ReadLine(), out age));\n\nConsole.WriteLine($\"Your age: {age}\");",
+  "tags": ["input", "validation", "loop", "retry"]
+},
+{
+  "id": "input-validation-custom-check",
+  "topic": "Input",
+  "category": "Input Validation",
+  "title": "Custom Validation Rules",
+  "description": "You can apply additional logic to validate input beyond just parsing.",
+  "code": "Console.Write(\"Enter a username: \");\nstring name = Console.ReadLine();\nif (string.IsNullOrWhiteSpace(name) || name.Length < 3)\n{\n    Console.WriteLine(\"Username must be at least 3 characters.\");\n}",
+  "tags": ["input", "validation", "custom", "check"]
+},
+{
+  "id": "input-file-readalltext",
+  "topic": "Input",
+  "category": "File Input",
+  "title": "File.ReadAllText()",
+  "description": "Reads the entire contents of a file into a single string.",
+  "code": "string content = File.ReadAllText(\"data.txt\");\nConsole.WriteLine(content);",
+  "tags": ["input", "file", "read", "text"]
+},
+{
+  "id": "input-file-readalllines",
+  "topic": "Input",
+  "category": "File Input",
+  "title": "File.ReadAllLines()",
+  "description": "Reads all lines of a file into a string array.",
+  "code": "string[] lines = File.ReadAllLines(\"data.txt\");\nforeach (var line in lines)\n    Console.WriteLine(line);",
+  "tags": ["input", "file", "read", "lines"]
+},
+{
+  "id": "input-file-readlines",
+  "topic": "Input",
+  "category": "File Input",
+  "title": "File.ReadLines()",
+  "description": "Reads a file line by line using lazy evaluation (efficient for large files).",
+  "code": "foreach (string line in File.ReadLines(\"log.txt\"))\n{\n    Console.WriteLine(line);\n}",
+  "tags": ["input", "file", "read", "lines", "lazy"]
+},
+{
+  "id": "input-file-streamreader",
+  "topic": "Input",
+  "category": "File Input",
+  "title": "StreamReader",
+  "description": "Reads text from a file line by line using a stream.",
+  "code": "using (StreamReader reader = new StreamReader(\"data.txt\"))\n{\n    string line;\n    while ((line = reader.ReadLine()) != null)\n        Console.WriteLine(line);\n}",
+  "tags": ["input", "file", "streamreader", "read"]
+},
+{
+  "id": "input-main-args",
+  "topic": "Input",
+  "category": "Command-Line Arguments",
+  "title": "Main Method Arguments",
+  "description": "Accepts command-line arguments passed when launching the application.",
+  "code": "static void Main(string[] args)\n{\n    Console.WriteLine(\"First arg: \" + args[0]);\n}",
+  "tags": ["input", "command line", "args", "main"]
+},
+{
+  "id": "input-args-loop",
+  "topic": "Input",
+  "category": "Command-Line Arguments",
+  "title": "Iterating over args[]",
+  "description": "Processes all command-line arguments passed to the program.",
+  "code": "static void Main(string[] args)\n{\n    foreach (string arg in args)\n    {\n        Console.WriteLine(arg);\n    }\n}",
+  "tags": ["input", "args", "loop", "foreach"]
+},
+{
+  "id": "input-args-length-check",
+  "topic": "Input",
+  "category": "Command-Line Arguments",
+  "title": "Checking args.Length",
+  "description": "Ensure arguments exist before accessing them to avoid runtime errors.",
+  "code": "static void Main(string[] args)\n{\n    if (args.Length > 0)\n    {\n        Console.WriteLine(\"Arg 1: \" + args[0]);\n    }\n    else\n    {\n        Console.WriteLine(\"No arguments passed.\");\n    }\n}",
+  "tags": ["input", "args", "length", "check"]
+},
+  {
+    "id": "input-stream-filestream",
+    "topic": "Input",
+    "category": "Stream-Based Input",
+    "title": "Reading with FileStream",
+    "description": "Reads raw bytes from a file stream and converts them to text.",
+    "code": "using (FileStream fs = new FileStream(\"data.txt\", FileMode.Open))\n{\n    byte[] buffer = new byte[fs.Length];\n    fs.Read(buffer, 0, buffer.Length);\n    string content = Encoding.UTF8.GetString(buffer);\n    Console.WriteLine(content);\n}",
+    "tags": ["input", "stream", "filestream", "bytes"]
+  },
+  {
+    "id": "input-stream-memorystream",
+    "topic": "Input",
+    "category": "Stream-Based Input",
+    "title": "Reading with MemoryStream",
+    "description": "Reads byte data stored in memory using MemoryStream.",
+    "code": "byte[] data = Encoding.UTF8.GetBytes(\"Hello from memory!\");\nusing (MemoryStream ms = new MemoryStream(data))\n{\n    StreamReader reader = new StreamReader(ms);\n    string result = reader.ReadToEnd();\n    Console.WriteLine(result);\n}",
+    "tags": ["input", "stream", "memorystream", "in-memory"]
+  },
+  {
+    "id": "input-stream-textreader",
+    "topic": "Input",
+    "category": "Stream-Based Input",
+    "title": "Reading with TextReader",
+    "description": "An abstract base class for reading character input streams.",
+    "code": "using (TextReader reader = File.OpenText(\"data.txt\"))\n{\n    string content = reader.ReadToEnd();\n    Console.WriteLine(content);\n}",
+    "tags": ["input", "stream", "textreader", "abstract"]
+  },
+{
+    "id": "input-structured-json",
+    "topic": "Input",
+    "category": "Structured Data Input",
+    "title": "Reading JSON",
+    "description": "Reads structured data from a JSON file and deserializes it to an object.",
+    "code": "string json = File.ReadAllText(\"user.json\");\nUser user = JsonSerializer.Deserialize<User>(json);\nConsole.WriteLine(user.Name);",
+    "tags": ["input", "json", "deserialize", "file"]
+  },
+  {
+    "id": "input-structured-xml",
+    "topic": "Input",
+    "category": "Structured Data Input",
+    "title": "Reading XML",
+    "description": "Reads and parses XML input using XElement.",
+    "code": "XElement root = XElement.Load(\"data.xml\");\nstring name = root.Element(\"name\").Value;\nConsole.WriteLine(name);",
+    "tags": ["input", "xml", "xelement", "file"]
+  },
+  {
+    "id": "input-structured-csv",
+    "topic": "Input",
+    "category": "Structured Data Input",
+    "title": "Reading CSV",
+    "description": "Reads CSV data line-by-line and splits it into values.",
+    "code": "foreach (var line in File.ReadLines(\"data.csv\"))\n{\n    string[] fields = line.Split(',');\n    Console.WriteLine(string.Join(\" | \", fields));\n}",
+    "tags": ["input", "csv", "split", "file"]
+  },
+  {
+    "id": "input-env-getenv",
+    "topic": "Input",
+    "category": "Environment & Config Input",
+    "title": "Environment.GetEnvironmentVariable()",
+    "description": "Reads a value from system environment variables.",
+    "code": "string path = Environment.GetEnvironmentVariable(\"PATH\");\nConsole.WriteLine(path);",
+    "tags": ["input", "environment", "env", "config"]
+  },
+  {
+    "id": "input-appsettings-json",
+    "topic": "Input",
+    "category": "Environment & Config Input",
+    "title": "Reading appsettings.json",
+    "description": "Reads config values from a JSON config file in .NET Core.",
+    "code": "var config = new ConfigurationBuilder()\n    .AddJsonFile(\"appsettings.json\")\n    .Build();\n\nstring conn = config[\"ConnectionStrings:Default\"];\nConsole.WriteLine(conn);",
+    "tags": ["input", "config", "json", "settings"]
+  },
+  {
+    "id": "input-commandlineconfig",
+    "topic": "Input",
+    "category": "Environment & Config Input",
+    "title": "Command-Line Config Override",
+    "description": "Overrides config with command-line args in .NET Core.",
+    "code": "var config = new ConfigurationBuilder()\n    .AddCommandLine(args)\n    .Build();\n\nstring mode = config[\"mode\"];\nConsole.WriteLine(mode);",
+    "tags": ["input", "config", "args", "override"]
+  },
+  {
+    "id": "input-interactive-confirmation",
+    "topic": "Input",
+    "category": "Interactive Prompts",
+    "title": "Yes/No Confirmation Prompt",
+    "description": "Basic confirmation input from the user using ReadLine and conditionals.",
+    "code": "Console.Write(\"Continue? (y/n): \");\nstring input = Console.ReadLine();\nif (input?.ToLower() == \"y\")\n{\n    Console.WriteLine(\"Continuing...\");\n}\nelse\n{\n    Console.WriteLine(\"Canceled.\");\n}",
+    "tags": ["input", "prompt", "confirmation", "readline"]
+  },
+  {
+    "id": "input-interactive-menu",
+    "topic": "Input",
+    "category": "Interactive Prompts",
+    "title": "Simple Console Menu",
+    "description": "Use a numbered menu to let users pick an option.",
+    "code": "Console.WriteLine(\"Select an option:\");\nConsole.WriteLine(\"1. Start\");\nConsole.WriteLine(\"2. Settings\");\nConsole.WriteLine(\"3. Exit\");\n\nstring choice = Console.ReadLine();\nswitch (choice)\n{\n    case \"1\": Console.WriteLine(\"Starting...\"); break;\n    case \"2\": Console.WriteLine(\"Opening settings...\"); break;\n    case \"3\": Console.WriteLine(\"Exiting...\"); break;\n    default: Console.WriteLine(\"Invalid choice.\"); break;\n}",
+    "tags": ["input", "menu", "console", "switch"]
+  },
+  {
+    "id": "input-interactive-looped-prompt",
+    "topic": "Input",
+    "category": "Interactive Prompts",
+    "title": "Repeat Prompt Until Exit",
+    "description": "Keep prompting the user until they choose to exit.",
+    "code": "string input;\ndo\n{\n    Console.Write(\"Enter command (q to quit): \");\n    input = Console.ReadLine();\n    Console.WriteLine($\"You typed: {input}\");\n} while (input?.ToLower() != \"q\");",
+    "tags": ["input", "loop", "repeat", "prompt"]
+  }
 ]
+
+
+

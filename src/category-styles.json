@@ -138,8 +138,38 @@
 "custom-output-streams": {
   "background": "#f0f4c3",
   "titleColor": "#827717"
+},
+"console-input": {
+  "background": "#e0f7fa",
+  "titleColor": "#006064"
+},
+"input-validation": {
+  "background": "#fff3cd",
+  "titleColor": "#8a6d3b"
+},
+"file-input": {
+  "background": "#e8f5e9",
+  "titleColor": "#2e7d32"
+},
+"command-line-arguments": {
+  "background": "#fff3e0",
+  "titleColor": "#ef6c00"
+},
+  "stream-based-input": {
+    "background": "#dfe6e9",
+    "titleColor": "#2d3436"
+  },
+  "structured-data-input": {
+    "background": "#e0f7fa",
+    "titleColor": "#006064"
+  },
+  "environment-&-config-input": {
+    "background": "#fff3e0",
+    "titleColor": "#e65100"
+  },
+  "interactive-prompts": {
+    "background": "#e3f2fd",
+    "titleColor": "#1565c0"
+  }
 }
 
-
-
-}

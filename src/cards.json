@@ -1816,7 +1816,251 @@
     "description": "Keep prompting the user until they choose to exit.",
     "code": "string input;\ndo\n{\n    Console.Write(\"Enter command (q to quit): \");\n    input = Console.ReadLine();\n    Console.WriteLine($\"You typed: {input}\");\n} while (input?.ToLower() != \"q\");",
     "tags": ["input", "loop", "repeat", "prompt"]
+  },
+   {
+    "id": "operators-arithmetic-addition",
+    "topic": "Operators",
+    "category": "Arithmetic Operators",
+    "title": "Addition (+)",
+    "description": "Adds two numbers together.",
+    "code": "int sum = 5 + 3;\nConsole.WriteLine(sum); // 8",
+    "tags": ["operators", "arithmetic", "addition", "plus"]
+  },
+  {
+    "id": "operators-arithmetic-subtraction",
+    "topic": "Operators",
+    "category": "Arithmetic Operators",
+    "title": "Subtraction (-)",
+    "description": "Subtracts the right operand from the left.",
+    "code": "int difference = 10 - 4;\nConsole.WriteLine(difference); // 6",
+    "tags": ["operators", "arithmetic", "subtraction", "minus"]
+  },
+  {
+    "id": "operators-arithmetic-multiplication",
+    "topic": "Operators",
+    "category": "Arithmetic Operators",
+    "title": "Multiplication (*)",
+    "description": "Multiplies two values.",
+    "code": "int product = 7 * 2;\nConsole.WriteLine(product); // 14",
+    "tags": ["operators", "arithmetic", "multiplication", "times"]
+  },
+  {
+    "id": "operators-arithmetic-division",
+    "topic": "Operators",
+    "category": "Arithmetic Operators",
+    "title": "Division (/)",
+    "description": "Divides the left operand by the right. Integer division truncates.",
+    "code": "int quotient = 10 / 3;\nConsole.WriteLine(quotient); // 3",
+    "tags": ["operators", "arithmetic", "division", "divide"]
+  },
+  {
+    "id": "operators-arithmetic-modulus",
+    "topic": "Operators",
+    "category": "Arithmetic Operators",
+    "title": "Modulus (%)",
+    "description": "Returns the remainder of division.",
+    "code": "int remainder = 10 % 3;\nConsole.WriteLine(remainder); // 1",
+    "tags": ["operators", "arithmetic", "modulus", "remainder"]
+  },
+  {
+    "id": "operators-arithmetic-increment",
+    "topic": "Operators",
+    "category": "Arithmetic Operators",
+    "title": "Increment (++)",
+    "description": "Increases a numeric value by one.",
+    "code": "int a = 5;\na++;\nConsole.WriteLine(a); // 6",
+    "tags": ["operators", "arithmetic", "increment", "plus plus"]
+  },
+  {
+    "id": "operators-arithmetic-decrement",
+    "topic": "Operators",
+    "category": "Arithmetic Operators",
+    "title": "Decrement (--)",
+    "description": "Decreases a numeric value by one.",
+    "code": "int b = 7;\nb--;\nConsole.WriteLine(b); // 6",
+    "tags": ["operators", "arithmetic", "decrement", "minus minus"]
+  },
+    {
+    "id": "operators-assignment-basic",
+    "topic": "Operators",
+    "category": "Assignment Operators",
+    "title": "=",
+    "description": "Assigns the value on the right to the variable on the left.",
+    "code": "int x = 10;",
+    "tags": ["assignment", "equals", "operator"]
+  },
+  {
+    "id": "operators-assignment-add",
+    "topic": "Operators",
+    "category": "Assignment Operators",
+    "title": "+=",
+    "description": "Adds the value on the right to the variable and assigns the result to the variable.",
+    "code": "int x = 5;\nx += 3; // x is now 8",
+    "tags": ["assignment", "add", "operator"]
+  },
+  {
+    "id": "operators-assignment-subtract",
+    "topic": "Operators",
+    "category": "Assignment Operators",
+    "title": "-=",
+    "description": "Subtracts the value on the right from the variable and assigns the result.",
+    "code": "int x = 10;\nx -= 4; // x is now 6",
+    "tags": ["assignment", "subtract", "operator"]
+  },
+  {
+    "id": "operators-assignment-multiply",
+    "topic": "Operators",
+    "category": "Assignment Operators",
+    "title": "*=",
+    "description": "Multiplies the variable by the value on the right and assigns the result.",
+    "code": "int x = 4;\nx *= 2; // x is now 8",
+    "tags": ["assignment", "multiply", "operator"]
+  },
+  {
+    "id": "operators-assignment-divide",
+    "topic": "Operators",
+    "category": "Assignment Operators",
+    "title": "/=",
+    "description": "Divides the variable by the value on the right and assigns the result.",
+    "code": "int x = 20;\nx /= 5; // x is now 4",
+    "tags": ["assignment", "divide", "operator"]
+  },
+  {
+    "id": "operators-assignment-modulo",
+    "topic": "Operators",
+    "category": "Assignment Operators",
+    "title": "%=",
+    "description": "Applies modulo operation and assigns the remainder.",
+    "code": "int x = 10;\nx %= 3; // x is now 1",
+    "tags": ["assignment", "modulo", "operator"]
+  },
+  {
+    "id": "operators-comparison-equals",
+    "topic": "Operators",
+    "category": "Comparison Operators",
+    "title": "==",
+    "description": "Checks if two values are equal.",
+    "code": "int a = 5;\nint b = 5;\nbool result = (a == b); // true",
+    "tags": ["comparison", "equals", "operator"]
+  },
+  {
+    "id": "operators-comparison-not-equals",
+    "topic": "Operators",
+    "category": "Comparison Operators",
+    "title": "!=",
+    "description": "Checks if two values are not equal.",
+    "code": "int a = 5;\nint b = 3;\nbool result = (a != b); // true",
+    "tags": ["comparison", "not equals", "operator"]
+  },
+  {
+    "id": "operators-comparison-greater",
+    "topic": "Operators",
+    "category": "Comparison Operators",
+    "title": ">",
+    "description": "Checks if the left value is greater than the right.",
+    "code": "int a = 10;\nbool result = (a > 5); // true",
+    "tags": ["comparison", "greater than", "operator"]
+  },
+  {
+    "id": "operators-comparison-less",
+    "topic": "Operators",
+    "category": "Comparison Operators",
+    "title": "<",
+    "description": "Checks if the left value is less than the right.",
+    "code": "int a = 2;\nbool result = (a < 5); // true",
+    "tags": ["comparison", "less than", "operator"]
+  },
+  {
+    "id": "operators-comparison-greater-equal",
+    "topic": "Operators",
+    "category": "Comparison Operators",
+    "title": ">=",
+    "description": "Checks if the left value is greater than or equal to the right.",
+    "code": "int a = 5;\nbool result = (a >= 5); // true",
+    "tags": ["comparison", "greater or equal", "operator"]
+  },
+  {
+    "id": "operators-comparison-less-equal",
+    "topic": "Operators",
+    "category": "Comparison Operators",
+    "title": "<=",
+    "description": "Checks if the left value is less than or equal to the right.",
+    "code": "int a = 3;\nbool result = (a <= 5); // true",
+    "tags": ["comparison", "less or equal", "operator"]
+  },
+  {
+    "id": "operators-logical-and",
+    "topic": "Operators",
+    "category": "Logical Operators",
+    "title": "Logical AND (&&)",
+    "description": "Returns true if both conditions are true.",
+    "code": "bool isAdult = age >= 18;\nbool hasID = true;\n\nif (isAdult && hasID)\n{\n    Console.WriteLine(\"Access granted.\");\n}",
+    "tags": ["logical", "and", "operators", "boolean"]
+  },
+  {
+    "id": "operators-logical-or",
+    "topic": "Operators",
+    "category": "Logical Operators",
+    "title": "Logical OR (||)",
+    "description": "Returns true if at least one condition is true.",
+    "code": "bool isMember = true;\nbool hasCoupon = false;\n\nif (isMember || hasCoupon)\n{\n    Console.WriteLine(\"Discount applied.\");\n}",
+    "tags": ["logical", "or", "operators", "boolean"]
+  },
+  {
+    "id": "operators-logical-not",
+    "topic": "Operators",
+    "category": "Logical Operators",
+    "title": "Logical NOT (!)",
+    "description": "Reverses the value of a boolean expression.",
+    "code": "bool isLoggedIn = false;\n\nif (!isLoggedIn)\n{\n    Console.WriteLine(\"Please log in.\");\n}",
+    "tags": ["logical", "not", "operators", "boolean"]
+  },
+   {
+    "id": "operators-bitwise-and",
+    "topic": "Operators",
+    "category": "Bitwise Operators",
+    "title": "Bitwise AND (&)",
+    "description": "Performs a binary AND operation between two integers.",
+    "code": "int a = 5;   // 0101\nint b = 3;   // 0011\nint result = a & b; // 0001 (1)",
+    "tags": ["bitwise", "and", "binary", "operators"]
+  },
+  {
+    "id": "operators-bitwise-or",
+    "topic": "Operators",
+    "category": "Bitwise Operators",
+    "title": "Bitwise OR (|)",
+    "description": "Performs a binary OR operation between two integers.",
+    "code": "int a = 5;   // 0101\nint b = 3;   // 0011\nint result = a | b; // 0111 (7)",
+    "tags": ["bitwise", "or", "binary", "operators"]
+  },
+  {
+    "id": "operators-bitwise-xor",
+    "topic": "Operators",
+    "category": "Bitwise Operators",
+    "title": "Bitwise XOR (^)",
+    "description": "Performs a binary exclusive OR between two integers.",
+    "code": "int a = 5;   // 0101\nint b = 3;   // 0011\nint result = a ^ b; // 0110 (6)",
+    "tags": ["bitwise", "xor", "exclusive", "operators"]
+  },
+  {
+    "id": "operators-bitwise-not",
+    "topic": "Operators",
+    "category": "Bitwise Operators",
+    "title": "Bitwise NOT (~)",
+    "description": "Inverts each bit of an integer (one's complement).",
+    "code": "int a = 5;        // 00000101\nint result = ~a;     // 11111010 (in 8-bit representation)",
+    "tags": ["bitwise", "not", "complement", "operators"]
+  },
+  {
+    "id": "operators-bitwise-shift",
+    "topic": "Operators",
+    "category": "Bitwise Operators",
+    "title": "Left & Right Shift (<<, >>)",
+    "description": "Shifts bits left or right by a specified number of positions.",
+    "code": "int a = 4;       // 0100\nint left = a << 1;  // 1000 (8)\nint right = a >> 1; // 0010 (2)",
+    "tags": ["bitwise", "shift", "left", "right", "operators"]
   }
+
 ]
 
 

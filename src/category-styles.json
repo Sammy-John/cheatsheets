@@ -170,6 +170,26 @@
   "interactive-prompts": {
     "background": "#e3f2fd",
     "titleColor": "#1565c0"
+  },
+  "arithmetic-operators": {
+    "background": "#fde2e4",           
+    "titleColor": "#d62828"            
+  },
+  "assignment-operators": {
+    "background": "#fff4e6",
+    "titleColor": "#e67e22"
+  },
+  "comparison-operators": {
+    "background": "#fbe9e7",
+    "titleColor": "#c62828"
+  },
+  "logical-operators": {
+    "background": "#e8f5e9",
+    "titleColor": "#1b5e20"
+  },
+  "bitwise-operators": {
+    "background": "#ede7f6",
+    "titleColor": "#4a148c"
   }
 }
 

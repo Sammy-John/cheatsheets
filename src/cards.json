@@ -2059,7 +2059,90 @@
     "description": "Shifts bits left or right by a specified number of positions.",
     "code": "int a = 4;       // 0100\nint left = a << 1;  // 1000 (8)\nint right = a >> 1; // 0010 (2)",
     "tags": ["bitwise", "shift", "left", "right", "operators"]
-  }
+  },
+   {
+    "id": "operators-null-coalescing",
+    "topic": "Operators",
+    "category": "Null-Coalescing Operators",
+    "title": "Null-Coalescing Operator (??)",
+    "description": "Returns the left-hand operand if it's not null; otherwise, returns the right-hand operand.",
+    "code": "string name = null;\nstring displayName = name ?? \"Guest\";\nConsole.WriteLine(displayName); // Output: Guest",
+    "tags": ["null", "coalescing", "??", "fallback", "operators"]
+  },
+  {
+    "id": "operators-null-coalescing-assignment",
+    "topic": "Operators",
+    "category": "Null-Coalescing Operators",
+    "title": "Null-Coalescing Assignment (??=)",
+    "description": "Assigns the right-hand value only if the left-hand variable is null.",
+    "code": "string name = null;\nname ??= \"Guest\";\nConsole.WriteLine(name); // Output: Guest",
+    "tags": ["null", "assignment", "??=", "operators"]
+  },
+  {
+    "id": "operators-ternary-conditional",
+    "topic": "Operators",
+    "category": "Null-Coalescing Operators",
+    "title": "Ternary Conditional Operator (?:)",
+    "description": "Evaluates a condition and returns one of two values based on the result.",
+    "code": "int age = 20;\nstring status = age >= 18 ? \"Adult\" : \"Minor\";\nConsole.WriteLine(status); // Output: Adult",
+    "tags": ["conditional", "ternary", "?:", "operators"]
+  },
+  {
+  "id": "operators-ternary-conditional",
+  "topic": "Operators",
+  "category": "Ternary Conditional Operators",
+  "title": "Ternary Operator (?:)",
+  "description": "Evaluates a condition and returns one of two values based on the result.",
+  "code": "int age = 20;\nstring status = age >= 18 ? \"Adult\" : \"Minor\";\nConsole.WriteLine(status); // Output: Adult",
+  "tags": ["ternary", "conditional", "?:", "if-else", "operators"]
+},
+{
+  "id": "operators-type-check-is",
+  "topic": "Operators",
+  "category": "Type Checking & Casting Operators",
+  "title": "is Operator",
+  "description": "Checks whether an object is of a specific type.",
+  "code": "object obj = \"hello\";\nif (obj is string)\n{\n    Console.WriteLine(\"It's a string!\");\n}",
+  "tags": ["operators", "type", "is", "check", "casting"]
+},
+{
+  "id": "operators-type-check-as",
+  "topic": "Operators",
+  "category": "Type Checking & Casting Operators",
+  "title": "as Operator",
+  "description": "Attempts to cast an object to a specific type without throwing an exception.",
+  "code": "object obj = \"hello\";\nstring? str = obj as string;\nif (str != null)\n{\n    Console.WriteLine(str.ToUpper());\n}",
+  "tags": ["operators", "type", "as", "cast", "safe"]
+},
+{
+  "id": "operators-type-check-pattern-matching",
+  "topic": "Operators",
+  "category": "Type Checking & Casting Operators",
+  "title": "Pattern Matching with is",
+  "description": "Performs type check and assigns to a variable in a single statement.",
+  "code": "object obj = 42;\nif (obj is int number)\n{\n    Console.WriteLine(number + 10);\n}",
+  "tags": ["operators", "pattern", "is", "match", "type"]
+},
+{
+  "id": "operators-checked",
+  "topic": "Operators",
+  "category": "Checked & Unchecked Context",
+  "title": "checked block",
+  "description": "Enables overflow checking for integral-type arithmetic operations and conversions.",
+  "code": "int max = int.MaxValue;\ntry\n{\n    int result = checked(max + 1);\n}\ncatch (OverflowException)\n{\n    Console.WriteLine(\"Overflow detected!\");\n}",
+  "tags": ["operators", "checked", "overflow", "exception"]
+},
+{
+  "id": "operators-unchecked",
+  "topic": "Operators",
+  "category": "Checked & Unchecked Context",
+  "title": "unchecked block",
+  "description": "Suppresses overflow-checking for arithmetic operations and conversions.",
+  "code": "int max = int.MaxValue;\nint result = unchecked(max + 1);\nConsole.WriteLine(result); // Outputs negative value",
+  "tags": ["operators", "unchecked", "overflow", "no-check"]
+}
+
+
 
 ]
 

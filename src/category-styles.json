@@ -190,6 +190,22 @@
   "bitwise-operators": {
     "background": "#ede7f6",
     "titleColor": "#4a148c"
+  },
+  "null-coalescing-operators": {
+    "background": "#fce4ec",
+    "titleColor": "#ad1457"
+  },
+  "ternary-conditional-operators": {
+    "background": "#f3e5f5",
+    "titleColor": "#6a1b9a"
+  },
+   "type-checking-casting-operators": {
+    "background": "#dfe6e9",
+    "titleColor": "#2d3436"
+  },
+  "checked-unchecked-context": {
+    "background": "#fdecea",
+    "titleColor": "#c0392b"
   }
 }
 

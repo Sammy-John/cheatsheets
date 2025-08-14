@@ -206,6 +206,54 @@
   "checked-unchecked-context": {
     "background": "#fdecea",
     "titleColor": "#c0392b"
+  },
+  "expression-types-overview": {
+    "background": "#fef9e7",
+    "titleColor": "#6c3483"
+  },
+  "arithmetic-expressions": {
+    "background": "#fdecea",
+    "titleColor": "#c62828"
+  },
+  "boolean-expressions": {
+    "background": "#e8f5e9",
+    "titleColor": "#2e7d32"
+  },
+    "string-expressions": {
+    "background": "#f3e5f5",
+    "titleColor": "#6a1b9a"
+  },
+  "object-instantiation-expressions": {
+    "background": "#d1f2eb",
+    "titleColor": "#117864"
+  },
+  "conditional-expressions": {
+    "background": "#fff3b0",
+    "titleColor": "#e17055"
+  },
+  "assignment-expressions": {
+    "background": "#e4f0f5",
+    "titleColor": "#0077b6"
+  },
+  "cast-type-test-expressions": {
+    "background": "#fdf2e9",
+    "titleColor": "#d35400"
+  },
+  "checked-unchecked-expressions": {
+    "background": "#fce4ec",
+    "titleColor": "#c2185b"
+  },
+  "await-expressions": {
+    "background": "#e0f7fa",
+    "titleColor": "#006064"
+  },
+  "object-collection-initializers": {
+    "background": "#e8f5e9",
+    "titleColor": "#2e7d32"
+  },
+  "index-range-expressions": {
+    "background": "#f3e5f5",
+    "titleColor": "#8e24aa"
   }
 }
 

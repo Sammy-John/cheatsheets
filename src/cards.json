@@ -2140,10 +2140,349 @@
   "description": "Suppresses overflow-checking for arithmetic operations and conversions.",
   "code": "int max = int.MaxValue;\nint result = unchecked(max + 1);\nConsole.WriteLine(result); // Outputs negative value",
   "tags": ["operators", "unchecked", "overflow", "no-check"]
-}
-
-
-
+},
+{
+    "id": "expressions-overview-definition",
+    "topic": "Expressions",
+    "category": "Expression Types Overview",
+    "title": "What is an Expression?",
+    "description": "An expression is any valid set of literals, variables, operators, and method calls that evaluates to a single value.",
+    "code": "int sum = 5 + 3;\nbool isAdult = age > 18;\nstring greeting = \"Hello \" + name;",
+    "tags": ["expressions", "definition", "evaluate", "syntax"]
+  },
+  {
+    "id": "expressions-vs-statements",
+    "topic": "Expressions",
+    "category": "Expression Types Overview",
+    "title": "Expression vs Statement",
+    "description": "An expression returns a value. A statement performs an action. Expressions can be embedded within statements.",
+    "code": "// Expression\nint result = 10 * 5;\n\n// Statement\nConsole.WriteLine(result);",
+    "tags": ["expression", "statement", "difference", "syntax"]
+  },
+  {
+    "id": "expressions-value-based",
+    "topic": "Expressions",
+    "category": "Expression Types Overview",
+    "title": "Value-Based Evaluation",
+    "description": "Expressions always evaluate to a value, regardless of how simple or complex they are.",
+    "code": "int a = 2 + 3 * (4 - 1); // Evaluates to 11",
+    "tags": ["expression", "value", "evaluation"]
+  },
+   {
+    "id": "expressions-arithmetic-basic",
+    "topic": "Expressions",
+    "category": "Arithmetic Expressions",
+    "title": "Basic Arithmetic",
+    "description": "Arithmetic expressions involve operations like addition, subtraction, multiplication, division, and modulus.",
+    "code": "int sum = 4 + 5;\nint product = 3 * 7;\ndouble quotient = 10.0 / 3.0;",
+    "tags": ["arithmetic", "addition", "division", "math"]
+  },
+  {
+    "id": "expressions-arithmetic-order",
+    "topic": "Expressions",
+    "category": "Arithmetic Expressions",
+    "title": "Order of Operations",
+    "description": "Operator precedence determines the order in which parts of an arithmetic expression are evaluated.",
+    "code": "int result = 2 + 3 * 4;    // 14\nint grouped = (2 + 3) * 4; // 20",
+    "tags": ["arithmetic", "precedence", "order", "grouping"]
+  },
+  {
+    "id": "expressions-arithmetic-compound",
+    "topic": "Expressions",
+    "category": "Arithmetic Expressions",
+    "title": "Compound Expressions",
+    "description": "You can chain arithmetic operations in a single expression.",
+    "code": "int total = (5 + 2) * (8 - 3) / 2;",
+    "tags": ["arithmetic", "compound", "math", "chained"]
+  },
+  {
+    "id": "expressions-boolean-basic",
+    "topic": "Expressions",
+    "category": "Boolean Expressions",
+    "title": "Boolean Expressions",
+    "description": "Used to evaluate logical conditions and return true or false.",
+    "code": "bool isAdult = age >= 18;\nbool isEligible = hasLicense && !isSuspended;",
+    "tags": ["boolean", "logic", "expressions", "conditions"]
+  },
+  {
+    "id": "expressions-boolean-comparisons",
+    "topic": "Expressions",
+    "category": "Boolean Expressions",
+    "title": "Comparison-Based Conditions",
+    "description": "Boolean expressions often use comparison operators like >, <, ==.",
+    "code": "bool isEqual = a == b;\nbool isGreater = score > 80;",
+    "tags": ["comparison", "boolean", "conditions"]
+  },
+  {
+    "id": "expressions-boolean-complex",
+    "topic": "Expressions",
+    "category": "Boolean Expressions",
+    "title": "Complex Logical Expressions",
+    "description": "You can combine multiple conditions using &&, ||, and !.",
+    "code": "if ((score > 70 && passed) || bonusGranted)\n{\n    Console.WriteLine(\"Access granted\");\n}",
+    "tags": ["complex", "boolean", "logic"]
+  },
+  {
+    "id": "expressions-string-concatenation",
+    "topic": "Expressions",
+    "category": "String Expressions",
+    "title": "String Concatenation",
+    "description": "Combine strings using the `+` operator.",
+    "code": "string fullName = firstName + \" \" + lastName;",
+    "tags": ["string", "concatenation", "text"]
+  },
+  {
+    "id": "expressions-string-interpolation",
+    "topic": "Expressions",
+    "category": "String Expressions",
+    "title": "String Interpolation",
+    "description": "Insert variables into a string using `$` syntax.",
+    "code": "string message = $\"Welcome, {name}!\";",
+    "tags": ["string", "interpolation", "syntax"]
+  },
+  {
+    "id": "expressions-string-formatting",
+    "topic": "Expressions",
+    "category": "String Expressions",
+    "title": "String.Format()",
+    "description": "Create formatted strings using placeholder indexes.",
+    "code": "string result = string.Format(\"{0} scored {1} points.\", user, score);",
+    "tags": ["string", "format", "placeholder"]
+  },
+  {
+    "id": "expressions-new-object",
+    "topic": "Expressions",
+    "category": "Object Instantiation Expressions",
+    "title": "new Object()",
+    "description": "Creates a new instance of an object.",
+    "code": "Person person = new Person();",
+    "tags": ["object", "new", "instantiation"]
+  },
+  {
+    "id": "expressions-object-initializer",
+    "topic": "Expressions",
+    "category": "Object Instantiation Expressions",
+    "title": "Object Initializer",
+    "description": "Instantiates and initializes properties in one step.",
+    "code": "Person person = new Person {\n    Name = \"Alice\",\n    Age = 30\n};",
+    "tags": ["object", "initializer", "syntax"]
+  },
+  {
+    "id": "expressions-new-anonymous-type",
+    "topic": "Expressions",
+    "category": "Object Instantiation Expressions",
+    "title": "Anonymous Type",
+    "description": "Creates an inline object with properties using `new {}` syntax.",
+    "code": "var user = new { Name = \"John\", Age = 42 };",
+    "tags": ["anonymous", "object", "inline"]
+  },
+  {
+    "id": "expressions-lambda-basic",
+    "topic": "Expressions",
+    "category": "Lambda Expressions",
+    "title": "Basic Lambda",
+    "description": "Defines an anonymous function using the `=>` syntax.",
+    "code": "Func<int, int> square = x => x * x;\nConsole.WriteLine(square(5));",
+    "tags": ["lambda", "function", "expression"]
+  },
+  {
+    "id": "expressions-lambda-multiline",
+    "topic": "Expressions",
+    "category": "Lambda Expressions",
+    "title": "Multiline Lambda",
+    "description": "Uses a block body for multiple statements in a lambda.",
+    "code": "Action<string> greet = name => {\n    Console.WriteLine(\"Hello\");\n    Console.WriteLine(name);\n};",
+    "tags": ["lambda", "multiline", "action"]
+  },
+  {
+    "id": "expressions-lambda-closure",
+    "topic": "Expressions",
+    "category": "Lambda Expressions",
+    "title": "Lambda with Closure",
+    "description": "Lambdas can capture and use variables from their outer scope.",
+    "code": "int factor = 2;\nFunc<int, int> multiply = n => n * factor;\nConsole.WriteLine(multiply(3));",
+    "tags": ["lambda", "closure", "scope"]
+  },
+  {
+    "id": "expressions-conditional-ternary",
+    "topic": "Expressions",
+    "category": "Conditional Expressions",
+    "title": "Ternary Operator",
+    "description": "Inline `if-else` expression that returns one of two values.",
+    "code": "int age = 20;\nstring result = age >= 18 ? \"Adult\" : \"Minor\";\nConsole.WriteLine(result);",
+    "tags": ["ternary", "conditional", "expression", "inline"]
+  },
+  {
+    "id": "expressions-conditional-nullcoalescing",
+    "topic": "Expressions",
+    "category": "Conditional Expressions",
+    "title": "Null-Coalescing Expression",
+    "description": "Returns the left-hand value unless it's null, otherwise returns the right-hand value.",
+    "code": "string input = null;\nstring name = input ?? \"Guest\";\nConsole.WriteLine(name);",
+    "tags": ["null", "coalesce", "conditional"]
+  },
+  {
+    "id": "expressions-conditional-nullcoalescing-assignment",
+    "topic": "Expressions",
+    "category": "Conditional Expressions",
+    "title": "Null-Coalescing Assignment",
+    "description": "Assigns the right-hand value only if the left-hand value is null.",
+    "code": "string name = null;\nname ??= \"Guest\";\nConsole.WriteLine(name);",
+    "tags": ["null", "assignment", "coalesce", "??="]
+  },
+  {
+    "id": "expressions-assignment-chained",
+    "topic": "Expressions",
+    "category": "Assignment Expressions",
+    "title": "Chained Assignment",
+    "description": "Multiple variables can be assigned the same value in a single statement.",
+    "code": "int a, b, c;\na = b = c = 10;\nConsole.WriteLine($\"a={a}, b={b}, c={c}\");",
+    "tags": ["assignment", "chained", "="]
+  },
+  {
+    "id": "expressions-assignment-compound",
+    "topic": "Expressions",
+    "category": "Assignment Expressions",
+    "title": "Compound Assignment",
+    "description": "Combines arithmetic or bitwise operation with assignment.",
+    "code": "int total = 5;\ntotal += 10; // Same as total = total + 10;\nConsole.WriteLine(total);",
+    "tags": ["assignment", "compound", "+=", "-=", "*=", "/="]
+  },
+  {
+    "id": "expressions-assignment-increment",
+    "topic": "Expressions",
+    "category": "Assignment Expressions",
+    "title": "Increment/Decrement",
+    "description": "Shorthand operators to increase or decrease values by 1.",
+    "code": "int count = 0;\ncount++;\ncount--;\nConsole.WriteLine(count);",
+    "tags": ["assignment", "increment", "decrement", "++", "--"]
+  },
+  {
+    "id": "expressions-cast-explicit",
+    "topic": "Expressions",
+    "category": "Cast & Type Test Expressions",
+    "title": "Explicit Cast",
+    "description": "Forces a conversion between compatible types. May throw an exception if invalid.",
+    "code": "double d = 9.8;\nint i = (int)d;\nConsole.WriteLine(i);",
+    "tags": ["cast", "explicit", "convert"]
+  },
+  {
+    "id": "expressions-cast-as-operator",
+    "topic": "Expressions",
+    "category": "Cast & Type Test Expressions",
+    "title": "Using 'as' Operator",
+    "description": "Performs a safe cast. Returns null if the conversion fails.",
+    "code": "object obj = \"Hello\";\nstring s = obj as string;\nif (s != null) Console.WriteLine(s);",
+    "tags": ["cast", "as", "safe", "null"]
+  },
+  {
+    "id": "expressions-type-is",
+    "topic": "Expressions",
+    "category": "Cast & Type Test Expressions",
+    "title": "Type Check with 'is'",
+    "description": "Checks if an object is a specific type before using it.",
+    "code": "object obj = 42;\nif (obj is int number)\n{\n    Console.WriteLine($\"Integer: {number}\");\n}",
+    "tags": ["is", "pattern matching", "type check"]
+  },
+  {
+    "id": "expressions-type-pattern-matching",
+    "topic": "Expressions",
+    "category": "Cast & Type Test Expressions",
+    "title": "Pattern Matching with 'is'",
+    "description": "Combines type check and variable assignment in one expression.",
+    "code": "object obj = 3.14;\nif (obj is double pi)\n{\n    Console.WriteLine($\"Pi: {pi}\");\n}",
+    "tags": ["pattern matching", "is", "expression"]
+  },
+  {
+    "id": "expressions-checked-overflow",
+    "topic": "Expressions",
+    "category": "Checked & Unchecked Expressions",
+    "title": "Checked Overflow Detection",
+    "description": "Detects overflow at runtime and throws an exception.",
+    "code": "int max = int.MaxValue;\nint result = checked(max + 1); // Throws OverflowException",
+    "tags": ["checked", "overflow", "expression"]
+  },
+  {
+    "id": "expressions-unchecked-overflow",
+    "topic": "Expressions",
+    "category": "Checked & Unchecked Expressions",
+    "title": "Unchecked to Suppress Overflow",
+    "description": "Disables overflow checking for numeric operations.",
+    "code": "int max = int.MaxValue;\nint result = unchecked(max + 1); // Wraps around",
+    "tags": ["unchecked", "overflow", "suppress"]
+  },
+  {
+    "id": "expressions-await-basic",
+    "topic": "Expressions",
+    "category": "Await Expressions",
+    "title": "Basic await Expression",
+    "description": "Waits asynchronously for a task to complete and returns the result.",
+    "code": "string content = await File.ReadAllTextAsync(\"data.txt\");\nConsole.WriteLine(content);",
+    "tags": ["await", "async", "expression", "task"]
+  },
+  {
+    "id": "expressions-await-in-method",
+    "topic": "Expressions",
+    "category": "Await Expressions",
+    "title": "Using await in Async Method",
+    "description": "await can only be used inside a method marked with async.",
+    "code": "async Task LoadData()\n{\n    string json = await File.ReadAllTextAsync(\"data.json\");\n    Console.WriteLine(json);\n}",
+    "tags": ["await", "async", "method"]
+  },
+  {
+    "id": "expressions-object-initializer",
+    "topic": "Expressions",
+    "category": "Object & Collection Initializers",
+    "title": "Object Initializer",
+    "description": "Create and initialize an object in a single expression.",
+    "code": "var person = new Person { Name = \"Alice\", Age = 30 };",
+    "tags": ["object", "initializer", "expression", "new"]
+  },
+  {
+    "id": "expressions-collection-initializer",
+    "topic": "Expressions",
+    "category": "Object & Collection Initializers",
+    "title": "Collection Initializer",
+    "description": "Create and initialize a collection in a single statement.",
+    "code": "var numbers = new List<int> { 1, 2, 3, 4, 5 };",
+    "tags": ["collection", "initializer", "list", "expression"]
+  },
+  {
+    "id": "expressions-nested-initializer",
+    "topic": "Expressions",
+    "category": "Object & Collection Initializers",
+    "title": "Nested Initializers",
+    "description": "Object and collection initializers can be nested.",
+    "code": "var order = new Order {\n  Customer = new Customer { Name = \"Bob\" },\n  Items = new List<Item> {\n    new Item { Name = \"Pen\", Qty = 2 },\n    new Item { Name = \"Notebook\", Qty = 1 }\n  }\n};",
+    "tags": ["nested", "initializer", "object", "collection"]
+  },
+  {
+    "id": "expressions-index-expression",
+    "topic": "Expressions",
+    "category": "Index & Range Expressions",
+    "title": "Index from End (^)",
+    "description": "Access elements from the end of a sequence using the ^ operator.",
+    "code": "string[] names = { \"Alice\", \"Bob\", \"Charlie\" };\nstring last = names[^1];  // \"Charlie\"",
+    "tags": ["index", "from end", "caret", "array"]
+  },
+  {
+    "id": "expressions-range-expression",
+    "topic": "Expressions",
+    "category": "Index & Range Expressions",
+    "title": "Range Operator (..)",
+    "description": "Use .. to create a subrange of a sequence.",
+    "code": "int[] numbers = { 1, 2, 3, 4, 5 };\nint[] mid = numbers[1..4];  // [2, 3, 4]",
+    "tags": ["range", "subarray", "slice", "dotdot"]
+  },
+  {
+    "id": "expressions-index-range-combined",
+    "topic": "Expressions",
+    "category": "Index & Range Expressions",
+    "title": "Combined Index and Range",
+    "description": "You can mix ^ and .. operators in array slicing.",
+    "code": "string[] data = { \"a\", \"b\", \"c\", \"d\", \"e\" };\nvar subset = data[^4..^1];  // [\"b\", \"c\", \"d\"]",
+    "tags": ["index", "range", "slice", "expression"]
+  }
 ]
 
 
